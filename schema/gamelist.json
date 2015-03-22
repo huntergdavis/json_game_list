@@ -1,0 +1,92 @@
+{
+    "basics": {
+        "name": "Hunter Davis's Collection",
+        "label": "Mostly just my console games for now",
+        "picture": "http://www.hunterdavis.com/wp-content/uploads/2007/12/hunterdavisqr.png",
+        "email": "hunter@hunterdavis.com",
+        "phone": "",
+        "website": "www.hunterdavis.com",
+        "summary": " These are all of my awesome console games.",
+        "location": {
+            "address": "---",
+            "postalCode": "---",
+            "city": "Seattle",
+            "countryCode": "US",
+            "region": "Washington"
+        },
+        "systems": [
+            {
+                "name": "Playstation 3",
+                "url": "http://www.playstation.com",
+                "releaseDate": "2006-12-25",
+                "quantity": 1,
+                "summary": "A rock solid console released in 2006 by Sony",
+                "consoles": [
+                    {
+                        "name": "Playstation 3",
+                        "revision": "Original Phat 60gb",
+                        "url": "http://www.playstation.com",
+                        "releaseDate": "2006-12-25",
+                        "condition": "fair",
+                        "quantity": 1,
+                        "description": "Has been dropped, missing usb front bezel",
+                        "systemInfo": {
+                            "cpu": "",
+                            "cpuSpeed": "",
+                            "cpuRam": "",
+                            "gpu": "",
+                            "gpuRam": "",
+                            "operatingSystem": "",
+                            "operatingSystemVersion": ""
+                        }
+                    }
+                ],
+                "accessories": [
+                    {
+                        "name": "Dualshock 3 Wireless Remote",
+                        "revision": "Original Dualshock 3",
+                        "url": "http://www.playstation.com",
+                        "releaseDate": "2006-12-25",
+                        "condition": "fair",
+                        "quantity": 3,
+                        "description": "Wireless Remote"
+                    },
+                    {
+                        "name": "Component Video Cables",
+                        "revision": "Original",
+                        "url": "http://www.playstation.com",
+                        "releaseDate": "2006-12-25",
+                        "condition": "excellent",
+                        "quantity": 1,
+                        "description": "video cables"
+                    }
+                ],
+                "games": [
+                    {
+                        "name": "DJ Hero 2",
+                        "revision": "V1",
+                        "url": "http://www.djhero.com",
+                        "releaseDate": "2011-12-25",
+                        "condition": "excellent",
+                        "quantity": 1,
+                        "description": "dj hero 2 game",
+                        "digitalDistribution": false,
+                        "expirationDate": "",
+                        "systemRequirements": {
+                            "description": "",
+                            "systemInfo": {
+                                "cpu": "",
+                                "cpuSpeed": "",
+                                "cpuRam": "",
+                                "gpu": "",
+                                "gpuRam": "",
+                                "operatingSystem": "",
+                                "operatingSystemVersion": ""
+                            }
+                        }
+                    }
+                ]
+            }
+        ]
+    }
+}
