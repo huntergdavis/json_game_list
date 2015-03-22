@@ -8,11 +8,10 @@ import java.util.Map;
 
 public class System {
 
-    private String name;
-    private String url;
-    private String releaseDate;
-    private Integer quantity;
-    private String summary;
+    private String name = "";
+    private String url = "";
+    private String releaseDate = "";
+    private String summary = "";
     private List<Console> consoles = new ArrayList<Console>();
     private List<Accessory> accessories = new ArrayList<Accessory>();
     private List<Game> games = new ArrayList<Game>();
@@ -31,35 +30,131 @@ public class System {
     }
 
     public String getSystemListItemName(int itemOffset) {
-        return "";
+        if(itemOffset == 0) {
+            // self case
+            return getName() + " (System)";
+        }else if(itemOffset < consoles.size() + 1) {
+            // consoles case
+            return consoles.get(itemOffset - 1).getName();
+        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+            // accessories case
+            return accessories.get(itemOffset - 1 - consoles.size()).getName();
+        }else {
+            // games case
+            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).getName();
+        }
     }
 
     public String getSystemListItemRevision(int itemOffset) {
-        return "";
+        if(itemOffset == 0) {
+            // self case
+            return "Contains " + consoles.size() + " consoles, " + accessories.size() + " accessories, " + " and " + games.size() + " games.";
+        }else if(itemOffset < consoles.size() + 1) {
+            // consoles case
+            return consoles.get(itemOffset - 1).getRevision();
+        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+            // accessories case
+            return accessories.get(itemOffset - 1 - consoles.size()).getRevision();
+        }else {
+            // games case
+            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).getRevision();
+        }
     }
 
     public String getSystemListItemUrl(int itemOffset) {
-        return "";
+        if(itemOffset == 0) {
+            // self case
+            return getUrl();
+        }else if(itemOffset < consoles.size() + 1) {
+            // consoles case
+            return consoles.get(itemOffset - 1).getUrl();
+        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+            // accessories case
+            return accessories.get(itemOffset - 1 - consoles.size()).getUrl();
+        }else {
+            // games case
+            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).getUrl();
+        }
     }
 
     public String getSystemListItemReleaseDate(int itemOffset) {
-        return "";
+        if(itemOffset == 0) {
+            // self case
+            return getReleaseDate();
+        }else if(itemOffset < consoles.size() + 1) {
+            // consoles case
+            return consoles.get(itemOffset - 1).getReleaseDate();
+        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+            // accessories case
+            return accessories.get(itemOffset - 1 - consoles.size()).getReleaseDate();
+        }else {
+            // games case
+            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).getReleaseDate();
+        }
     }
 
     public String getSystemListItemCondition(int itemOffset) {
-        return "";
+        if(itemOffset == 0) {
+            // self case
+            return "";
+        }else if(itemOffset < consoles.size() + 1) {
+            // consoles case
+            return consoles.get(itemOffset - 1).getCondition();
+        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+            // accessories case
+            return accessories.get(itemOffset - 1 - consoles.size()).getCondition();
+        }else {
+            // games case
+            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).getCondition();
+        }
     }
 
     public String getSystemListItemQuantity(int itemOffset) {
-        return "";
+        if(itemOffset == 0) {
+            // self case
+            return "";
+        }else if(itemOffset < consoles.size() + 1) {
+            // consoles case
+            return "(" + consoles.get(itemOffset - 1).getQuantity() + ")";
+        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+            // accessories case
+            return "(" + accessories.get(itemOffset - 1 - consoles.size()).getQuantity() + ")";
+        }else {
+            // games case
+            return "(" + games.get(itemOffset - 1 - consoles.size() - accessories.size()).getQuantity() + ")";
+        }
     }
 
     public String getSystemListItemDescription(int itemOffset) {
-        return "";
+        if(itemOffset == 0) {
+            // self case
+            return getSummary();
+        }else if(itemOffset < consoles.size() + 1) {
+            // consoles case
+            return consoles.get(itemOffset - 1).getDescription();
+        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+            // accessories case
+            return accessories.get(itemOffset - 1 - consoles.size()).getDescription();
+        }else {
+            // games case
+            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).getDescription();
+        }
     }
 
     public String getSystemListItemSystemRequirements(int itemOffset) {
-        return "";
+        if(itemOffset == 0) {
+            // self case
+            return "";
+        }else if(itemOffset < consoles.size() + 1) {
+            // consoles case
+            return consoles.get(itemOffset - 1).getSystemInfo().toString();
+        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+            // accessories case
+            return accessories.get(itemOffset - 1 - consoles.size()).systemRequirements.toString();
+        }else {
+            // games case
+            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).getSystemRequirements().toString();
+        }
     }
 
 
@@ -115,24 +210,6 @@ public class System {
      */
     public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
-    }
-
-    /**
-     * 
-     * @return
-     *     The quantity
-     */
-    public Integer getQuantity() {
-        return quantity;
-    }
-
-    /**
-     * 
-     * @param quantity
-     *     The quantity
-     */
-    public void setQuantity(Integer quantity) {
-        this.quantity = quantity;
     }
 
     /**

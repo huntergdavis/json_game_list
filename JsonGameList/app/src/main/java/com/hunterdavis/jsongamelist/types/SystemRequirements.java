@@ -10,6 +10,14 @@ public class SystemRequirements {
     private SystemInfo systemInfo;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    @Override
+    public String toString() {
+        return "SystemRequirements{" +'\n'+
+                description + '\'' +
+                ", systemInfo=" + systemInfo.toString() +
+                '}';
+    }
+
     /**
      * 
      * @return

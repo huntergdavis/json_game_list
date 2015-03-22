@@ -15,6 +15,19 @@ public class SystemInfo {
     private String operatingSystemVersion;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    @Override
+    public String toString() {
+        return "SystemInfo{" +
+                "cpu='" + cpu + '\n' +
+                ", cpuSpeed='" + cpuSpeed + '\n' +
+                ", cpuRam='" + cpuRam +'\n' +
+                ", gpu='" + gpu + '\n' +
+                ", gpuRam='" + gpuRam + '\n' +
+                ", operatingSystem='" + operatingSystem + '\n' +
+                ", operatingSystemVersion='" + operatingSystemVersion + '\n' +
+                '}';
+    }
+
     /**
      * 
      * @return

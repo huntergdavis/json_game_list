@@ -52,7 +52,7 @@ public class SystemFragment extends ListFragment {
             this.systemNumber = args.getInt(EXTRA_SYSTEM_NUMER);
         }
 
-        systemReference = JsonGameListActivity.gameList.systems.get(systemNumber);
+        systemReference = JsonGameListActivity.gameList.systems.get(systemNumber-1);
 
         ArrayList dummyList = new ArrayList<Integer>();
         for(int i = 0;i<systemReference.getListItemCount();i++) {
@@ -89,6 +89,7 @@ public class SystemFragment extends ListFragment {
                 viewHolder.quantity = (TextView) convertView.findViewById(R.id.quantity);
                 viewHolder.description = (TextView) convertView.findViewById(R.id.description);
                 viewHolder.systemRequirements = (TextView) convertView.findViewById(R.id.systemRequirementsOrInfo);
+                convertView.setTag(viewHolder);
             } else {
                 // recycle the already inflated view
                 viewHolder = (WorkViewHolder) convertView.getTag();
