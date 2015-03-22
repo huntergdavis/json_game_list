@@ -8,8 +8,8 @@ import java.util.Map;
 
 public class JsonGameList {
 
-    private Basics basics;
-    List<System> systems = new ArrayList<>();
+    Basics basics;
+    public List<System> systems = new ArrayList<>();
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
 
@@ -20,20 +20,19 @@ public class JsonGameList {
         return 0;
     }
 
+
+
     public String getSystemName(int systemOffset) {
 
         if(systems == null) {
             return "";
         }
 
-        if(systems.size() < systemOffset) {
+        if(systems.size() <= systemOffset) {
             return "";
         }
 
-        // the systems offset will be 1, but internally we are zero index
-        int offsetMinusOne = systemOffset - 1;
-
-        return systems.get(offsetMinusOne).getName();
+        return systems.get(systemOffset).getName();
     }
 
 

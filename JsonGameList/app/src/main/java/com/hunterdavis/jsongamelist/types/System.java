@@ -18,6 +18,51 @@ public class System {
     private List<Game> games = new ArrayList<Game>();
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
+    public int getListItemCount() {
+
+        // 1 list item just for showing the console information
+        int listItemCount = 1;
+
+        listItemCount += consoles.size();
+        listItemCount += accessories.size();
+        listItemCount += games.size();
+
+        return listItemCount;
+    }
+
+    public String getSystemListItemName(int itemOffset) {
+        return "";
+    }
+
+    public String getSystemListItemRevision(int itemOffset) {
+        return "";
+    }
+
+    public String getSystemListItemUrl(int itemOffset) {
+        return "";
+    }
+
+    public String getSystemListItemReleaseDate(int itemOffset) {
+        return "";
+    }
+
+    public String getSystemListItemCondition(int itemOffset) {
+        return "";
+    }
+
+    public String getSystemListItemQuantity(int itemOffset) {
+        return "";
+    }
+
+    public String getSystemListItemDescription(int itemOffset) {
+        return "";
+    }
+
+    public String getSystemListItemSystemRequirements(int itemOffset) {
+        return "";
+    }
+
+
     /**
      * 
      * @return

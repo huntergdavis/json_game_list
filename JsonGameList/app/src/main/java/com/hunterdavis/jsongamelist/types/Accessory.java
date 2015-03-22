@@ -6,14 +6,15 @@ import java.util.Map;
 
 public class Accessory {
 
-    private String name;
-    private String revision;
-    private String url;
-    private String releaseDate;
-    private String condition;
-    private Integer quantity;
-    private String description;
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+    public String name;
+    public String revision;
+    public String url;
+    public String releaseDate;
+    public String condition;
+    public Integer quantity;
+    public String description;
+    public SystemRequirements systemRequirements;
+    public Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
      * 

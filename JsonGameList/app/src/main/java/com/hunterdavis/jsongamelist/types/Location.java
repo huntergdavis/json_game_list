@@ -14,14 +14,10 @@ public class Location {
 
     @Override
     public String toString() {
-        return "Location{" +
-                "address='" + address + '\'' +
-                ", postalCode='" + postalCode + '\'' +
-                ", city='" + city + '\'' +
-                ", countryCode='" + countryCode + '\'' +
-                ", region='" + region + '\'' +
-                ", additionalProperties=" + additionalProperties +
-                '}';
+        return address + "\n" +
+               postalCode  + "\n" +
+                city  + ", " + region  + "\n" +
+                countryCode;
     }
 
     /**

@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.hunterdavis.jsongamelist.fragment.BasicsFragment;
+import com.hunterdavis.jsongamelist.fragment.SystemFragment;
 
 import java.util.Locale;
 
@@ -26,8 +27,9 @@ public class GamePagerAdapter  extends FragmentPagerAdapter {
         switch (position) {
 
             case 0:
-            default:
                 return BasicsFragment.newInstance();
+            default:
+                return SystemFragment.newInstance(position);
         }
     }
 
@@ -48,7 +50,8 @@ public class GamePagerAdapter  extends FragmentPagerAdapter {
             if(JsonGameListActivity.gameList == null) {
                 return adapterContext.getString(R.string.overview);
             }else {
-                return JsonGameListActivity.gameList.getSystemName(position);
+                // account for the 0 position being basic information
+                return JsonGameListActivity.gameList.getSystemName(position-1);
             }
         }
     }
