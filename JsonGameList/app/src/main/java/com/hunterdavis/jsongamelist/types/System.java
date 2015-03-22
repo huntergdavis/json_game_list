@@ -115,13 +115,13 @@ public class System {
             return "";
         }else if(itemOffset < consoles.size() + 1) {
             // consoles case
-            return "(" + consoles.get(itemOffset - 1).getQuantity() + ")";
+            return "(qty: " + consoles.get(itemOffset - 1).getQuantity() + ")";
         }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
             // accessories case
-            return "(" + accessories.get(itemOffset - 1 - consoles.size()).getQuantity() + ")";
+            return "(qty: " + accessories.get(itemOffset - 1 - consoles.size()).getQuantity() + ")";
         }else {
             // games case
-            return "(" + games.get(itemOffset - 1 - consoles.size() - accessories.size()).getQuantity() + ")";
+            return "(qty: " + games.get(itemOffset - 1 - consoles.size() - accessories.size()).getQuantity() + ")";
         }
     }
 
