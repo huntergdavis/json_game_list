@@ -3,7 +3,6 @@ package com.hunterdavis.jsongamelist.types;
 
 import java.util.HashMap;
 import java.util.Map;
-
 public class Location {
 
     private String address;
@@ -12,6 +11,18 @@ public class Location {
     private String countryCode;
     private String region;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
+    @Override
+    public String toString() {
+        return "Location{" +
+                "address='" + address + '\'' +
+                ", postalCode='" + postalCode + '\'' +
+                ", city='" + city + '\'' +
+                ", countryCode='" + countryCode + '\'' +
+                ", region='" + region + '\'' +
+                ", additionalProperties=" + additionalProperties +
+                '}';
+    }
 
     /**
      * 
