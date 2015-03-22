@@ -16,10 +16,10 @@
         }
     },
     "systems": [
-    {
-		"name" : "3DS",
-		"url" : "http://www.nintendo.com",
-		"consoles": [
+        {
+            "name": "3DS",
+            "url": "http://www.nintendo.com",
+            "consoles": [
                 {
                     "name": "3DS XL",
                     "revision": "Blue 3DS XL",
@@ -38,7 +38,7 @@
                     }
                 }
             ],
-      "games": [
+            "games": [
                 {
                     "name": "The Legend Of Zelda: Majora's Mask 3D",
                     "digitalDistribution": false
@@ -46,93 +46,399 @@
                 {
                     "name": "Gardening Mama 2: Forrest Friends",
                     "digitalDistribution": false
-                },                
+                },
                 {
                     "name": "StarFox 64 3d",
                     "digitalDistribution": false
-                },               
+                },
                 {
                     "name": "Sonic Generations",
                     "digitalDistribution": false
-                },               
+                },
                 {
                     "name": "Paper Mario Sticker Star",
                     "digitalDistribution": false
-                },               
+                },
                 {
                     "name": "Project X Zone",
                     "digitalDistribution": false
-                },               
+                },
                 {
                     "name": "Mario Tennis Open",
                     "digitalDistribution": false
-                },               
+                },
                 {
                     "name": "Sonic All Stars Racing Transformed",
                     "digitalDistribution": false
-                },               
+                },
                 {
                     "name": "The Legend Of Zelda Ocarina Of Time 3D",
                     "digitalDistribution": false
-                },               
+                },
                 {
                     "name": "Cave Story 3D",
                     "digitalDistribution": false
-                },               
+                },
                 {
                     "name": "Lego Batman 3: Beyond Gotham",
                     "digitalDistribution": false
-                },               
+                },
                 {
                     "name": "Shifting World",
                     "digitalDistribution": false
-                },               
+                },
                 {
                     "name": "TheatRhythm: Final Fantasy Curtain Call",
                     "digitalDistribution": false
-                },               
+                },
                 {
                     "name": "CrossWords Plus",
                     "digitalDistribution": false
-                },               
+                },
                 {
                     "name": "Rayman Origins",
                     "digitalDistribution": false
-                },               
+                },
                 {
                     "name": "Luigi's Mansion: Dark Moon",
                     "digitalDistribution": false
-                },               
+                },
                 {
                     "name": "Dead Or Alive Dimensions",
                     "digitalDistribution": false
-                },               
+                },
                 {
                     "name": "Code of Princess",
                     "digitalDistribution": true
-                },              
+                },
                 {
                     "name": "Mario Kart 7",
                     "digitalDistribution": true
-                },              
+                },
                 {
                     "name": "Super Mario 3D Land",
                     "digitalDistribution": true
-                },              
+                },
                 {
                     "name": "Zelda: A Link Between Worlds",
                     "digitalDistribution": true
-                },              
+                },
                 {
                     "name": "Etrian Odyssey 4",
                     "digitalDistribution": true
-                },              
+                },
                 {
                     "name": "Rayman 3D",
                     "digitalDistribution": true
                 }
-            ]   
-    },
+            ]
+        },
+        {
+            "name": "DS",
+            "url": "http://www.nintendo.com",
+            "games": [
+                {
+                    "name": "Diddy Kong Racing DS"
+                },
+                {
+                    "name": "Prince Of Persia: The Fallen King"
+                },
+                {
+                    "name": "Exit"
+                },
+                {
+                    "name": "N+"
+                },
+                {
+                    "name": "Super Mario 64"
+                },
+                {
+                    "name": "Nostalgia"
+                },
+                {
+                    "name": "StarFox Command"
+                },
+                {
+                    "name": "Kirby Mass Attack"
+                },
+                {
+                    "name": "Glory of Heracles"
+                },
+                {
+                    "name": "WarioWar DIY"
+                },
+                {
+                    "name": "Magical Starsign"
+                },
+                {
+                    "name": "Mario and Luigi: Bowser's inside Story"
+                },
+                {
+                    "name": "Soul Bubbles"
+                },
+                {
+                    "name": "Galactic Taz Ball"
+                },
+                {
+                    "name": "Super Pricess Peach"
+                },
+                {
+                    "name": "Lock's Quest"
+                },
+                {
+                    "name": "Johnny Bravo Date-O-Rama"
+                },
+                {
+                    "name": "Prince Of Persia: The Forgotten Sands"
+                },
+                {
+                    "name": "Super Monkey Ball: Touch and Roll"
+                },
+                {
+                    "name": "Nicktoons: MLB"
+                },
+                {
+                    "name": "Spectrobes"
+                },
+                {
+                    "name": "Super Dodgeball Brawlers"
+                },
+                {
+                    "name": "Balls of Fury"
+                },
+                {
+                    "name": "Intellivision Lives"
+                },
+                {
+                    "name": "Sonic Classic Collection"
+                },
+                {
+                    "name": "Atari Greatest Hits Vol 1"
+                },
+                {
+                    "name": "Atari Greatest Hits Vol 2"
+                },
+                {
+                    "name": "Megaman Zero Collection"
+                },
+                {
+                    "name": "Retro Game Challenge"
+                },
+                {
+                    "name": "Sega Casino"
+                },
+                {
+                    "name": "Sonic Chronicles: The Dark Brotherhood"
+                },
+                {
+                    "name": "Sonic Rush Adventure"
+                },
+                {
+                    "name": "Sega Superstars Tennis"
+                },
+                {
+                    "name": "Monster Tale"
+                },
+                {
+                    "name": "Henry HatsWorth And The Puzzling Adventure"
+                },
+                {
+                    "name": "Litttle Red Riding Hood And The Zombie BBQ"
+                },
+                {
+                    "name": "Speed Racer"
+                },
+                {
+                    "name": "Meteos"
+                },
+                {
+                    "name": "Ghostbusters"
+                },
+                {
+                    "name": "BarnYard Blast"
+                },
+                {
+                    "name": "Giana Sisters"
+                },
+                {
+                    "name": "Bangai-O Spirits"
+                },
+                {
+                    "name": "Tetris DS"
+                },
+                {
+                    "name": "Dragon Quest Heroes: Rocket Slime"
+                },
+                {
+                    "name": "The Legendary Starfy"
+                },
+                {
+                    "name": "Burnout Legends"
+                },
+                {
+                    "name": "Pac N Roll"
+                }
+            ]
+        },
+        {
+            "name": "Xbox 360",
+            "url": "http://www.xbox.com",
+            "games": [
+                {
+                    "name": "Amped 3"
+                },
+                {
+                    "name": "SoulCalibur IV"
+                },
+                {
+                    "name": "Crackdown 2"
+                },
+                {
+                    "name": "BattleFantasia"
+                },
+                {
+                    "name": "Crackdown"
+                },
+                {
+                    "name": "Lego Star Wars"
+                },
+                {
+                    "name": "Red Dead Redemption Undead Nightmare"
+                },
+                {
+                    "name": "Red Dead Redemption"
+                },
+                {
+                    "name": "Wolfenstein: The New Order"
+                },
+                {
+                    "name": "Price Of Persia: The Forgotten Sands"
+                },
+                {
+                    "name": "Viva Pinata: Party Animals"
+                },
+                {
+                    "name": "Gears of War"
+                },
+                {
+                    "name": "Burnout Revenge"
+                },
+                {
+                    "name": "Perfect Dark Zero"
+                },
+                {
+                    "name": "Saints Row"
+                },
+                {
+                    "name": "Harry Potter Years 5-7"
+                },
+                {
+                    "name": "The Simpsons Game"
+                },
+                {
+                    "name": "Marvel Vs Capcom 3"
+                }
+            ]
+        },
+        {
+            "name": "Xbox (Original)",
+            "url": "http://www.xbox.com",
+            "games": [
+                {
+                    "name": "Teenage Mutant Ninja Turtles"
+                },
+                {
+                    "name": "Black"
+                },
+                {
+                    "name": "Mortal Kombat Deadly Alliance"
+                },
+                {
+                    "name": "Starsky and Hutch"
+                },
+                {
+                    "name": "Crazy Taxi 3: High Rollers"
+                },
+                {
+                    "name": "Kakuto Chojin"
+                },
+                {
+                    "name": "Eggstreme Madness"
+                },
+                {
+                    "name": "Azurik: Rise of Perathia"
+                },
+                {
+                    "name": "Half Life 2"
+                },
+                {
+                    "name": "Burnout 3: Takedown"
+                },
+                {
+                    "name": "The Incredible Hulk: Ultimate Destruction"
+                },
+                {
+                    "name": "Unreal 2: The Awakening"
+                },
+                {
+                    "name": "Unreal Championship"
+                },
+                {
+                    "name": "RalliSpirt Challenge 2"
+                },
+                {
+                    "name": "Midway Arcade Treasures 2"
+                },
+                {
+                    "name": "The Simpsons: Road Rage"
+                },
+                {
+                    "name": "Star Wars Jedi Starfighter"
+                },
+                {
+                    "name": "Soul Calibur II"
+                },
+                {
+                    "name": "Crimson Skies: High Road to Revenge"
+                },
+                {
+                    "name": "Strike Force Bowling"
+                },
+                {
+                    "name": "Blinx: The Time Sweeper"
+                },
+                {
+                    "name": "Defender"
+                },
+                {
+                    "name": "The Simpsons: Hit and Run"
+                },
+                {
+                    "name": "Ford VS Chevy"
+                },
+                {
+                    "name": "WrestleMania 21"
+                },
+                {
+                    "name": "Phantom Dust"
+                },
+                {
+                    "name": "Grabbed By The Ghoulies"
+                },
+                {
+                    "name": "Deus Ex: Invisible War"
+                },
+                {
+                    "name": "Doom 3"
+                },
+                {
+                    "name": "Sega GT 2002 / Jet Set Radio Future"
+                },
+                {
+                    "name": "Outlaw Volleyball: Red Hot"
+                }
+            ]
+        },
         {
             "name": "Playstation 3",
             "url": "http://www.playstation.com",
