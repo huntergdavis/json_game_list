@@ -1,9 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hunterdavis.jsongamelist">
+    package="com.hunterdavis.jsongamelist" >
 
-    <application android:allowBackup="true" android:label="@string/app_name"
-        android:icon="@drawable/ic_launcher" android:theme="@style/AppTheme">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".JsonGameListActivity"
+            android:label="@string/title_activity_json_game_list" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- Mime Type filters -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.EDIT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/json" />
+                <data android:mimeType="application/json" />
+            </intent-filter>
+
+            <!-- File extensions filters -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.EDIT" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <!-- Ignore Mimetype -->
+                <data
+                    android:host="*"
+                    android:mimeType="*/*" />
+                <!-- Standard XML extension -->
+                <data
+                    android:pathPattern=".*\\.json"
+                    android:scheme="file" />
+
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>

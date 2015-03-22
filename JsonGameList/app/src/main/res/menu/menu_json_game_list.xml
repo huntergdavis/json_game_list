@@ -1,0 +1,7 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.hunterdavis.jsongamelist.JsonGameListActivity">
+    <item android:id="@+id/action_hunter" android:title="@string/load_hunter"
+        android:orderInCategory="100" app:showAsAction="never" />
+</menu>

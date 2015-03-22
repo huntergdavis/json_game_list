@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">JsonGameList</string>
+    <string name="title_activity_json_game_list">Json Game List</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="overview">Overview</string>
+
+    <string name="load_hunter">load Hunter\'s GameList.JSON</string>
+
+</resources>
