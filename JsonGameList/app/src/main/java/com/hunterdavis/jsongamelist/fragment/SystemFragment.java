@@ -3,6 +3,7 @@ package com.hunterdavis.jsongamelist.fragment;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
+import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -96,16 +97,26 @@ public class SystemFragment extends ListFragment {
             }
 
             // update the item view
-            viewHolder.name.setText(systemReference.getSystemListItemName(position));
-            viewHolder.revision.setText(systemReference.getSystemListItemRevision(position));
-            viewHolder.url.setText(systemReference.getSystemListItemUrl(position));
-            viewHolder.releaseDate.setText(systemReference.getSystemListItemReleaseDate(position));
-            viewHolder.condition.setText(systemReference.getSystemListItemCondition(position));
-            viewHolder.quantity.setText(systemReference.getSystemListItemQuantity(position));
-            viewHolder.description.setText(systemReference.getSystemListItemDescription(position));
-            viewHolder.systemRequirements.setText(systemReference.getSystemListItemSystemRequirements(position));
+            updateItemViewVisibliltyAndText(viewHolder.name,systemReference.getSystemListItemName(position));
+            updateItemViewVisibliltyAndText(viewHolder.revision,systemReference.getSystemListItemRevision(position));
+            updateItemViewVisibliltyAndText(viewHolder.url,systemReference.getSystemListItemUrl(position));
+            updateItemViewVisibliltyAndText(viewHolder.releaseDate,systemReference.getSystemListItemReleaseDate(position));
+            updateItemViewVisibliltyAndText(viewHolder.condition,systemReference.getSystemListItemCondition(position));
+            updateItemViewVisibliltyAndText(viewHolder.quantity,systemReference.getSystemListItemQuantity(position));
+            updateItemViewVisibliltyAndText(viewHolder.description,systemReference.getSystemListItemDescription(position));
+            updateItemViewVisibliltyAndText(viewHolder.systemRequirements,systemReference.getSystemListItemSystemRequirements(position));
 
             return convertView;
+        }
+    }
+
+    private void updateItemViewVisibliltyAndText(TextView view, String text) {
+        if(TextUtils.isEmpty(text)) {
+            view.setVisibility(View.GONE);
+            view.setText("");
+        }else {
+            view.setText(text);
+            view.setVisibility(View.VISIBLE);
         }
     }
 

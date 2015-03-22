@@ -13,7 +13,7 @@ public class Accessory {
     public String condition;
     public Integer quantity;
     public String description;
-    public SystemRequirements systemRequirements;
+    public SystemRequirements systemRequirements = new SystemRequirements();
     public Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**

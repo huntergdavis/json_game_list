@@ -16,6 +16,123 @@
         }
     },
     "systems": [
+    {
+		"name" : "3DS",
+		"url" : "http://www.nintendo.com",
+		"consoles": [
+                {
+                    "name": "3DS XL",
+                    "revision": "Blue 3DS XL",
+                    "url": "http://www.nintendo.com",
+                    "condition": "excellent",
+                    "quantity": 1,
+                    "description": "Excellent Condition",
+                    "systemInfo": {
+                        "cpu": "",
+                        "cpuSpeed": "",
+                        "cpuRam": "",
+                        "gpu": "",
+                        "gpuRam": "",
+                        "operatingSystem": "",
+                        "operatingSystemVersion": ""
+                    }
+                }
+            ],
+      "games": [
+                {
+                    "name": "The Legend Of Zelda: Majora's Mask 3D",
+                    "digitalDistribution": false
+                },
+                {
+                    "name": "Gardening Mama 2: Forrest Friends",
+                    "digitalDistribution": false
+                },                
+                {
+                    "name": "StarFox 64 3d",
+                    "digitalDistribution": false
+                },               
+                {
+                    "name": "Sonic Generations",
+                    "digitalDistribution": false
+                },               
+                {
+                    "name": "Paper Mario Sticker Star",
+                    "digitalDistribution": false
+                },               
+                {
+                    "name": "Project X Zone",
+                    "digitalDistribution": false
+                },               
+                {
+                    "name": "Mario Tennis Open",
+                    "digitalDistribution": false
+                },               
+                {
+                    "name": "Sonic All Stars Racing Transformed",
+                    "digitalDistribution": false
+                },               
+                {
+                    "name": "The Legend Of Zelda Ocarina Of Time 3D",
+                    "digitalDistribution": false
+                },               
+                {
+                    "name": "Cave Story 3D",
+                    "digitalDistribution": false
+                },               
+                {
+                    "name": "Lego Batman 3: Beyond Gotham",
+                    "digitalDistribution": false
+                },               
+                {
+                    "name": "Shifting World",
+                    "digitalDistribution": false
+                },               
+                {
+                    "name": "TheatRhythm: Final Fantasy Curtain Call",
+                    "digitalDistribution": false
+                },               
+                {
+                    "name": "CrossWords Plus",
+                    "digitalDistribution": false
+                },               
+                {
+                    "name": "Rayman Origins",
+                    "digitalDistribution": false
+                },               
+                {
+                    "name": "Luigi's Mansion: Dark Moon",
+                    "digitalDistribution": false
+                },               
+                {
+                    "name": "Dead Or Alive Dimensions",
+                    "digitalDistribution": false
+                },               
+                {
+                    "name": "Code of Princess",
+                    "digitalDistribution": true
+                },              
+                {
+                    "name": "Mario Kart 7",
+                    "digitalDistribution": true
+                },              
+                {
+                    "name": "Super Mario 3D Land",
+                    "digitalDistribution": true
+                },              
+                {
+                    "name": "Zelda: A Link Between Worlds",
+                    "digitalDistribution": true
+                },              
+                {
+                    "name": "Etrian Odyssey 4",
+                    "digitalDistribution": true
+                },              
+                {
+                    "name": "Rayman 3D",
+                    "digitalDistribution": true
+                }
+            ]   
+    },
         {
             "name": "Playstation 3",
             "url": "http://www.playstation.com",

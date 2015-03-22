@@ -15,7 +15,7 @@ public class Game {
     private String description;
     private Boolean digitalDistribution;
     private String expirationDate;
-    private SystemRequirements systemRequirements;
+    private SystemRequirements systemRequirements = new SystemRequirements();
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**

@@ -33,10 +33,10 @@ public class System {
         if(itemOffset == 0) {
             // self case
             return getName() + " (System)";
-        }else if(itemOffset < consoles.size() + 1) {
+        }else if((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
             // consoles case
             return consoles.get(itemOffset - 1).getName();
-        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+        }else if((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
             // accessories case
             return accessories.get(itemOffset - 1 - consoles.size()).getName();
         }else {
@@ -49,10 +49,10 @@ public class System {
         if(itemOffset == 0) {
             // self case
             return "Contains " + consoles.size() + " consoles, " + accessories.size() + " accessories, " + " and " + games.size() + " games.";
-        }else if(itemOffset < consoles.size() + 1) {
+        }else if((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
             // consoles case
             return consoles.get(itemOffset - 1).getRevision();
-        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+        }else if((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
             // accessories case
             return accessories.get(itemOffset - 1 - consoles.size()).getRevision();
         }else {
@@ -65,10 +65,10 @@ public class System {
         if(itemOffset == 0) {
             // self case
             return getUrl();
-        }else if(itemOffset < consoles.size() + 1) {
+        }else if((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
             // consoles case
             return consoles.get(itemOffset - 1).getUrl();
-        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+        }else if((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
             // accessories case
             return accessories.get(itemOffset - 1 - consoles.size()).getUrl();
         }else {
@@ -81,10 +81,10 @@ public class System {
         if(itemOffset == 0) {
             // self case
             return getReleaseDate();
-        }else if(itemOffset < consoles.size() + 1) {
+        }else if((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
             // consoles case
             return consoles.get(itemOffset - 1).getReleaseDate();
-        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+        }else if((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
             // accessories case
             return accessories.get(itemOffset - 1 - consoles.size()).getReleaseDate();
         }else {
@@ -97,10 +97,10 @@ public class System {
         if(itemOffset == 0) {
             // self case
             return "";
-        }else if(itemOffset < consoles.size() + 1) {
+        }else if((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
             // consoles case
             return consoles.get(itemOffset - 1).getCondition();
-        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+        }else if((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
             // accessories case
             return accessories.get(itemOffset - 1 - consoles.size()).getCondition();
         }else {
@@ -113,13 +113,23 @@ public class System {
         if(itemOffset == 0) {
             // self case
             return "";
-        }else if(itemOffset < consoles.size() + 1) {
+        }else if((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
+            if(consoles.get(itemOffset - 1).getQuantity() == null) {
+                return "";
+            }
+
             // consoles case
             return "(qty: " + consoles.get(itemOffset - 1).getQuantity() + ")";
-        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+        }else if((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
+            if(accessories.get(itemOffset - 1 - consoles.size()).getQuantity() == null) {
+                return "";
+            }
             // accessories case
             return "(qty: " + accessories.get(itemOffset - 1 - consoles.size()).getQuantity() + ")";
         }else {
+            if(games.get(itemOffset - 1 - consoles.size() - accessories.size()).getQuantity() == null) {
+                return "";
+            }
             // games case
             return "(qty: " + games.get(itemOffset - 1 - consoles.size() - accessories.size()).getQuantity() + ")";
         }
@@ -129,10 +139,10 @@ public class System {
         if(itemOffset == 0) {
             // self case
             return getSummary();
-        }else if(itemOffset < consoles.size() + 1) {
+        }else if((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
             // consoles case
             return consoles.get(itemOffset - 1).getDescription();
-        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+        }else if((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
             // accessories case
             return accessories.get(itemOffset - 1 - consoles.size()).getDescription();
         }else {
@@ -145,10 +155,10 @@ public class System {
         if(itemOffset == 0) {
             // self case
             return "";
-        }else if(itemOffset < consoles.size() + 1) {
+        }else if((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
             // consoles case
             return consoles.get(itemOffset - 1).getSystemInfo().toString();
-        }else if(itemOffset < (consoles.size() + accessories.size() + 1)) {
+        }else if((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
             // accessories case
             return accessories.get(itemOffset - 1 - consoles.size()).systemRequirements.toString();
         }else {
