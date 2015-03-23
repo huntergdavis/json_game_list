@@ -283,6 +283,26 @@
         {
             "name": "Xbox 360",
             "url": "http://www.xbox.com",
+            "consoles": [
+                {
+                    "name": "Xbox 360",
+                    "revision": "Original Phat 60gb Xbox 360",
+                    "url": "http://www.xbox.com",
+                    "releaseDate": "2005-12-25",
+                    "condition": "fair",
+                    "quantity": 1,
+                    "description": "Glue all over the bottom from a previous hack.",
+                    "systemInfo": {
+                        "cpu": "",
+                        "cpuSpeed": "",
+                        "cpuRam": "",
+                        "gpu": "",
+                        "gpuRam": "",
+                        "operatingSystem": "",
+                        "operatingSystemVersion": ""
+                    }
+                }
+            ],
             "games": [
                 {
                     "name": "Amped 3"
@@ -646,7 +666,27 @@
         },
         {
             "name": "Wii U",
-            "url": "",
+            "url": "http://www.nintendo.com",
+            "consoles": [
+                {
+                    "name": "Wii U",
+                    "revision": "Original White 20gb",
+                    "url": "http://www.nintendo.com",
+                    "releaseDate": "20013-12-25",
+                    "condition": "excellent",
+                    "quantity": 1,
+                    "description": "White Wii U",
+                    "systemInfo": {
+                        "cpu": "",
+                        "cpuSpeed": "",
+                        "cpuRam": "",
+                        "gpu": "",
+                        "gpuRam": "",
+                        "operatingSystem": "",
+                        "operatingSystemVersion": ""
+                    }
+                }
+            ],
             "games": [
 
                 {
@@ -796,6 +836,26 @@
         {
             "name": "Wii",
             "url": "",
+            "consoles": [
+                {
+                    "name": "Wii",
+                    "revision": "Original White Wii (Modded)",
+                    "url": "http://www.nintendo.com",
+                    "releaseDate": "2006-12-25",
+                    "condition": "fair",
+                    "quantity": 1,
+                    "description": "Has been modded",
+                    "systemInfo": {
+                        "cpu": "",
+                        "cpuSpeed": "",
+                        "cpuRam": "",
+                        "gpu": "",
+                        "gpuRam": "",
+                        "operatingSystem": "",
+                        "operatingSystemVersion": ""
+                    }
+                }
+            ],
             "games": [
 
                 {

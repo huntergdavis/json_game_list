@@ -55,6 +55,9 @@ public class SystemFragment extends ListFragment {
 
         systemReference = JsonGameListActivity.gameList.systems.get(systemNumber-1);
 
+        // alphebetize our games list when it's loaded in
+        systemReference.alphebetizeGamesList();
+
         ArrayList dummyList = new ArrayList<Integer>();
         for(int i = 0;i<systemReference.getListItemCount();i++) {
             dummyList.add(69); // bill and ted

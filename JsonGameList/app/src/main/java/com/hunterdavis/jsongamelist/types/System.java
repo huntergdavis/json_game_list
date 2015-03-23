@@ -2,6 +2,8 @@
 package com.hunterdavis.jsongamelist.types;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -27,6 +29,16 @@ public class System {
         listItemCount += games.size();
 
         return listItemCount;
+    }
+
+    public void alphebetizeGamesList() {
+        Collections.sort(games, new Comparator<Game>() {
+            @Override
+            public int compare(Game g1, Game g2) {
+                return g1.getName().compareTo(g2.getName());
+            }
+
+        });
     }
 
     public String getSystemListItemName(int itemOffset) {
