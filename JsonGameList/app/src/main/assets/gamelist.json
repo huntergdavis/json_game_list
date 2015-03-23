@@ -533,6 +533,462 @@
                     }
                 }
             ]
+        },
+        {
+            "name": "TurboGrafx 16",
+            "games": [
+                {
+                    "name": "TV Sports Football"
+                }
+            ]
+        },
+        {
+            "name": "Neo Geo Pocket Color",
+            "url": "http://www.neo-geo.com",
+            "games": [
+                {
+                    "name": "Samurai Showdown! 2"
+                }
+            ]
+        },
+        {
+            "name": "Game Boy Advance",
+            "url": "http://www.nintendo.com",
+            "games": [
+                {
+                    "name": "Cartoon Network Block Party And Speedway"
+                },
+                {
+                    "name": "Rayman Advance"
+                },
+                {
+                    "name": "King Of Fighters EX: Neo Blood"
+                },
+                {
+                    "name": "Rayman Hoodlum's Revenge"
+                }
+            ]
+        },
+        {
+            "name": "Gamecube",
+            "url": "http://www.nintendo.com",
+            "games": [
+
+                {
+                    "name": "Wrestlemania 18"
+                },
+
+                {
+                    "name": "Super Monkey Ball 2"
+                },
+
+                {
+                    "name": "Super Monkey Ball"
+                },
+
+                {
+                    "name": "Star Wars Rogue Leader"
+                },
+
+                {
+                    "name": "Army Men Sarge's War"
+                },
+
+                {
+                    "name": "The Legend of Zelda: The Wind Waker"
+                },
+
+                {
+                    "name": "Black and Bruised"
+                },
+
+                {
+                    "name": "Over The Hedge"
+                },
+
+                {
+                    "name": "The Spongebob Squarepants Movie"
+                },
+
+                {
+                    "name": "Kareoke Revolution Party"
+                },
+
+                {
+                    "name": "Star Wars: The Clone Wars"
+                },
+
+                {
+                    "name": "Ultimate Spider Man"
+                },
+
+                {
+                    "name": "Star Wars Bounty Hunter"
+                },
+
+                {
+                    "name": "Need For Speed Underground 2"
+                },
+
+                {
+                    "name": "NCAA Football 2003"
+                },
+
+                {
+                    "name": "RoadKill"
+                },
+
+                {
+                    "name": "Medal of Honor: Rising Sun"
+                }
+
+            ]
+        },
+        {
+            "name": "Wii U",
+            "url": "",
+            "games": [
+
+                {
+                    "name": "Lego Batman 3: Beyond Gotham"
+                },
+
+                {
+                    "name": "Hyrule Warriors"
+                },
+
+                {
+                    "name": "Mario Kart 8"
+                },
+
+                {
+                    "name": "Lego Batman 2: DC Super Heroes"
+                },
+
+                {
+                    "name": "Captain Toad: Treasure Tracker"
+                },
+
+                {
+                    "name": "Mario and Sonic at the Sochii Winter Olympics"
+                },
+
+                {
+                    "name": "Injustice: Gods Among Us"
+                },
+
+                {
+                    "name": "Bayonetta 2"
+                },
+
+                {
+                    "name": "Tekken Tag Tournament 2"
+                },
+
+                {
+                    "name": "Zombi U"
+                },
+
+                {
+                    "name": "Game and Wario"
+                },
+
+                {
+                    "name": "The Legend Of Zelda: The Wind Waker HD"
+                },
+
+                {
+                    "name": "New Super Luigi U"
+                },
+
+                {
+                    "name": "Mass Effect 3"
+                },
+
+                {
+                    "name": "New Super Mario U"
+                },
+
+                {
+                    "name": "007 Legends"
+                },
+
+                {
+                    "name": "Nintendo Land"
+                },
+
+                {
+                    "name": "The Avengers"
+                },
+
+                {
+                    "name": "Super Mario 3d World"
+                },
+
+                {
+                    "name": "Call of Duty Black Ops 2"
+                },
+
+                {
+                    "name": "Scribblenauts Unmasked"
+                },
+
+                {
+                    "name": "Pac Man and the Ghostly Adventures"
+                },
+
+                {
+                    "name": "The Wonderful 101"
+                },
+
+                {
+                    "name": "Lego City Undercover"
+                },
+
+                {
+                    "name": "Rayman Legends"
+                },
+
+                {
+                    "name": "Assassins Creed III"
+                },
+
+                {
+                    "name": "Need For Speed Most Wanted U"
+                },
+
+                {
+                    "name": "Assassins Creed IV: Black Flag"
+                },
+
+                {
+                    "name": "Sonic Lost World"
+                },
+
+                {
+                    "name": "Darksiders II"
+                },
+
+                {
+                    "name": "Batman: Arkham City Armored Edition"
+                },
+
+                {
+                    "name": "Ducktales Remastered"
+                },
+
+                {
+                    "name": "Wii Party U",
+                    "digitalDistribution": true
+                },
+
+                {
+                    "name": "NES Remix",
+                    "digitalDistribution": true
+                },
+
+                {
+                    "name": "NES Remix 2",
+                    "digitalDistribution": true
+                }
+            ]
+        },
+        {
+            "name": "Wii",
+            "url": "",
+            "games": [
+
+                {
+                    "name": "Super Mario Galaxy 2",
+                    "digitalDistribution": true
+                },
+                {
+                    "name": "Punch-Out",
+                    "digitalDistribution": true
+                },
+                {
+                    "name": "Metroid Prime Trilogy",
+                    "digitalDistribution": true
+                },
+                {
+                    "name": "SpongeBob Boating Bash"
+                },
+
+
+                {
+                    "name": "The Golden Compass"
+                },
+
+
+                {
+                    "name": "Jumper"
+                },
+
+
+                {
+                    "name": "Ultimate Board Game Collection"
+                },
+
+
+                {
+                    "name": "M&Ms Beach party"
+                },
+
+
+                {
+                    "name": "Goldeneye 007"
+                },
+
+
+                {
+                    "name": "Rayman Raving Rabbids: TV Party"
+                },
+
+
+                {
+                    "name": "Kawasaki Quad Bikes"
+                },
+
+
+                {
+                    "name": "Boom Blox Bash Party"
+                },
+
+
+                {
+                    "name": "Babysitting Mama"
+                },
+
+
+                {
+                    "name": "Battalion Wars 2"
+                },
+
+
+                {
+                    "name": "Rayman Raving Rabbids"
+                },
+
+
+                {
+                    "name": "Indiana Jones and the Staff of Kings"
+                },
+
+
+                {
+                    "name": "Super Mario Galaxy"
+                },
+
+
+                {
+                    "name": "Mercury Meltdown Revolution"
+                },
+
+
+                {
+                    "name": "Monster Trux Offroad"
+                },
+
+
+                {
+                    "name": "Excitebots: Trick Racing"
+                },
+
+
+                {
+                    "name": "Broken Sword: Shadow of the Templars"
+                },
+
+
+                {
+                    "name": "New Super Mario Bros Wii"
+                },
+
+
+                {
+                    "name": "Nights: Journey of Dreams"
+                },
+
+
+                {
+                    "name": "Spongebob Squarepants: Globs of Doom"
+                },
+
+
+                {
+                    "name": "Wii Sports"
+                },
+
+
+                {
+                    "name": "Star Wars: The Force Unleashed"
+                },
+
+
+                {
+                    "name": "The Legend of Zelda: Twilight Princess"
+                },
+
+
+                {
+                    "name": "Super Monkey Ball Banana Blitz"
+                },
+
+
+                {
+                    "name": "RedSteel"
+                },
+
+
+                {
+                    "name": "Resident Evil 4 Wii Edition"
+                },
+
+
+                {
+                    "name": "Guitar Hero Aerosmith"
+                },
+
+
+                {
+                    "name": "Tony Hawk's Proving Ground"
+                },
+
+
+                {
+                    "name": "Wii Music"
+                },
+
+
+                {
+                    "name": "Big Brain Academy: Wii Degree"
+                },
+
+
+                {
+                    "name": "Super Monkey Ball: Banana Blitz"
+                },
+
+
+                {
+                    "name": "Super Paper Mario"
+                },
+
+
+                {
+                    "name": "King of Fighters Orochi Saga"
+                },
+
+
+                {
+                    "name": "Tenchu Shadow Assassins"
+                },
+
+
+                {
+                    "name": "Super Smash Bros Brawl"
+                }
+            ]
         }
     ]
 }
