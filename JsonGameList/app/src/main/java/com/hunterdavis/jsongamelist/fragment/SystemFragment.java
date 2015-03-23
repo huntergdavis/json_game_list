@@ -1,6 +1,8 @@
 package com.hunterdavis.jsongamelist.fragment;
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.text.TextUtils;
@@ -8,13 +10,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.hunterdavis.jsongamelist.IconDownloadTask;
 import com.hunterdavis.jsongamelist.JsonGameListActivity;
 import com.hunterdavis.jsongamelist.R;
 import com.hunterdavis.jsongamelist.types.*;
 import com.hunterdavis.jsongamelist.types.System;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -77,7 +83,7 @@ public class SystemFragment extends ListFragment {
         }
 
         @Override
-        public View getView(int position, View convertView, ViewGroup parent) {
+        public View getView(final int position, View convertView, ViewGroup parent) {
             final WorkViewHolder viewHolder;
             if (convertView == null) {
                 // inflate the GridView item layout
@@ -93,11 +99,15 @@ public class SystemFragment extends ListFragment {
                 viewHolder.quantity = (TextView) convertView.findViewById(R.id.quantity);
                 viewHolder.description = (TextView) convertView.findViewById(R.id.description);
                 viewHolder.systemRequirements = (TextView) convertView.findViewById(R.id.systemRequirementsOrInfo);
+                viewHolder.workImageAndWebsiteLauncher = (ImageView) convertView.findViewById(R.id.websiteIconimageButton);
                 convertView.setTag(viewHolder);
             } else {
                 // recycle the already inflated view
                 viewHolder = (WorkViewHolder) convertView.getTag();
             }
+
+            // hide the image first
+            viewHolder.workImageAndWebsiteLauncher.setVisibility(View.GONE);
 
             // update the item view
             updateItemViewVisibliltyAndText(viewHolder.name,systemReference.getSystemListItemName(position));
@@ -108,6 +118,43 @@ public class SystemFragment extends ListFragment {
             updateItemViewVisibliltyAndText(viewHolder.quantity,systemReference.getSystemListItemQuantity(position));
             updateItemViewVisibliltyAndText(viewHolder.description,systemReference.getSystemListItemDescription(position));
             updateItemViewVisibliltyAndText(viewHolder.systemRequirements,systemReference.getSystemListItemSystemRequirements(position));
+
+
+            String baseURL = "";
+
+            try
+            {
+                URL url = new URL(systemReference.getSystemListItemUrl(position));
+                baseURL = url.getProtocol() + "://" + url.getHost();
+            }
+            catch (MalformedURLException e)
+            {
+                // do something.. or not
+            }
+
+            final String favIconString = baseURL + "/favicon.ico";
+
+            new IconDownloadTask(viewHolder.workImageAndWebsiteLauncher).execute(favIconString);
+
+
+            // go to website if exists when you click on it
+            if(!TextUtils.isEmpty(systemReference.getSystemListItemUrl(position))) {
+                    viewHolder.url.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(systemReference.getSystemListItemUrl(position)));
+                            startActivity(browserIntent);
+                        }
+                    });
+            }else {
+                viewHolder.url.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        // do nothing
+                    }
+                });
+            }
+
 
             return convertView;
         }
@@ -136,6 +183,7 @@ public class SystemFragment extends ListFragment {
         TextView quantity;
         TextView description;
         TextView systemRequirements;
+        ImageView workImageAndWebsiteLauncher;
 
     }
 }
