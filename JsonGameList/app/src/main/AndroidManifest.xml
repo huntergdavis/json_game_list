@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.hunterdavis.jsongamelist" >
+    package="com.hunterdavis.jsongamelistmanager" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
@@ -11,7 +11,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".JsonGameListActivity"
+            android:name="com.hunterdavis.jsongamelistmanager.JsonGameListActivity"
             android:label="@string/title_activity_json_game_list" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

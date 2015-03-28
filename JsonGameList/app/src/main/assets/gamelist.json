@@ -357,6 +357,12 @@
                 },
                 {
                     "name": "Marvel Vs Capcom 3"
+                },
+                {
+                    "name" : "Turning Point: Fall of Liberty"
+                },
+                {
+                    "name" : "Viva Pinata: Trouble In Paradise"
                 }
             ]
         },
@@ -456,6 +462,30 @@
                 },
                 {
                     "name": "Outlaw Volleyball: Red Hot"
+                },
+                {
+                    "name" : "Jade Empire"
+                },
+                {
+                    "name" : "CounterStrike"
+                },
+                {
+                    "name" : "Mercenaries: Playground of Destruction"
+                },
+                {
+                    "name" : "Project Gotham Racing"
+                },
+                {
+                    "name" : "Battlefield 2: Modern Combat"
+                },
+                {
+                    "name" : "Brothers In Arms: Road To Hill 30"
+                },
+                {
+                    "name" : "Spider Man"
+                },
+                {
+                    "name" : "Marvel Ultimate Alliance"
                 }
             ]
         },
@@ -607,7 +637,8 @@
                 },
 
                 {
-                    "name": "Star Wars Rogue Leader"
+                    "name": "Star Wars Rogue Leader",
+                    "quantity" : 2
                 },
 
                 {
@@ -660,6 +691,9 @@
 
                 {
                     "name": "Medal of Honor: Rising Sun"
+                },
+                {
+                    "name": "Spy Hunter"
                 }
 
             ]
@@ -1036,9 +1070,12 @@
 
 
                 {
-                    "name": "King of Fighters Orochi Saga"
+                    "name": "King of Fighters Orochi Saga",
+                    "quantity" : 2
                 },
-
+                {
+                    "name" : "Metroid Prime 3: Corruption"
+                },
 
                 {
                     "name": "Tenchu Shadow Assassins"
