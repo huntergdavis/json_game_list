@@ -8,12 +8,10 @@ import android.support.v4.app.FragmentPagerAdapter;
 import com.hunterdavis.jsongamelist.fragment.BasicsFragment;
 import com.hunterdavis.jsongamelist.fragment.SystemFragment;
 
-import java.util.Locale;
-
 /**
  * Created by hunter on 3/22/15.
  */
-public class GamePagerAdapter  extends FragmentPagerAdapter {
+public class GamePagerAdapter extends FragmentPagerAdapter {
 
     Context adapterContext;
 
@@ -34,23 +32,23 @@ public class GamePagerAdapter  extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        if(JsonGameListActivity.gameList == null) {
+        if (JsonGameListActivity.gameList == null) {
             return 1;
-        }else {
+        } else {
             return JsonGameListActivity.gameList.getSystemsCount() + 1;
         }
     }
 
     @Override
     public CharSequence getPageTitle(int position) {
-        if(position == 0) {
+        if (position == 0) {
             return adapterContext.getString(R.string.overview);
         } else {
-            if(JsonGameListActivity.gameList == null) {
+            if (JsonGameListActivity.gameList == null) {
                 return adapterContext.getString(R.string.overview);
-            }else {
+            } else {
                 // account for the 0 position being basic information
-                return JsonGameListActivity.gameList.getSystemName(position-1);
+                return JsonGameListActivity.gameList.getSystemName(position - 1);
             }
         }
     }

@@ -1,4 +1,3 @@
-
 package com.hunterdavis.jsongamelist.types;
 
 import android.text.TextUtils;
@@ -14,47 +13,39 @@ public class SystemRequirements {
 
     @Override
     public String toString() {
-        if(TextUtils.isEmpty(description)) {
+        if (TextUtils.isEmpty(description)) {
             return "";
         }
 
-        return "SystemRequirements{" +'\n'+
+        return "SystemRequirements{" + '\n' +
                 description + '\n' +
                 ", systemInfo=" + systemInfo.toString() +
                 '}';
     }
 
     /**
-     * 
-     * @return
-     *     The description
+     * @return The description
      */
     public String getDescription() {
         return description;
     }
 
     /**
-     * 
-     * @param description
-     *     The description
+     * @param description The description
      */
     public void setDescription(String description) {
         this.description = description;
     }
 
     /**
-     * 
-     * @return
-     *     The systemInfo
+     * @return The systemInfo
      */
     public SystemInfo getSystemInfo() {
         return systemInfo;
     }
 
     /**
-     * 
-     * @param systemInfo
-     *     The systemInfo
+     * @param systemInfo The systemInfo
      */
     public void setSystemInfo(SystemInfo systemInfo) {
         this.systemInfo = systemInfo;

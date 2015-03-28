@@ -3,11 +3,11 @@ package com.hunterdavis.jsongamelist;
 import android.content.ContentResolver;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -26,18 +26,16 @@ import java.io.InputStream;
 import java.io.UnsupportedEncodingException;
 
 
-public class JsonGameListActivity extends ActionBarActivity implements ActionBar.TabListener  {
+public class JsonGameListActivity extends ActionBarActivity implements ActionBar.TabListener {
 
+    public static OkHttpClient client = null;
+    public static JsonGameList gameList = null;
+    // our ui update bus
+    public static Bus bus = new Bus(ThreadEnforcer.MAIN);
+    private static boolean ignoreIntent = false;
     // our pager adapter
     GamePagerAdapter mGamePagerAdapter;
     ViewPager mViewPager;
-
-    public static OkHttpClient client = null;
-    private static boolean ignoreIntent = false;
-    public static JsonGameList gameList = null;
-
-    // our ui update bus
-    public static Bus bus = new Bus(ThreadEnforcer.MAIN);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,9 +47,9 @@ public class JsonGameListActivity extends ActionBarActivity implements ActionBar
         Intent intent = getIntent();
         String action = intent.getAction();
 
-        if(ignoreIntent) {
+        if (ignoreIntent) {
             ignoreIntent = false;
-        }else {
+        } else {
             if (action.compareTo(Intent.ACTION_VIEW) == 0) {
                 String scheme = intent.getScheme();
                 ContentResolver resolver = getContentResolver();
@@ -127,9 +125,9 @@ public class JsonGameListActivity extends ActionBarActivity implements ActionBar
         }
 
         // just a little niceness
-        if(gameList != null) {
-            if(gameList.getBasics() != null) {
-                if(!TextUtils.isEmpty(gameList.getBasics().getName())) {
+        if (gameList != null) {
+            if (gameList.getBasics() != null) {
+                if (!TextUtils.isEmpty(gameList.getBasics().getName())) {
                     getSupportActionBar().setTitle(gameList.getBasics().getName());
                 }
             }
@@ -147,7 +145,7 @@ public class JsonGameListActivity extends ActionBarActivity implements ActionBar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        switch(item.getItemId()) {
+        switch (item.getItemId()) {
             case R.id.action_hunter:
                 try {
                     gameList = JsonGameListParser.parseHuntersGameList(this);
@@ -156,12 +154,11 @@ public class JsonGameListActivity extends ActionBarActivity implements ActionBar
                     e.printStackTrace();
                 }
 
-               break;
+                break;
             case R.id.action_github:
-                new JsonDownloadTask().doInBackground("https://raw.githubusercontent.com/huntergdavis/json_game_list/master/JsonGameList/app/src/main/assets/gamelist.json");
+                new JsonDownloadTask().execute("https://raw.githubusercontent.com/huntergdavis/json_game_list/master/JsonGameList/app/src/main/assets/gamelist.json");
                 break;
         }
-
 
 
         return super.onOptionsItemSelected(item);
@@ -184,10 +181,10 @@ public class JsonGameListActivity extends ActionBarActivity implements ActionBar
 
     @Subscribe
     public void updateJson(JsonUpdatedEvent event) {
-        if(event.gameList != null) {
+        if (event.gameList != null) {
             gameList = event.gameList;
             ignoreIntent = true;
-            this.recreate();
+            JsonGameListActivity.this.recreate();
         }
     }
 }

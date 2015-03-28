@@ -16,7 +16,6 @@ import android.widget.TextView;
 import com.hunterdavis.jsongamelist.IconDownloadTask;
 import com.hunterdavis.jsongamelist.JsonGameListActivity;
 import com.hunterdavis.jsongamelist.R;
-import com.hunterdavis.jsongamelist.types.*;
 import com.hunterdavis.jsongamelist.types.System;
 
 import java.net.MalformedURLException;
@@ -36,6 +35,9 @@ public class SystemFragment extends ListFragment {
 
     System systemReference = new System();
 
+    public SystemFragment() {
+    }
+
     /**
      * Returns a new instance of this fragment for the given section
      * number.
@@ -43,29 +45,26 @@ public class SystemFragment extends ListFragment {
     public static SystemFragment newInstance(int systemNumber) {
         SystemFragment fragment = new SystemFragment();
         Bundle args = new Bundle();
-        args.putInt(EXTRA_SYSTEM_NUMER,systemNumber);
+        args.putInt(EXTRA_SYSTEM_NUMER, systemNumber);
         fragment.setArguments(args);
         return fragment;
-    }
-
-    public SystemFragment() {
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         Bundle args = getArguments();
-        if(args != null) {
+        if (args != null) {
             this.systemNumber = args.getInt(EXTRA_SYSTEM_NUMER);
         }
 
-        systemReference = JsonGameListActivity.gameList.systems.get(systemNumber-1);
+        systemReference = JsonGameListActivity.gameList.systems.get(systemNumber - 1);
 
         // alphebetize our games list when it's loaded in
         systemReference.alphebetizeGamesList();
 
         ArrayList dummyList = new ArrayList<Integer>();
-        for(int i = 0;i<systemReference.getListItemCount();i++) {
+        for (int i = 0; i < systemReference.getListItemCount(); i++) {
             dummyList.add(69); // bill and ted
         }
 
@@ -74,6 +73,16 @@ public class SystemFragment extends ListFragment {
         setListAdapter(adapter);
 
         return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+    private void updateItemViewVisibliltyAndText(TextView view, String text) {
+        if (TextUtils.isEmpty(text)) {
+            view.setVisibility(View.GONE);
+            view.setText("");
+        } else {
+            view.setText(text);
+            view.setVisibility(View.VISIBLE);
+        }
     }
 
     private class SystemAdapter extends ArrayAdapter<Integer> {
@@ -110,25 +119,22 @@ public class SystemFragment extends ListFragment {
             viewHolder.workImageAndWebsiteLauncher.setVisibility(View.GONE);
 
             // update the item view
-            updateItemViewVisibliltyAndText(viewHolder.name,systemReference.getSystemListItemName(position));
-            updateItemViewVisibliltyAndText(viewHolder.revision,systemReference.getSystemListItemRevision(position));
-            updateItemViewVisibliltyAndText(viewHolder.url,systemReference.getSystemListItemUrl(position));
-            updateItemViewVisibliltyAndText(viewHolder.releaseDate,systemReference.getSystemListItemReleaseDate(position));
-            updateItemViewVisibliltyAndText(viewHolder.condition,systemReference.getSystemListItemCondition(position));
-            updateItemViewVisibliltyAndText(viewHolder.quantity,systemReference.getSystemListItemQuantity(position));
-            updateItemViewVisibliltyAndText(viewHolder.description,systemReference.getSystemListItemDescription(position));
-            updateItemViewVisibliltyAndText(viewHolder.systemRequirements,systemReference.getSystemListItemSystemRequirements(position));
+            updateItemViewVisibliltyAndText(viewHolder.name, systemReference.getSystemListItemName(position));
+            updateItemViewVisibliltyAndText(viewHolder.revision, systemReference.getSystemListItemRevision(position));
+            updateItemViewVisibliltyAndText(viewHolder.url, systemReference.getSystemListItemUrl(position));
+            updateItemViewVisibliltyAndText(viewHolder.releaseDate, systemReference.getSystemListItemReleaseDate(position));
+            updateItemViewVisibliltyAndText(viewHolder.condition, systemReference.getSystemListItemCondition(position));
+            updateItemViewVisibliltyAndText(viewHolder.quantity, systemReference.getSystemListItemQuantity(position));
+            updateItemViewVisibliltyAndText(viewHolder.description, systemReference.getSystemListItemDescription(position));
+            updateItemViewVisibliltyAndText(viewHolder.systemRequirements, systemReference.getSystemListItemSystemRequirements(position));
 
 
             String baseURL = "";
 
-            try
-            {
+            try {
                 URL url = new URL(systemReference.getSystemListItemUrl(position));
                 baseURL = url.getProtocol() + "://" + url.getHost();
-            }
-            catch (MalformedURLException e)
-            {
+            } catch (MalformedURLException e) {
                 // do something.. or not
             }
 
@@ -138,15 +144,15 @@ public class SystemFragment extends ListFragment {
 
 
             // go to website if exists when you click on it
-            if(!TextUtils.isEmpty(systemReference.getSystemListItemUrl(position))) {
-                    viewHolder.url.setOnClickListener(new View.OnClickListener() {
-                        @Override
-                        public void onClick(View v) {
-                            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(systemReference.getSystemListItemUrl(position)));
-                            startActivity(browserIntent);
-                        }
-                    });
-            }else {
+            if (!TextUtils.isEmpty(systemReference.getSystemListItemUrl(position))) {
+                viewHolder.url.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(systemReference.getSystemListItemUrl(position)));
+                        startActivity(browserIntent);
+                    }
+                });
+            } else {
                 viewHolder.url.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -159,17 +165,6 @@ public class SystemFragment extends ListFragment {
             return convertView;
         }
     }
-
-    private void updateItemViewVisibliltyAndText(TextView view, String text) {
-        if(TextUtils.isEmpty(text)) {
-            view.setVisibility(View.GONE);
-            view.setText("");
-        }else {
-            view.setText(text);
-            view.setVisibility(View.VISIBLE);
-        }
-    }
-
 
     /**
      * convenience viewHolder pattern

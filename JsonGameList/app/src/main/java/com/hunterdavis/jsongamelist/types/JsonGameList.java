@@ -1,4 +1,3 @@
-
 package com.hunterdavis.jsongamelist.types;
 
 import java.util.ArrayList;
@@ -8,27 +7,26 @@ import java.util.Map;
 
 public class JsonGameList {
 
-    Basics basics;
     public List<System> systems = new ArrayList<>();
+    Basics basics;
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
 
     public int getSystemsCount() {
-        if(systems != null) {
+        if (systems != null) {
             return systems.size();
         }
         return 0;
     }
 
 
-
     public String getSystemName(int systemOffset) {
 
-        if(systems == null) {
+        if (systems == null) {
             return "";
         }
 
-        if(systems.size() <= systemOffset) {
+        if (systems.size() <= systemOffset) {
             return "";
         }
 
@@ -36,20 +34,15 @@ public class JsonGameList {
     }
 
 
-
     /**
-     * 
-     * @return
-     *     The basics
+     * @return The basics
      */
     public Basics getBasics() {
         return basics;
     }
 
     /**
-     * 
-     * @param basics
-     *     The basics
+     * @param basics The basics
      */
     public void setBasics(Basics basics) {
         this.basics = basics;

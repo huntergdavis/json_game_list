@@ -8,8 +8,13 @@ import com.hunterdavis.jsongamelist.types.JsonGameList;
 public class JsonUpdatedEvent {
 
     JsonGameList gameList;
+    boolean loadFailed = false;
 
     public JsonUpdatedEvent(JsonGameList gameList) {
         this.gameList = gameList;
+    }
+
+    public JsonUpdatedEvent() {
+        loadFailed = true;
     }
 }

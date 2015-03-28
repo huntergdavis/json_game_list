@@ -1,4 +1,3 @@
-
 package com.hunterdavis.jsongamelist.types;
 
 import java.util.ArrayList;
@@ -20,162 +19,126 @@ public class Basics {
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**
-     * 
-     * @return
-     *     The name
+     * @return The name
      */
     public String getName() {
         return name;
     }
 
     /**
-     * 
-     * @param name
-     *     The name
+     * @param name The name
      */
     public void setName(String name) {
         this.name = name;
     }
 
     /**
-     * 
-     * @return
-     *     The label
+     * @return The label
      */
     public String getLabel() {
         return label;
     }
 
     /**
-     * 
-     * @param label
-     *     The label
+     * @param label The label
      */
     public void setLabel(String label) {
         this.label = label;
     }
 
     /**
-     * 
-     * @return
-     *     The picture
+     * @return The picture
      */
     public String getPicture() {
         return picture;
     }
 
     /**
-     * 
-     * @param picture
-     *     The picture
+     * @param picture The picture
      */
     public void setPicture(String picture) {
         this.picture = picture;
     }
 
     /**
-     * 
-     * @return
-     *     The email
+     * @return The email
      */
     public String getEmail() {
         return email;
     }
 
     /**
-     * 
-     * @param email
-     *     The email
+     * @param email The email
      */
     public void setEmail(String email) {
         this.email = email;
     }
 
     /**
-     * 
-     * @return
-     *     The phone
+     * @return The phone
      */
     public String getPhone() {
         return phone;
     }
 
     /**
-     * 
-     * @param phone
-     *     The phone
+     * @param phone The phone
      */
     public void setPhone(String phone) {
         this.phone = phone;
     }
 
     /**
-     * 
-     * @return
-     *     The website
+     * @return The website
      */
     public String getWebsite() {
         return website;
     }
 
     /**
-     * 
-     * @param website
-     *     The website
+     * @param website The website
      */
     public void setWebsite(String website) {
         this.website = website;
     }
 
     /**
-     * 
-     * @return
-     *     The summary
+     * @return The summary
      */
     public String getSummary() {
         return summary;
     }
 
     /**
-     * 
-     * @param summary
-     *     The summary
+     * @param summary The summary
      */
     public void setSummary(String summary) {
         this.summary = summary;
     }
 
     /**
-     * 
-     * @return
-     *     The location
+     * @return The location
      */
     public Location getLocation() {
         return location;
     }
 
     /**
-     * 
-     * @param location
-     *     The location
+     * @param location The location
      */
     public void setLocation(Location location) {
         this.location = location;
     }
 
     /**
-     * 
-     * @return
-     *     The systems
+     * @return The systems
      */
     public List<System> getSystems() {
         return systems;
     }
 
     /**
-     * 
-     * @param systems
-     *     The systems
+     * @param systems The systems
      */
     public void setSystems(List<System> systems) {
         this.systems = systems;

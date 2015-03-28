@@ -1,4 +1,3 @@
-
 package com.hunterdavis.jsongamelist.types;
 
 import android.text.TextUtils;
@@ -29,134 +28,106 @@ public class SystemInfo {
     }
 
     public String returnIfNotNull(String name) {
-        if(TextUtils.isEmpty(name)) {
+        if (TextUtils.isEmpty(name)) {
             return "";
-        }else {
+        } else {
             return name + "\n";
         }
     }
 
     /**
-     * 
-     * @return
-     *     The cpu
+     * @return The cpu
      */
     public String getCpu() {
         return cpu;
     }
 
     /**
-     * 
-     * @param cpu
-     *     The cpu
+     * @param cpu The cpu
      */
     public void setCpu(String cpu) {
         this.cpu = cpu;
     }
 
     /**
-     * 
-     * @return
-     *     The cpuSpeed
+     * @return The cpuSpeed
      */
     public String getCpuSpeed() {
         return cpuSpeed;
     }
 
     /**
-     * 
-     * @param cpuSpeed
-     *     The cpuSpeed
+     * @param cpuSpeed The cpuSpeed
      */
     public void setCpuSpeed(String cpuSpeed) {
         this.cpuSpeed = cpuSpeed;
     }
 
     /**
-     * 
-     * @return
-     *     The cpuRam
+     * @return The cpuRam
      */
     public String getCpuRam() {
         return cpuRam;
     }
 
     /**
-     * 
-     * @param cpuRam
-     *     The cpuRam
+     * @param cpuRam The cpuRam
      */
     public void setCpuRam(String cpuRam) {
         this.cpuRam = cpuRam;
     }
 
     /**
-     * 
-     * @return
-     *     The gpu
+     * @return The gpu
      */
     public String getGpu() {
         return gpu;
     }
 
     /**
-     * 
-     * @param gpu
-     *     The gpu
+     * @param gpu The gpu
      */
     public void setGpu(String gpu) {
         this.gpu = gpu;
     }
 
     /**
-     * 
-     * @return
-     *     The gpuRam
+     * @return The gpuRam
      */
     public String getGpuRam() {
         return gpuRam;
     }
 
     /**
-     * 
-     * @param gpuRam
-     *     The gpuRam
+     * @param gpuRam The gpuRam
      */
     public void setGpuRam(String gpuRam) {
         this.gpuRam = gpuRam;
     }
 
     /**
-     * 
-     * @return
-     *     The operatingSystem
+     * @return The operatingSystem
      */
     public String getOperatingSystem() {
         return operatingSystem;
     }
 
     /**
-     * 
-     * @param operatingSystem
-     *     The operatingSystem
+     * @param operatingSystem The operatingSystem
      */
     public void setOperatingSystem(String operatingSystem) {
         this.operatingSystem = operatingSystem;
     }
 
     /**
-     * 
-     * @return
-     *     The operatingSystemVersion
+     * @return The operatingSystemVersion
      */
     public String getOperatingSystemVersion() {
         return operatingSystemVersion;
     }
 
     /**
-     * 
-     * @param operatingSystemVersion
-     *     The operatingSystemVersion
+     * @param operatingSystemVersion The operatingSystemVersion
      */
     public void setOperatingSystemVersion(String operatingSystemVersion) {
         this.operatingSystemVersion = operatingSystemVersion;

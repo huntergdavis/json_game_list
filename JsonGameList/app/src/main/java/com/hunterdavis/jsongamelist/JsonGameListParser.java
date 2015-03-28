@@ -3,7 +3,6 @@ package com.hunterdavis.jsongamelist;
 import android.content.Context;
 import android.content.res.AssetManager;
 
-
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
 import com.hunterdavis.jsongamelist.types.JsonGameList;
@@ -19,6 +18,7 @@ import java.io.UnsupportedEncodingException;
 public class JsonGameListParser {
     /**
      * parse Hunter's current resume from the assets folder
+     *
      * @param context
      * @return
      */
@@ -31,17 +31,19 @@ public class JsonGameListParser {
 
     /**
      * parse Hunter's current resume from the assets folder
+     *
      * @param context
      * @return
      */
-    public static JsonGameList parseStringGameList(Context context, String listToParse) throws IOException {
+    public static JsonGameList parseStringGameList(String listToParse) throws IOException {
         Gson gson = new Gson();
-        JsonGameList gameList = gson.fromJson(listToParse,JsonGameList.class);
+        JsonGameList gameList = gson.fromJson(listToParse, JsonGameList.class);
         return gameList;
     }
 
     /**
      * parse an inputstream for a Resume object
+     *
      * @param input
      * @return
      */
