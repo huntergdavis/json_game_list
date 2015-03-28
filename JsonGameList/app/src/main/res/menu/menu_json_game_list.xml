@@ -6,5 +6,8 @@
         android:orderInCategory="100" app:showAsAction="never" />
     <item android:id="@+id/action_github" android:title="@string/load_hunter_github"
         android:orderInCategory="101" app:showAsAction="never" />
+    <item android:id="@+id/action_url" android:title="@string/load_url"
+        android:orderInCategory="101" app:showAsAction="never" />
+
 
 </menu>

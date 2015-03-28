@@ -1,6 +1,8 @@
 package com.hunterdavis.jsongamelist;
 
+import android.app.AlertDialog;
 import android.content.ContentResolver;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -11,6 +13,8 @@ import android.support.v7.app.ActionBarActivity;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.Toast;
 
 import com.hunterdavis.jsongamelist.types.JsonGameList;
 import com.squareup.okhttp.Cache;
@@ -158,6 +162,21 @@ public class JsonGameListActivity extends ActionBarActivity implements ActionBar
             case R.id.action_github:
                 new JsonDownloadTask().execute("https://raw.githubusercontent.com/huntergdavis/json_game_list/master/JsonGameList/app/src/main/assets/gamelist.json");
                 break;
+            case R.id.action_url:
+                final AlertDialog alertDialog = new AlertDialog.Builder(this).create();
+                final EditText input = new EditText(this);
+                input.setHint("enter url here");
+                alertDialog.setTitle("Download Gamelist From URL");
+                alertDialog.setMessage("Enter GameList URL");
+                alertDialog.setButton(DialogInterface.BUTTON_POSITIVE,"OK", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        new JsonDownloadTask().execute(input.getText().toString());
+                    }
+                });
+                alertDialog.setView(input);
+                alertDialog.show();
+                break;
         }
 
 
@@ -185,6 +204,8 @@ public class JsonGameListActivity extends ActionBarActivity implements ActionBar
             gameList = event.gameList;
             ignoreIntent = true;
             JsonGameListActivity.this.recreate();
+        }else if (event.loadFailed) {
+            Toast.makeText(this, R.string.load_failed,Toast.LENGTH_SHORT);
         }
     }
 }
