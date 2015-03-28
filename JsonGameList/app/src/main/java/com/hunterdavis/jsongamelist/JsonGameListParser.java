@@ -30,6 +30,17 @@ public class JsonGameListParser {
     }
 
     /**
+     * parse Hunter's current resume from the assets folder
+     * @param context
+     * @return
+     */
+    public static JsonGameList parseStringGameList(Context context, String listToParse) throws IOException {
+        Gson gson = new Gson();
+        JsonGameList gameList = gson.fromJson(listToParse,JsonGameList.class);
+        return gameList;
+    }
+
+    /**
      * parse an inputstream for a Resume object
      * @param input
      * @return

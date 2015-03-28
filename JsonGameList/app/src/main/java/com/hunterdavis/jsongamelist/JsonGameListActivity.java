@@ -15,6 +15,9 @@ import android.view.MenuItem;
 import com.hunterdavis.jsongamelist.types.JsonGameList;
 import com.squareup.okhttp.Cache;
 import com.squareup.okhttp.OkHttpClient;
+import com.squareup.otto.Bus;
+import com.squareup.otto.Subscribe;
+import com.squareup.otto.ThreadEnforcer;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -33,11 +36,15 @@ public class JsonGameListActivity extends ActionBarActivity implements ActionBar
     private static boolean ignoreIntent = false;
     public static JsonGameList gameList = null;
 
+    // our ui update bus
+    public static Bus bus = new Bus(ThreadEnforcer.MAIN);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_json_game_list);
 
+        bus.register(this);
 
         Intent intent = getIntent();
         String action = intent.getAction();
@@ -140,18 +147,22 @@ public class JsonGameListActivity extends ActionBarActivity implements ActionBar
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_hunter) {
+        switch(item.getItemId()) {
+            case R.id.action_hunter:
+                try {
+                    gameList = JsonGameListParser.parseHuntersGameList(this);
+                    bus.post(new JsonUpdatedEvent(gameList));
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
 
-            try {
-                gameList = JsonGameListParser.parseHuntersGameList(this);
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-
-            // recreate everything
-            ignoreIntent = true;
-            this.recreate();
+               break;
+            case R.id.action_github:
+                new JsonDownloadTask().doInBackground("https://raw.githubusercontent.com/huntergdavis/json_game_list/master/JsonGameList/app/src/main/assets/gamelist.json");
+                break;
         }
+
+
 
         return super.onOptionsItemSelected(item);
     }
@@ -169,5 +180,14 @@ public class JsonGameListActivity extends ActionBarActivity implements ActionBar
 
     @Override
     public void onTabReselected(ActionBar.Tab tab, FragmentTransaction fragmentTransaction) {
+    }
+
+    @Subscribe
+    public void updateJson(JsonUpdatedEvent event) {
+        if(event.gameList != null) {
+            gameList = event.gameList;
+            ignoreIntent = true;
+            this.recreate();
+        }
     }
 }

@@ -4,4 +4,7 @@
     tools:context="com.hunterdavis.jsongamelist.JsonGameListActivity">
     <item android:id="@+id/action_hunter" android:title="@string/load_hunter"
         android:orderInCategory="100" app:showAsAction="never" />
+    <item android:id="@+id/action_github" android:title="@string/load_hunter_github"
+        android:orderInCategory="101" app:showAsAction="never" />
+
 </menu>
