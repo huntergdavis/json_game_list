@@ -16,6 +16,7 @@ public class Basics {
     private String summary;
     private Location location;
     private List<System> systems = new ArrayList<System>();
+    public ArrayList<String> videos = new ArrayList<String>();
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**

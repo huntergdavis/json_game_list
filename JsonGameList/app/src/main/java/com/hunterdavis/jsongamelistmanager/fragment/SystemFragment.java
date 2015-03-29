@@ -18,6 +18,7 @@ import android.widget.TextView;
 import com.hunterdavis.jsongamelistmanager.IconDownloadTask;
 import com.hunterdavis.jsongamelistmanager.JsonGameListActivity;
 import com.hunterdavis.jsongamelistmanager.R;
+import com.hunterdavis.jsongamelistmanager.YoutubePreviewDownloadTask;
 import com.hunterdavis.jsongamelistmanager.types.System;
 
 import java.net.MalformedURLException;
@@ -113,6 +114,7 @@ public class SystemFragment extends ListFragment {
                 viewHolder.workImageAndWebsiteLauncher = (ImageView) convertView.findViewById(R.id.websiteIconimageButton);
                 viewHolder.duplicate = (TextView) convertView.findViewById(R.id.duplicate);
                 viewHolder.background = (GridLayout) convertView.findViewById(R.id.background);
+                viewHolder.youtube = (ImageView) convertView.findViewById(R.id.youtube);
                 convertView.setTag(viewHolder);
             } else {
                 // recycle the already inflated view
@@ -133,6 +135,7 @@ public class SystemFragment extends ListFragment {
             updateItemViewVisibliltyAndText(viewHolder.systemRequirements, systemReference.getSystemListItemSystemRequirements(position));
             updateItemViewVisibliltyAndText(viewHolder.duplicate, systemReference.getSystemListItemDuplicates(position, getString(R.string.duplicate)));
 
+
             // special case - if duplicate then set background as RED
             if(viewHolder.duplicate.getVisibility() == View.GONE) {
                 viewHolder.background.setBackgroundColor(getResources().getColor(R.color.background_floating_material_light));
@@ -140,8 +143,8 @@ public class SystemFragment extends ListFragment {
                 viewHolder.background.setBackgroundColor(Color.RED);
             }
 
+            // our favico downloading task
             String baseURL = "";
-
             try {
                 URL url = new URL(systemReference.getSystemListItemUrl(position));
                 baseURL = url.getProtocol() + "://" + url.getHost();
@@ -149,9 +152,35 @@ public class SystemFragment extends ListFragment {
                 // do something.. or not
             }
 
-            final String favIconString = baseURL + "/favicon.ico";
+            viewHolder.workImageAndWebsiteLauncher.setVisibility(View.GONE);
+            if(!TextUtils.isEmpty(baseURL)) {
+                final String favIconString = baseURL + "/favicon.ico";
+                viewHolder.workImageAndWebsiteLauncher.setTag(systemReference.getSystemListItemName(position));
+                new IconDownloadTask(viewHolder.workImageAndWebsiteLauncher, systemReference.getSystemListItemName(position)).execute(favIconString);
+            }
 
-            new IconDownloadTask(viewHolder.workImageAndWebsiteLauncher).execute(favIconString);
+
+            // the youtube preview image
+            viewHolder.youtube.setVisibility(View.GONE);
+            String firstYoutubeUrl = systemReference.getSystemListYoutube(position);
+            if(!TextUtils.isEmpty(firstYoutubeUrl)) {
+                viewHolder.youtube.setTag(systemReference.getSystemListItemName(position));
+                new YoutubePreviewDownloadTask(getActivity(),viewHolder.youtube, systemReference.getSystemListItemName(position)).execute(firstYoutubeUrl);
+                viewHolder.youtube.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(systemReference.getSystemListYoutube(position)));
+                        startActivity(browserIntent);
+                    }
+                });
+            }else {
+                viewHolder.youtube.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //nada
+                    }
+                });
+            }
 
 
             // go to website if exists when you click on it
@@ -191,6 +220,7 @@ public class SystemFragment extends ListFragment {
         TextView description;
         TextView systemRequirements;
         ImageView workImageAndWebsiteLauncher;
+        ImageView youtube;
         GridLayout background;
 
     }

@@ -13,7 +13,8 @@
             "city": "Seattle",
             "countryCode": "US",
             "region": "Washington"
-        }
+        },
+	"videos" : [""]
     },
     "systems": [
         {
@@ -38,7 +39,8 @@
                         "gpuRam": "",
                         "operatingSystem": "",
                         "operatingSystemVersion": ""
-                    }
+                    },
+		    "videos" : [""]
                 }
             ],
             "accessories": [
@@ -61,7 +63,8 @@
                             "operatingSystem": "",
                             "operatingSystemVersion": ""
                         }
-                    }
+                    },
+		    "videos" : [""]
                 },
                 {
                     "name": "Component Video Cables",
@@ -82,7 +85,8 @@
                             "operatingSystem": "",
                             "operatingSystemVersion": ""
                         }
-                    }
+                    },
+		    "videos" : [""]
                 }
             ],
             "games": [
@@ -107,9 +111,11 @@
                             "operatingSystem": "",
                             "operatingSystemVersion": ""
                         }
-                    }
+                    },
+		    "videos" : [""]
                 }
-            ]
+            ],
+            "videos" : [""]
         }
     ]
 }

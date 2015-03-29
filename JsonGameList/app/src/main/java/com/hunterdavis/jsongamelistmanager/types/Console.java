@@ -1,5 +1,6 @@
 package com.hunterdavis.jsongamelistmanager.types;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,6 +14,7 @@ public class Console {
     private Integer quantity;
     private String description;
     private SystemInfo systemInfo;
+    public ArrayList<String> videos = new ArrayList<String>();
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**

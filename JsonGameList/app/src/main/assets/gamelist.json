@@ -41,7 +41,8 @@
             "games": [
                 {
                     "name": "The Legend Of Zelda: Majora's Mask 3D",
-                    "digitalDistribution": false
+                    "digitalDistribution": false,
+                    "videos" : ["https://www.youtube.com/watch?v=Hj6cXziHpjQ"]
                 },
                 {
                     "name": "Gardening Mama 2: Forrest Friends",
@@ -93,6 +94,18 @@
                 },
                 {
                     "name": "CrossWords Plus",
+                    "digitalDistribution": false
+                },
+                {
+                    "name": "Donkey Kong Country Returns 3D",
+                    "digitalDistribution": false
+                },
+                {
+                    "name": "Animal Crossing: New Leaf",
+                    "digitalDistribution": false
+                },
+                {
+                    "name": "New Super Mario Bros. 2",
                     "digitalDistribution": false
                 },
                 {
@@ -306,6 +319,9 @@
             "games": [
                 {
                     "name": "Amped 3"
+                },
+                {
+                    "name": "Gears of War: Judgement"
                 },
                 {
                     "name": "SoulCalibur IV"

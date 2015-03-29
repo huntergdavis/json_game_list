@@ -20,10 +20,11 @@ import java.net.URL;
  */
 public class IconDownloadTask extends AsyncTask<String, Void, Bitmap> {
     private final WeakReference imageViewReference;
+    private String tag;
 
-
-    public IconDownloadTask(ImageView imageView) {
+    public IconDownloadTask(ImageView imageView, String tag) {
         imageViewReference = new WeakReference(imageView);
+        this.tag = tag;
     }
 
     @Override
@@ -43,10 +44,11 @@ public class IconDownloadTask extends AsyncTask<String, Void, Bitmap> {
         if (imageViewReference != null) {
             ImageView imageView = (ImageView) imageViewReference.get();
             if (imageView != null) {
-
-                if (bitmap != null) {
-                    imageView.setImageBitmap(bitmap);
-                    imageView.setVisibility(View.VISIBLE);
+                if(imageView.getTag() == tag) {
+                    if (bitmap != null) {
+                        imageView.setImageBitmap(bitmap);
+                        imageView.setVisibility(View.VISIBLE);
+                    }
                 }
             }
 

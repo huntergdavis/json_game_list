@@ -1,5 +1,6 @@
 package com.hunterdavis.jsongamelistmanager.types;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,6 +16,7 @@ public class Game {
     private Boolean digitalDistribution;
     private String expirationDate;
     private SystemRequirements systemRequirements = new SystemRequirements();
+    public ArrayList<String> videos = new ArrayList<String>();
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     /**

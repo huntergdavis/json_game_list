@@ -18,6 +18,7 @@ public class System {
     public List<Console> consoles = new ArrayList<Console>();
     public List<Accessory> accessories = new ArrayList<Accessory>();
     public List<Game> games = new ArrayList<Game>();
+    public ArrayList<String> videos = new ArrayList<String>();
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public int getListItemCount() {
@@ -57,6 +58,33 @@ public class System {
             return games.get(itemOffset - 1 - consoles.size() - accessories.size()).getName();
         }
     }
+
+    public String getSystemListYoutube(int itemOffset) {
+        if (itemOffset == 0) {
+            // self case
+            if(videos.size() > 0) {
+                return videos.get(0);
+            }
+        } else if ((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
+            // consoles case
+            if(consoles.get(itemOffset - 1).videos.size() > 0) {
+                return consoles.get(itemOffset - 1).videos.get(0);
+            }
+        } else if ((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
+            // accessories case
+            if(accessories.get(itemOffset - 1 - consoles.size()).videos.size() > 0) {
+                return accessories.get(itemOffset - 1 - consoles.size()).videos.get(0);
+            }
+        } else {
+            // games case
+            if(games.get(itemOffset - 1 - consoles.size() - accessories.size()).videos.size() > 0) {
+                return games.get(itemOffset - 1 - consoles.size() - accessories.size()).videos.get(0);
+            }
+        }
+        return "";
+    }
+
+
 
     public String getSystemListItemRevision(int itemOffset) {
         if (itemOffset == 0) {
