@@ -313,7 +313,8 @@
                         "gpuRam": "",
                         "operatingSystem": "",
                         "operatingSystemVersion": ""
-                    }
+                    },
+                    "videos" : ["https://www.youtube.com/watch?v=-SOOGYYsduE"]
                 }
             ],
             "games": [
