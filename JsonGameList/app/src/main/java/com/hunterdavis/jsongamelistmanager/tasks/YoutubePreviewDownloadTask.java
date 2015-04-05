@@ -1,4 +1,4 @@
-package com.hunterdavis.jsongamelistmanager;
+package com.hunterdavis.jsongamelistmanager.tasks;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -10,6 +10,7 @@ import android.widget.ImageView;
 
 import com.google.gson.Gson;
 import com.google.gson.stream.JsonReader;
+import com.hunterdavis.jsongamelistmanager.JsonGameListActivity;
 import com.hunterdavis.jsongamelistmanager.types.JsonGameList;
 import com.hunterdavis.jsongamelistmanager.types.Youtube;
 import com.squareup.okhttp.Request;

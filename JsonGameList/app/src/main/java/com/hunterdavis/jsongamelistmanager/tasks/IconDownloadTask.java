@@ -1,4 +1,4 @@
-package com.hunterdavis.jsongamelistmanager;
+package com.hunterdavis.jsongamelistmanager.tasks;
 
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.hunterdavis.jsongamelistmanager.JsonGameListActivity;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 

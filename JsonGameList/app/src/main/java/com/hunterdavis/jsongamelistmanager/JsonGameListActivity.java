@@ -16,6 +16,7 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.hunterdavis.jsongamelistmanager.tasks.JsonDownloadTask;
 import com.hunterdavis.jsongamelistmanager.types.JsonGameList;
 import com.squareup.okhttp.Cache;
 import com.squareup.okhttp.OkHttpClient;

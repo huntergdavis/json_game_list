@@ -15,10 +15,11 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.hunterdavis.jsongamelistmanager.IconDownloadTask;
+import com.hunterdavis.jsongamelistmanager.tasks.DuckDuckGoTask;
+import com.hunterdavis.jsongamelistmanager.tasks.IconDownloadTask;
 import com.hunterdavis.jsongamelistmanager.JsonGameListActivity;
 import com.hunterdavis.jsongamelistmanager.R;
-import com.hunterdavis.jsongamelistmanager.YoutubePreviewDownloadTask;
+import com.hunterdavis.jsongamelistmanager.tasks.YoutubePreviewDownloadTask;
 import com.hunterdavis.jsongamelistmanager.types.System;
 
 import java.net.MalformedURLException;
@@ -114,7 +115,7 @@ public class SystemFragment extends ListFragment {
                 viewHolder.workImageAndWebsiteLauncher = (ImageView) convertView.findViewById(R.id.websiteIconimageButton);
                 viewHolder.duplicate = (TextView) convertView.findViewById(R.id.duplicate);
                 viewHolder.background = (GridLayout) convertView.findViewById(R.id.background);
-                viewHolder.youtube = (ImageView) convertView.findViewById(R.id.youtube);
+                viewHolder.imagePreview = (ImageView) convertView.findViewById(R.id.youtube);
                 convertView.setTag(viewHolder);
             } else {
                 // recycle the already inflated view
@@ -160,13 +161,13 @@ public class SystemFragment extends ListFragment {
             }
 
 
-            // the youtube preview image
-            viewHolder.youtube.setVisibility(View.GONE);
+            // the imagePreview or google image search preview image
+            viewHolder.imagePreview.setVisibility(View.GONE);
+            viewHolder.imagePreview.setTag(systemReference.getSystemListItemName(position));
             String firstYoutubeUrl = systemReference.getSystemListYoutube(position);
             if(!TextUtils.isEmpty(firstYoutubeUrl)) {
-                viewHolder.youtube.setTag(systemReference.getSystemListItemName(position));
-                new YoutubePreviewDownloadTask(getActivity(),viewHolder.youtube, systemReference.getSystemListItemName(position)).execute(firstYoutubeUrl);
-                viewHolder.youtube.setOnClickListener(new View.OnClickListener() {
+                new YoutubePreviewDownloadTask(getActivity(),viewHolder.imagePreview, systemReference.getSystemListItemName(position)).execute(firstYoutubeUrl);
+                viewHolder.imagePreview.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(systemReference.getSystemListYoutube(position)));
@@ -174,13 +175,22 @@ public class SystemFragment extends ListFragment {
                     }
                 });
             }else {
-                viewHolder.youtube.setOnClickListener(new View.OnClickListener() {
+                viewHolder.imagePreview.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         //nada
                     }
                 });
             }
+
+
+            viewHolder.name.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    new DuckDuckGoTask(getActivity(),viewHolder.imagePreview,viewHolder.description, systemReference.getSystemListItemName(position)).execute();
+
+                }
+            });
 
 
             // go to website if exists when you click on it
@@ -220,7 +230,7 @@ public class SystemFragment extends ListFragment {
         TextView description;
         TextView systemRequirements;
         ImageView workImageAndWebsiteLauncher;
-        ImageView youtube;
+        ImageView imagePreview;
         GridLayout background;
 
     }

@@ -1,7 +1,10 @@
-package com.hunterdavis.jsongamelistmanager;
+package com.hunterdavis.jsongamelistmanager.tasks;
 
 import android.os.AsyncTask;
 
+import com.hunterdavis.jsongamelistmanager.JsonGameListActivity;
+import com.hunterdavis.jsongamelistmanager.JsonGameListParser;
+import com.hunterdavis.jsongamelistmanager.JsonUpdatedEvent;
 import com.hunterdavis.jsongamelistmanager.types.JsonGameList;
 import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
