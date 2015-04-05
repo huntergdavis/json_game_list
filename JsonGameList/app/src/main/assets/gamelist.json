@@ -761,7 +761,10 @@
                 {
                     "name": "Lego Batman 3: Beyond Gotham"
                 },
-
+                {
+                    "name": "Donkey Kong Country: Tropical Freeze",
+                    "digitalDistribution": true
+                },
                 {
                     "name": "Hyrule Warriors"
                 },
