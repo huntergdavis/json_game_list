@@ -14,7 +14,7 @@ public class Accessory extends ObjectWithAdditionalProperty {
     public String description;
     public SystemRequirements systemRequirements = new SystemRequirements();
     public ArrayList<String> videos = new ArrayList<String>();
-    public String logoImage;
+    public String logo;
 
 
     /**

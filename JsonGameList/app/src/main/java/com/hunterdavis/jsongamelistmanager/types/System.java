@@ -26,7 +26,7 @@ public class System extends ObjectWithAdditionalProperty{
     // update for compatibility with steam gamelist data
     public String steamID64;
     public String steamID;
-    public String logoImage;
+    public String logo;
 
     public int getListItemCount() {
 
@@ -268,16 +268,16 @@ public class System extends ObjectWithAdditionalProperty{
     public String getSystemListItemLogoImage(int itemOffset) {
         if (itemOffset == 0) {
             // self case
-            return logoImage;
+            return logo;
         } else if ((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
             // consoles case
-            return consoles.get(itemOffset - 1).logoImage;
+            return consoles.get(itemOffset - 1).logo;
         } else if ((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
             // accessories case
-            return accessories.get(itemOffset - 1 - consoles.size()).logoImage;
+            return accessories.get(itemOffset - 1 - consoles.size()).logo;
         } else {
             // games case
-            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).logoImage;
+            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).logo;
         }
     }
 

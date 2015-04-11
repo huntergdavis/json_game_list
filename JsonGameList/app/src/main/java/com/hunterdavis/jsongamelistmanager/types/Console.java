@@ -14,7 +14,7 @@ public class Console extends ObjectWithAdditionalProperty {
     private String description;
     private SystemInfo systemInfo;
     public ArrayList<String> videos = new ArrayList<String>();
-    public String logoImage;
+    public String logo;
 
 
     /**

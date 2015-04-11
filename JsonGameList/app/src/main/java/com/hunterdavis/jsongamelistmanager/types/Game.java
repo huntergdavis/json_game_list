@@ -18,7 +18,7 @@ public class Game extends ObjectWithAdditionalProperty{
     public ArrayList<String> videos = new ArrayList<String>();
 
     // update for data from steam DB
-    public String logoImage;
+    public String logo;
     public String hoursLastTwoWeeeks;
     public String hoursOnRecord;
     public String statsLink;
