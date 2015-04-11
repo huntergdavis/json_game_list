@@ -192,11 +192,15 @@ public class SystemFragment extends ListFragment {
             }
 
 
+            // default to not gone
+            viewHolder.duckDuckWent = false;
             viewHolder.name.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    new DuckDuckGoTask(getActivity(),viewHolder.imagePreview,viewHolder.description, systemReference.getSystemListItemName(position)).execute();
-
+                    if(viewHolder.duckDuckWent = false) {
+                        new DuckDuckGoTask(getActivity(), viewHolder.imagePreview, viewHolder.description, systemReference.getSystemListItemName(position)).execute();
+                        viewHolder.duckDuckWent = true;
+                    }
                 }
             });
 
@@ -240,6 +244,8 @@ public class SystemFragment extends ListFragment {
         ImageView workImageAndWebsiteLauncher;
         ImageView imagePreview;
         GridLayout background;
+
+        boolean duckDuckWent;
 
     }
 }
