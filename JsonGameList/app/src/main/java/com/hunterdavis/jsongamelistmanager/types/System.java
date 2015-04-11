@@ -1,6 +1,10 @@
 package com.hunterdavis.jsongamelistmanager.types;
 
+import android.content.Context;
+import android.text.TextUtils;
+
 import com.hunterdavis.jsongamelistmanager.JsonGameListParser;
+import com.hunterdavis.jsongamelistmanager.R;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -18,6 +22,11 @@ public class System extends ObjectWithAdditionalProperty{
     public List<Accessory> accessories = new ArrayList<Accessory>();
     public List<Game> games = new ArrayList<Game>();
     public ArrayList<String> videos = new ArrayList<String>();
+
+    // update for compatibility with steam gamelist data
+    public String steamID64;
+    public String steamID;
+    public String logoImage;
 
     public int getListItemCount() {
 
@@ -254,6 +263,81 @@ public class System extends ObjectWithAdditionalProperty{
 
         return "";
     }
+
+
+    public String getSystemListItemLogoImage(int itemOffset) {
+        if (itemOffset == 0) {
+            // self case
+            return logoImage;
+        } else if ((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
+            // consoles case
+            return consoles.get(itemOffset - 1).logoImage;
+        } else if ((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
+            // accessories case
+            return accessories.get(itemOffset - 1 - consoles.size()).logoImage;
+        } else {
+            // games case
+            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).logoImage;
+        }
+    }
+
+    public String getSystemListItemStatsLink(int itemOffset) {
+        if (itemOffset == 0) {
+            // self case
+            return "";
+        } else if ((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
+            // consoles case
+            return "";
+        } else if ((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
+            // accessories case
+            return "";
+        } else {
+            // games case
+            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).statsLink;
+        }
+    }
+
+    public String getSystemListItemGlobalStatsLink(int itemOffset) {
+        if (itemOffset == 0) {
+            // self case
+            return "";
+        } else if ((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
+            // consoles case
+            return "";
+        } else if ((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
+            // accessories case
+            return "";
+        } else {
+            // games case
+            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).statsLink;
+        }
+    }
+
+    public String getSystemListItehoursPlayed(Context context, int itemOffset) {
+        if (itemOffset == 0) {
+            // self case
+            return "";
+        } else if ((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
+            // consoles case
+            return "";
+        } else if ((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
+            // accessories case
+            return "";
+        } else {
+            // games case
+            String hoursPlayed = "";
+            if(!TextUtils.isEmpty(games.get(itemOffset - 1 - consoles.size() - accessories.size()).hoursOnRecord))
+            {
+                hoursPlayed += games.get(itemOffset - 1 - consoles.size() - accessories.size()).hoursOnRecord;
+            }
+
+            if(!TextUtils.isEmpty(games.get(itemOffset - 1 - consoles.size() - accessories.size()).hoursLastTwoWeeeks)) {
+                hoursPlayed  += " (" + games.get(itemOffset - 1 - consoles.size() - accessories.size()).hoursLastTwoWeeeks + " " + context.getString(R.string.last_two_weeks)+ ")";
+            }
+            return hoursPlayed;
+        }
+    }
+
 
     /**
      * @return The url

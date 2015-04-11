@@ -17,6 +17,14 @@ public class Game extends ObjectWithAdditionalProperty{
     private SystemRequirements systemRequirements = new SystemRequirements();
     public ArrayList<String> videos = new ArrayList<String>();
 
+    // update for data from steam DB
+    public String logoImage;
+    public String hoursLastTwoWeeeks;
+    public String hoursOnRecord;
+    public String statsLink;
+    public String globalStatsLink;
+    public String appID;
+
 
     /**
      * @return The revision

@@ -12,5 +12,10 @@
     <string name="duplicate">"Duplicate!"</string>
     <string name="load_hunter_github">load Hunter\'s list From Github</string>
     <string name="load_url">load from URL</string>
+    <string name="last_two_weeks">last two weeks</string>
+    <string name="stats">Stats</string>
+    <string name="global_stats">Global Stats</string>
+
+
 
 </resources>

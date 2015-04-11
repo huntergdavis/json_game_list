@@ -21,6 +21,7 @@ import com.hunterdavis.jsongamelistmanager.JsonGameListActivity;
 import com.hunterdavis.jsongamelistmanager.R;
 import com.hunterdavis.jsongamelistmanager.tasks.YoutubePreviewDownloadTask;
 import com.hunterdavis.jsongamelistmanager.types.System;
+import com.squareup.picasso.Picasso;
 
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -89,6 +90,25 @@ public class SystemFragment extends ListFragment {
         }
     }
 
+    private void updateItemViewVisibliltyAndTextWithUrlAndDefaultText(TextView view, String text, final String url) {
+        if (TextUtils.isEmpty(url)) {
+            view.setVisibility(View.GONE);
+            view.setText("");
+        } else {
+            view.setText(text);
+            view.setVisibility(View.VISIBLE);
+            view.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(browserIntent);
+                }
+            });
+        }
+
+
+    }
+
     private class SystemAdapter extends ArrayAdapter<Integer> {
 
         public SystemAdapter(Context context, List<Integer> items) {
@@ -135,6 +155,14 @@ public class SystemFragment extends ListFragment {
             updateItemViewVisibliltyAndText(viewHolder.description, systemReference.getSystemListItemDescription(position));
             updateItemViewVisibliltyAndText(viewHolder.systemRequirements, systemReference.getSystemListItemSystemRequirements(position));
 
+            // new steam items
+            updateItemViewVisibliltyAndText(viewHolder.hoursPlayed, systemReference.getSystemListItehoursPlayed(getContext(),position));
+
+            updateItemViewVisibliltyAndTextWithUrlAndDefaultText(viewHolder.statsLink,getString(R.string.stats), systemReference.getSystemListItemStatsLink(position));
+            updateItemViewVisibliltyAndTextWithUrlAndDefaultText(viewHolder.globalStatsLink,getString(R.string.global_stats), systemReference.getSystemListItemGlobalStatsLink(position));
+
+
+
             // if duplicate is empty, try cross duplicate, otherwise default to duplicate
             if(TextUtils.isEmpty(systemReference.getSystemListItemDuplicates(position, getString(R.string.duplicate)))) {
                 updateItemViewVisibliltyAndText(viewHolder.duplicate, systemReference.getSystemListItemCrossDuplicates(position, getString(R.string.cross_duplicate)));
@@ -152,20 +180,26 @@ public class SystemFragment extends ListFragment {
                 viewHolder.background.setBackgroundColor(Color.RED);
             }
 
-            // our favico downloading task
-            String baseURL = "";
-            try {
-                URL url = new URL(systemReference.getSystemListItemUrl(position));
-                baseURL = url.getProtocol() + "://" + url.getHost();
-            } catch (MalformedURLException e) {
-                // do something.. or not
-            }
+            // our favico downloading task if no logoImage
+            String logoImage = systemReference.getSystemListItemLogoImage(position);
+            if(TextUtils.isEmpty(logoImage)) {
+                String baseURL = "";
+                try {
+                    URL url = new URL(systemReference.getSystemListItemUrl(position));
+                    baseURL = url.getProtocol() + "://" + url.getHost();
+                } catch (MalformedURLException e) {
+                    // do something.. or not
+                }
 
-            viewHolder.workImageAndWebsiteLauncher.setVisibility(View.GONE);
-            if(!TextUtils.isEmpty(baseURL)) {
-                final String favIconString = baseURL + "/favicon.ico";
-                viewHolder.workImageAndWebsiteLauncher.setTag(systemReference.getSystemListItemName(position));
-                new IconDownloadTask(viewHolder.workImageAndWebsiteLauncher, systemReference.getSystemListItemName(position)).execute(favIconString);
+                viewHolder.workImageAndWebsiteLauncher.setVisibility(View.GONE);
+                if(!TextUtils.isEmpty(baseURL)) {
+                    final String favIconString = baseURL + "/favicon.ico";
+                    viewHolder.workImageAndWebsiteLauncher.setTag(systemReference.getSystemListItemName(position));
+                    new IconDownloadTask(viewHolder.workImageAndWebsiteLauncher, systemReference.getSystemListItemName(position)).execute(favIconString);
+                }
+            }else {
+                viewHolder.workImageAndWebsiteLauncher.setVisibility(View.VISIBLE);
+                Picasso.with(getContext()).load(logoImage).into(viewHolder.workImageAndWebsiteLauncher);
             }
 
 
@@ -192,7 +226,7 @@ public class SystemFragment extends ListFragment {
             }
 
 
-            // default to not gone
+            // default to not duck duck gone
             viewHolder.duckDuckWent = false;
             viewHolder.name.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -244,6 +278,10 @@ public class SystemFragment extends ListFragment {
         ImageView workImageAndWebsiteLauncher;
         ImageView imagePreview;
         GridLayout background;
+
+        TextView hoursPlayed;
+        TextView statsLink;
+        TextView globalStatsLink;
 
         boolean duckDuckWent;
 
