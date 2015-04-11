@@ -237,7 +237,7 @@ public class SystemFragment extends ListFragment {
             viewHolder.name.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    if(viewHolder.duckDuckWent = false) {
+                    if(!viewHolder.duckDuckWent) {
                         new DuckDuckGoTask(getActivity(), viewHolder.imagePreview, viewHolder.description, systemReference.getSystemListItemName(position)).execute();
                         viewHolder.duckDuckWent = true;
                     }
