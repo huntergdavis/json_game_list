@@ -88,18 +88,18 @@ public class JsonGameListParser {
 
         // second loop, mark dupes of dupes
         for (System system : gameList.systems) {
-            updateSetRefAndDupRef(system, systemNamesDupes, systemNamesDupes);
+            updateSetRefAndDupRefSecondPass(system, systemNamesDupes, systemNamesDupes);
 
             for (Console console : system.consoles) {
-                updateSetRefAndDupRef(console, consoleNamesDupes, consoleNamesDupes);
+                updateSetRefAndDupRefSecondPass(console, consoleNamesDupes, consoleNamesDupes);
             }
 
             for (Accessory acc : system.accessories) {
-                updateSetRefAndDupRef(acc, accessoryNamesDupes, accessoryNamesDupes);
+                updateSetRefAndDupRefSecondPass(acc, accessoryNamesDupes, accessoryNamesDupes);
             }
 
             for (Game game : system.games) {
-                updateSetRefAndDupRef(game, gameNamesDupes, gameNamesDupes);
+                updateSetRefAndDupRefSecondPass(game, gameNamesDupes, gameNamesDupes);
                 updateSetRefAndDupRefCrossDupes(game, crossGameNamesDupes, crossGameNamesDupes);
             }
         }
@@ -110,6 +110,12 @@ public class JsonGameListParser {
     public static void updateSetRefAndDupRefCrossDupes(ObjectWithAdditionalProperty oWap, Set<String> setRef, Set<String> dupeRef) {
         if(setRef.contains(oWap.getName())) {
             oWap.setAdditionalProperty(PROPERTY_DUPLICATE_OTHER_CONSOLE,true);
+        }
+    }
+
+    public static void updateSetRefAndDupRefSecondPass(ObjectWithAdditionalProperty oWap, Set<String> setRef, Set<String> dupeRef) {
+        if(setRef.contains(oWap.getName())) {
+            oWap.setAdditionalProperty(PROPERTY_DUPLICATE,true);
         }
     }
 
