@@ -136,6 +136,9 @@ public class SystemFragment extends ListFragment {
                 viewHolder.duplicate = (TextView) convertView.findViewById(R.id.duplicate);
                 viewHolder.background = (GridLayout) convertView.findViewById(R.id.background);
                 viewHolder.imagePreview = (ImageView) convertView.findViewById(R.id.youtube);
+                viewHolder.hoursPlayed = (TextView) convertView.findViewById(R.id.hoursPlayed);
+                viewHolder.statsLink = (TextView) convertView.findViewById(R.id.statsLink);
+                viewHolder.globalStatsLink = (TextView) convertView.findViewById(R.id.globalStatsLink);
                 convertView.setTag(viewHolder);
             } else {
                 // recycle the already inflated view
