@@ -16,7 +16,6 @@ public class Game extends ObjectWithAdditionalProperty{
     private String expirationDate;
     private SystemRequirements systemRequirements = new SystemRequirements();
     public ArrayList<String> videos = new ArrayList<String>();
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
 
     /**

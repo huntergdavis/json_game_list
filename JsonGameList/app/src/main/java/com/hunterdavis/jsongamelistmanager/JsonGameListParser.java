@@ -108,9 +108,8 @@ public class JsonGameListParser {
     }
 
     public static void updateSetRefAndDupRefCrossDupes(ObjectWithAdditionalProperty oWap, Set<String> setRef, Set<String> dupeRef) {
-        if(!setRef.add(oWap.getName())) {
+        if(setRef.contains(oWap.getName())) {
             oWap.setAdditionalProperty(PROPERTY_DUPLICATE_OTHER_CONSOLE,true);
-            dupeRef.add(oWap.getName());
         }
     }
 
