@@ -57,73 +57,82 @@ public class JsonGameListParser {
     private static JsonGameList markDuplicatesInGameList(JsonGameList gameList) {
         Set<String> systemNames = new HashSet<String>();
         Set<String> crossGameNames = new HashSet<String>();
-
-        Set<String> consoleNamesDupes = new HashSet<String>();
-        Set<String> accessoryNamesDupes = new HashSet<String>();
-        Set<String> gameNamesDupes = new HashSet<String>();
         Set<String> crossGameNamesDupes = new HashSet<String>();
         Set<String> systemNamesDupes = new HashSet<String>();
 
 
         // first loop, mark all dupes
         for (System system : gameList.systems) {
-            updateSetRefAndDupRef(system, systemNames, systemNamesDupes);
+            Set<String> consoleNamesDupes = new HashSet<String>();
+            Set<String> accessoryNamesDupes = new HashSet<String>();
+            Set<String> gameNamesDupes = new HashSet<String>();
+
+            setDuplicateAndAddToDupeListIfCollision(system, systemNames, systemNamesDupes);
 
             Set<String> consoleNames = new HashSet<String>();
             for (Console console : system.consoles) {
-                updateSetRefAndDupRef(console, consoleNames, consoleNamesDupes);
+                setDuplicateAndAddToDupeListIfCollision(console, consoleNames, consoleNamesDupes);
             }
 
             Set<String> accessoryNames = new HashSet<String>();
             for (Accessory acc : system.accessories) {
-                updateSetRefAndDupRef(acc, accessoryNames, accessoryNamesDupes);
+                setDuplicateAndAddToDupeListIfCollision(acc, accessoryNames, accessoryNamesDupes);
             }
 
             Set<String> gameNames = new HashSet<String>();
             for (Game game : system.games) {
-                updateSetRefAndDupRef(game, gameNames, gameNamesDupes);
-                updateSetRefAndDupRef(game, crossGameNames, crossGameNamesDupes);
+                setDuplicateAndAddToDupeListIfCollision(game, gameNames, gameNamesDupes);
+                setCrossDuplicateAndAddToDupeListIfCollision(game, crossGameNames, crossGameNamesDupes);
             }
-        }
 
-        // second loop, mark dupes of dupes
-        for (System system : gameList.systems) {
-            updateSetRefAndDupRefSecondPass(system, systemNamesDupes, systemNamesDupes);
-
+            // second loop, mark dupes of dupes
             for (Console console : system.consoles) {
-                updateSetRefAndDupRefSecondPass(console, consoleNamesDupes, consoleNamesDupes);
+                updateSetRefSecondPass(console, consoleNamesDupes);
             }
 
             for (Accessory acc : system.accessories) {
-                updateSetRefAndDupRefSecondPass(acc, accessoryNamesDupes, accessoryNamesDupes);
+                updateSetRefSecondPass(acc, accessoryNamesDupes);
             }
 
             for (Game game : system.games) {
-                updateSetRefAndDupRefSecondPass(game, gameNamesDupes, gameNamesDupes);
-                updateSetRefAndDupRefCrossDupes(game, crossGameNamesDupes, crossGameNamesDupes);
+                updateSetRefSecondPass(game, gameNamesDupes);
+                setCrossDupeIfCollision(game, crossGameNamesDupes);
+            }
+        }
+
+        // second loop, mark dupes of dupes for cross refs
+        for (System system : gameList.systems) {
+            for (Game game : system.games) {
+                setCrossDupeIfCollision(game, crossGameNamesDupes);
             }
         }
 
         return gameList;
     }
 
-    public static void updateSetRefAndDupRefCrossDupes(ObjectWithAdditionalProperty oWap, Set<String> setRef, Set<String> dupeRef) {
+    public static void setCrossDupeIfCollision(ObjectWithAdditionalProperty oWap, Set<String> setRef) {
         if(setRef.contains(oWap.getName())) {
             oWap.setAdditionalProperty(PROPERTY_DUPLICATE_OTHER_CONSOLE,true);
         }
     }
 
-    public static void updateSetRefAndDupRefSecondPass(ObjectWithAdditionalProperty oWap, Set<String> setRef, Set<String> dupeRef) {
+    public static void updateSetRefSecondPass(ObjectWithAdditionalProperty oWap, Set<String> setRef) {
         if(setRef.contains(oWap.getName())) {
             oWap.setAdditionalProperty(PROPERTY_DUPLICATE,true);
         }
     }
 
-    public static void updateSetRefAndDupRef(ObjectWithAdditionalProperty oWap, Set<String> setRef, Set<String> dupeRef) {
+    public static void setDuplicateAndAddToDupeListIfCollision(ObjectWithAdditionalProperty oWap, Set<String> setRef, Set<String> dupeRef) {
         if(!setRef.add(oWap.getName())) {
             oWap.setAdditionalProperty(PROPERTY_DUPLICATE,true);
             dupeRef.add(oWap.getName());
         }
     }
 
+    public static void setCrossDuplicateAndAddToDupeListIfCollision(ObjectWithAdditionalProperty oWap, Set<String> setRef, Set<String> dupeRef) {
+        if(!setRef.add(oWap.getName())) {
+            oWap.setAdditionalProperty(PROPERTY_DUPLICATE_OTHER_CONSOLE,true);
+            dupeRef.add(oWap.getName());
+        }
+    }
 }
