@@ -185,6 +185,7 @@ public class SystemFragment extends ListFragment {
             }
 
             // our favico downloading task if no logoImage
+            String logoImage = systemReference.getSystemListItemLogoImage(position);
             String baseURL = "";
             try {
                 URL url = new URL(systemReference.getSystemListItemUrl(position));
@@ -194,13 +195,12 @@ public class SystemFragment extends ListFragment {
             }
 
             viewHolder.workImageAndWebsiteLauncher.setVisibility(View.GONE);
-            if(!TextUtils.isEmpty(baseURL)) {
+            if(!TextUtils.isEmpty(baseURL) && TextUtils.isEmpty(logoImage)) {
                 final String favIconString = baseURL + "/favicon.ico";
                 viewHolder.workImageAndWebsiteLauncher.setTag(systemReference.getSystemListItemName(position));
                 new IconDownloadTask(viewHolder.workImageAndWebsiteLauncher, systemReference.getSystemListItemName(position)).execute(favIconString);
             }
 
-            String logoImage = systemReference.getSystemListItemLogoImage(position);
             if(TextUtils.isEmpty(logoImage)) {
                 viewHolder.logo.setVisibility(View.GONE);
             }else {
