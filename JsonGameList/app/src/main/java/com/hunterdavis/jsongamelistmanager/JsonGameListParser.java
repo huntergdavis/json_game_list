@@ -56,38 +56,69 @@ public class JsonGameListParser {
 
     private static JsonGameList markDuplicatesInGameList(JsonGameList gameList) {
         Set<String> systemNames = new HashSet<String>();
-        Set<String> crossConsoleNames = new HashSet<String>();
-        Set<String> crossAccessoryNames = new HashSet<String>();
         Set<String> crossGameNames = new HashSet<String>();
 
+        Set<String> consoleNamesDupes = new HashSet<String>();
+        Set<String> accessoryNamesDupes = new HashSet<String>();
+        Set<String> gameNamesDupes = new HashSet<String>();
+        Set<String> crossGameNamesDupes = new HashSet<String>();
+        Set<String> systemNamesDupes = new HashSet<String>();
 
+
+        // first loop, mark all dupes
         for (System system : gameList.systems) {
-            if(!systemNames.add(system.getName())) {
-                system.setAdditionalProperty(PROPERTY_DUPLICATE,true);
-            }
+            updateSetRefAndDupRef(system, systemNames, systemNamesDupes);
 
             Set<String> consoleNames = new HashSet<String>();
             for (Console console : system.consoles) {
-                if(!consoleNames.add(console.getName())) {
-                    console.setAdditionalProperty(PROPERTY_DUPLICATE,true);
-                }
+                updateSetRefAndDupRef(console, consoleNames, consoleNamesDupes);
             }
 
             Set<String> accessoryNames = new HashSet<String>();
             for (Accessory acc : system.accessories) {
-                if(!accessoryNames.add(acc.getName())) {
-                    acc.setAdditionalProperty(PROPERTY_DUPLICATE,true);
-                }
+                updateSetRefAndDupRef(acc, accessoryNames, accessoryNamesDupes);
             }
 
             Set<String> gameNames = new HashSet<String>();
             for (Game game : system.games) {
-                if(!gameNames.add(game.getName())) {
-                    game.setAdditionalProperty(PROPERTY_DUPLICATE,true);
-                }
+                updateSetRefAndDupRef(game, gameNames, gameNamesDupes);
+                updateSetRefAndDupRef(game, crossGameNames, crossGameNamesDupes);
+            }
+        }
+
+        // second loop, mark dupes of dupes
+        for (System system : gameList.systems) {
+            updateSetRefAndDupRef(system, systemNamesDupes, systemNamesDupes);
+
+            for (Console console : system.consoles) {
+                updateSetRefAndDupRef(console, consoleNamesDupes, consoleNamesDupes);
+            }
+
+            for (Accessory acc : system.accessories) {
+                updateSetRefAndDupRef(acc, accessoryNamesDupes, accessoryNamesDupes);
+            }
+
+            for (Game game : system.games) {
+                updateSetRefAndDupRef(game, gameNamesDupes, gameNamesDupes);
+                updateSetRefAndDupRefCrossDupes(game, crossGameNamesDupes, crossGameNamesDupes);
             }
         }
 
         return gameList;
     }
+
+    public static void updateSetRefAndDupRefCrossDupes(ObjectWithAdditionalProperty oWap, Set<String> setRef, Set<String> dupeRef) {
+        if(!setRef.add(oWap.getName())) {
+            oWap.setAdditionalProperty(PROPERTY_DUPLICATE_OTHER_CONSOLE,true);
+            dupeRef.add(oWap.getName());
+        }
+    }
+
+    public static void updateSetRefAndDupRef(ObjectWithAdditionalProperty oWap, Set<String> setRef, Set<String> dupeRef) {
+        if(!setRef.add(oWap.getName())) {
+            oWap.setAdditionalProperty(PROPERTY_DUPLICATE,true);
+            dupeRef.add(oWap.getName());
+        }
+    }
+
 }

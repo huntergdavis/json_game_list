@@ -134,14 +134,19 @@ public class SystemFragment extends ListFragment {
             updateItemViewVisibliltyAndText(viewHolder.quantity, systemReference.getSystemListItemQuantity(position));
             updateItemViewVisibliltyAndText(viewHolder.description, systemReference.getSystemListItemDescription(position));
             updateItemViewVisibliltyAndText(viewHolder.systemRequirements, systemReference.getSystemListItemSystemRequirements(position));
+
+
+            updateItemViewVisibliltyAndText(viewHolder.duplicate, systemReference.getSystemListItemCrossDuplicates(position, getString(R.string.cross_duplicate)));
             updateItemViewVisibliltyAndText(viewHolder.duplicate, systemReference.getSystemListItemDuplicates(position, getString(R.string.duplicate)));
 
 
             // special case - if duplicate then set background as RED
-            if(viewHolder.duplicate.getVisibility() == View.GONE) {
+            if(TextUtils.isEmpty(viewHolder.duplicate.getText().toString())) {
                 viewHolder.background.setBackgroundColor(getResources().getColor(R.color.background_floating_material_light));
-            }else {
+            }else if (viewHolder.duplicate.getText().toString().equalsIgnoreCase(getString(R.string.duplicate))) {
                 viewHolder.background.setBackgroundColor(Color.RED);
+            }else if (viewHolder.duplicate.getText().toString().equalsIgnoreCase(getString(R.string.cross_duplicate))) {
+                viewHolder.background.setBackgroundColor(Color.MAGENTA);
             }
 
             // our favico downloading task

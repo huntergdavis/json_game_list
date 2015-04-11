@@ -9,9 +9,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class System {
+public class System extends ObjectWithAdditionalProperty{
 
-    private String name = "";
     private String url = "";
     private String releaseDate = "";
     private String summary = "";
@@ -19,7 +18,6 @@ public class System {
     public List<Accessory> accessories = new ArrayList<Accessory>();
     public List<Game> games = new ArrayList<Game>();
     public ArrayList<String> videos = new ArrayList<String>();
-    private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public int getListItemCount() {
 
@@ -232,18 +230,29 @@ public class System {
         return "";
     }
 
-    /**
-     * @return The name
-     */
-    public String getName() {
-        return name;
-    }
 
-    /**
-     * @param name The name
-     */
-    public void setName(String name) {
-        this.name = name;
+    public String getSystemListItemCrossDuplicates(int itemOffset, String errorString) {
+        if (itemOffset == 0) {
+            // self case
+            return "";
+        } else if ((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
+            // consoles case
+            if(consoles.get(itemOffset - 1).getAdditionalProperties().containsKey(JsonGameListParser.PROPERTY_DUPLICATE_OTHER_CONSOLE)) {
+                return errorString;
+            }
+        } else if ((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
+            // accessories case
+            if(accessories.get(itemOffset - 1 - consoles.size()).getAdditionalProperties().containsKey(JsonGameListParser.PROPERTY_DUPLICATE_OTHER_CONSOLE)) {
+                return errorString;
+            }
+        } else {
+            // games case
+            if (games.get(itemOffset - 1 - consoles.size() - accessories.size()).getAdditionalProperties().containsKey(JsonGameListParser.PROPERTY_DUPLICATE_OTHER_CONSOLE)) {
+                return errorString;
+            }
+        }
+
+        return "";
     }
 
     /**
@@ -328,14 +337,6 @@ public class System {
      */
     public void setGames(List<Game> games) {
         this.games = games;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }

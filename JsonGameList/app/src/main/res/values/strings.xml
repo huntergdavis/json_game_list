@@ -8,6 +8,7 @@
     <string name="overview">Overview</string>
     <string name="load_failed">Failed to Retrieve GameList</string>
     <string name="load_hunter">load sample list</string>
+    <string name="cross_duplicate">"Cross-System Duplicate!"</string>
     <string name="duplicate">"Duplicate!"</string>
     <string name="load_hunter_github">load Hunter\'s list From Github</string>
     <string name="load_url">load from URL</string>

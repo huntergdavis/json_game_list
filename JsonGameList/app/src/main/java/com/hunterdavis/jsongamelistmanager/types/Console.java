@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class Console extends ObjectWithAdditionalProperty {
 
-    private String name;
     private String revision;
     private String url;
     private String releaseDate;
@@ -16,19 +15,6 @@ public class Console extends ObjectWithAdditionalProperty {
     private SystemInfo systemInfo;
     public ArrayList<String> videos = new ArrayList<String>();
 
-    /**
-     * @return The name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * @param name The name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
 
     /**
      * @return The revision

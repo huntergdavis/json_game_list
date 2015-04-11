@@ -4,9 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Game {
+public class Game extends ObjectWithAdditionalProperty{
 
-    private String name;
     private String revision;
     private String url;
     private String releaseDate;
@@ -19,19 +18,6 @@ public class Game {
     public ArrayList<String> videos = new ArrayList<String>();
     private Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    /**
-     * @return The name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * @param name The name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
 
     /**
      * @return The revision

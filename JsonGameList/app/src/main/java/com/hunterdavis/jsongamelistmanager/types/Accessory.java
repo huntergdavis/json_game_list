@@ -6,7 +6,6 @@ import java.util.Map;
 
 public class Accessory extends ObjectWithAdditionalProperty {
 
-    public String name;
     public String revision;
     public String url;
     public String releaseDate;
@@ -16,19 +15,6 @@ public class Accessory extends ObjectWithAdditionalProperty {
     public SystemRequirements systemRequirements = new SystemRequirements();
     public ArrayList<String> videos = new ArrayList<String>();
 
-    /**
-     * @return The name
-     */
-    public String getName() {
-        return name;
-    }
-
-    /**
-     * @param name The name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
 
     /**
      * @return The revision
