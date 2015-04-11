@@ -21,6 +21,7 @@ import java.util.Set;
 public class JsonGameListParser {
 
     public static final String PROPERTY_DUPLICATE = "duplicate";
+    public static final String PROPERTY_DUPLICATE_OTHER_CONSOLE = "duplicate_other_console";
 
     /**
      * parse Hunter's current resume from the assets folder
@@ -51,8 +52,14 @@ public class JsonGameListParser {
     }
 
 
+
+
     private static JsonGameList markDuplicatesInGameList(JsonGameList gameList) {
         Set<String> systemNames = new HashSet<String>();
+        Set<String> crossConsoleNames = new HashSet<String>();
+        Set<String> crossAccessoryNames = new HashSet<String>();
+        Set<String> crossGameNames = new HashSet<String>();
+
 
         for (System system : gameList.systems) {
             if(!systemNames.add(system.getName())) {
