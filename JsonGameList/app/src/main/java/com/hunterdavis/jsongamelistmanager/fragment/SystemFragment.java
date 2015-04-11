@@ -139,6 +139,7 @@ public class SystemFragment extends ListFragment {
                 viewHolder.hoursPlayed = (TextView) convertView.findViewById(R.id.hoursPlayed);
                 viewHolder.statsLink = (TextView) convertView.findViewById(R.id.statsLink);
                 viewHolder.globalStatsLink = (TextView) convertView.findViewById(R.id.globalStatsLink);
+                viewHolder.logo = (ImageView) convertView.findViewById(R.id.logo);
                 convertView.setTag(viewHolder);
             } else {
                 // recycle the already inflated view
@@ -184,25 +185,27 @@ public class SystemFragment extends ListFragment {
             }
 
             // our favico downloading task if no logoImage
+            String baseURL = "";
+            try {
+                URL url = new URL(systemReference.getSystemListItemUrl(position));
+                baseURL = url.getProtocol() + "://" + url.getHost();
+            } catch (MalformedURLException e) {
+                // do something.. or not
+            }
+
+            viewHolder.workImageAndWebsiteLauncher.setVisibility(View.GONE);
+            if(!TextUtils.isEmpty(baseURL)) {
+                final String favIconString = baseURL + "/favicon.ico";
+                viewHolder.workImageAndWebsiteLauncher.setTag(systemReference.getSystemListItemName(position));
+                new IconDownloadTask(viewHolder.workImageAndWebsiteLauncher, systemReference.getSystemListItemName(position)).execute(favIconString);
+            }
+
             String logoImage = systemReference.getSystemListItemLogoImage(position);
             if(TextUtils.isEmpty(logoImage)) {
-                String baseURL = "";
-                try {
-                    URL url = new URL(systemReference.getSystemListItemUrl(position));
-                    baseURL = url.getProtocol() + "://" + url.getHost();
-                } catch (MalformedURLException e) {
-                    // do something.. or not
-                }
-
-                viewHolder.workImageAndWebsiteLauncher.setVisibility(View.GONE);
-                if(!TextUtils.isEmpty(baseURL)) {
-                    final String favIconString = baseURL + "/favicon.ico";
-                    viewHolder.workImageAndWebsiteLauncher.setTag(systemReference.getSystemListItemName(position));
-                    new IconDownloadTask(viewHolder.workImageAndWebsiteLauncher, systemReference.getSystemListItemName(position)).execute(favIconString);
-                }
+                viewHolder.logo.setVisibility(View.GONE);
             }else {
-                viewHolder.workImageAndWebsiteLauncher.setVisibility(View.VISIBLE);
-                Picasso.with(getContext()).load(logoImage).into(viewHolder.workImageAndWebsiteLauncher);
+                viewHolder.logo.setVisibility(View.VISIBLE);
+                Picasso.with(getContext()).load(logoImage).into(viewHolder.logo);
             }
 
 
@@ -280,6 +283,7 @@ public class SystemFragment extends ListFragment {
         TextView systemRequirements;
         ImageView workImageAndWebsiteLauncher;
         ImageView imagePreview;
+        ImageView logo;
         GridLayout background;
 
         TextView hoursPlayed;
