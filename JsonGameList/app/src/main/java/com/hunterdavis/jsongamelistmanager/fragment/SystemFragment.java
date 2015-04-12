@@ -72,6 +72,7 @@ public class SystemFragment extends ListFragment {
 
         ArrayList systemItemList = new ArrayList<SystemItemWithMetadata>();
 
+        systemItemList.add(systemReference);
         systemItemList.addAll(systemReference.consoles);
         systemItemList.addAll(systemReference.accessories);
         systemItemList.addAll(systemReference.games);
@@ -152,7 +153,7 @@ public class SystemFragment extends ListFragment {
             // hide the image first
             viewHolder.workImageAndWebsiteLauncher.setVisibility(View.GONE);
 
-            SystemItemWithMetadata currentItem = getItem(position);
+            final SystemItemWithMetadata currentItem = getItem(position);
 
             // update the item view
             updateItemViewVisibliltyAndText(viewHolder.name, currentItem.name);
@@ -249,7 +250,7 @@ public class SystemFragment extends ListFragment {
                 @Override
                 public void onClick(View v) {
                     if(!viewHolder.duckDuckWent) {
-                        new DuckDuckGoTask(getActivity(), viewHolder.imagePreview, viewHolder.description, systemReference.getSystemListItemName(position)).execute();
+                        new DuckDuckGoTask(getActivity(), viewHolder.imagePreview, viewHolder.description, currentItem.getName()).execute();
                         viewHolder.duckDuckWent = true;
                     }
                 }
