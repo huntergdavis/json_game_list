@@ -160,7 +160,7 @@ public class SystemFragment extends ListFragment {
             updateItemViewVisibliltyAndText(viewHolder.url, currentItem.url);
             updateItemViewVisibliltyAndText(viewHolder.releaseDate, currentItem.releaseDate);
             updateItemViewVisibliltyAndText(viewHolder.condition, currentItem.condition);
-            updateItemViewVisibliltyAndText(viewHolder.quantity, currentItem.getDescriptiveQuantity());
+            updateItemViewVisibliltyAndText(viewHolder.quantity, currentItem.getDescriptiveQuantity(getContext()));
             updateItemViewVisibliltyAndText(viewHolder.description, currentItem.description);
 
 
@@ -189,8 +189,10 @@ public class SystemFragment extends ListFragment {
                 viewHolder.background.setBackgroundColor(Color.MAGENTA);
             }else if (viewHolder.duplicate.getText().toString().equalsIgnoreCase(getString(R.string.duplicate))) {
                 viewHolder.background.setBackgroundColor(Color.RED);
-            }else if (!TextUtils.isEmpty(currentItem.getStringIfProperty(JsonGameListParser.PROPERTY_WISHLIST, "-"))) {
-                viewHolder.background.setBackgroundColor(Color.DKGRAY);
+            }
+
+            if (currentItem.getQuantity() < 1) {
+                viewHolder.background.setBackgroundColor(Color.GRAY);
             }
 
             // our favico downloading task if no logoImage

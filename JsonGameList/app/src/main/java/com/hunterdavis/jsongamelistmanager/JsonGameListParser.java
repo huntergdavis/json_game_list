@@ -74,20 +74,17 @@ public class JsonGameListParser {
             Set<String> consoleNames = new HashSet<String>();
             for (Console console : system.consoles) {
                 setDuplicateAndAddToDupeListIfCollision(console, consoleNames, consoleNamesDupes);
-                setToWishListIfNegativeOrZeroButNotNull(console);
             }
 
             Set<String> accessoryNames = new HashSet<String>();
             for (Accessory acc : system.accessories) {
                 setDuplicateAndAddToDupeListIfCollision(acc, accessoryNames, accessoryNamesDupes);
-                setToWishListIfNegativeOrZeroButNotNull(acc);
             }
 
             Set<String> gameNames = new HashSet<String>();
             for (Game game : system.games) {
                 setDuplicateAndAddToDupeListIfCollision(game, gameNames, gameNamesDupes);
                 setCrossDuplicateAndAddToDupeListIfCollision(game, crossGameNames, crossGameNamesDupes);
-                setToWishListIfNegativeOrZeroButNotNull(game);
             }
 
             // second loop, mark dupes of dupes within same system
@@ -114,20 +111,6 @@ public class JsonGameListParser {
 
         return gameList;
     }
-
-    /**
-     * if our item has a zero or negative quantity set, it's a wishlist item
-     * the user wants that many
-     * @param item
-     */
-    public static void setToWishListIfNegativeOrZeroButNotNull(SystemItemWithMetadata item) {
-        if(item.getQuantity() == null) {
-            return;
-        }else if (item.getQuantity() < 1) {
-            item.setAdditionalProperty(PROPERTY_WISHLIST,true);
-        }
-    }
-
 
     /**
      * if the set contains the name of the item, set cross duplicate

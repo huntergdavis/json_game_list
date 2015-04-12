@@ -335,7 +335,8 @@
                 },
                 {
                     "name": "SoulCalibur V"
-                },                {
+                },
+                {
                     "name": "Crackdown 2"
                 },
                 {
@@ -346,7 +347,7 @@
                 },
                 {
                     "name": "Dead Or Alive 5",
-                     "quantity": "0";
+                     "quantity": 0
                 },
                 {
                     "name": "Dead Or Alive 4"
