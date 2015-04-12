@@ -132,7 +132,7 @@ public abstract class SystemItemWithMetadata {
         }else if (1 == getQuantity()) {
             return "";
         }else if (getQuantity() < 1) {
-            return "(" + context.getString(R.string.wishlist) + ")";
+            return " (" + context.getString(R.string.wishlist) + ")";
         }
 
         return " (qty: " + getQuantity() + ")";
