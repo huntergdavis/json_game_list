@@ -9,14 +9,10 @@ import com.hunterdavis.jsongamelistmanager.R;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-public class System extends ObjectWithAdditionalProperty{
+public class System extends SystemItemWithMetadata {
 
-    private String url = "";
-    private String releaseDate = "";
     private String summary = "";
     public List<Console> consoles = new ArrayList<Console>();
     public List<Accessory> accessories = new ArrayList<Accessory>();
@@ -28,19 +24,7 @@ public class System extends ObjectWithAdditionalProperty{
     public String steamID;
     public String logo;
 
-    public int getListItemCount() {
-
-        // 1 list item just for showing the console information
-        int listItemCount = 1;
-
-        listItemCount += consoles.size();
-        listItemCount += accessories.size();
-        listItemCount += games.size();
-
-        return listItemCount;
-    }
-
-    public void alphebetizeGamesList() {
+    public void alphabetizeGameList() {
         Collections.sort(games, new Comparator<Game>() {
             @Override
             public int compare(Game g1, Game g2) {
@@ -92,23 +76,6 @@ public class System extends ObjectWithAdditionalProperty{
     }
 
 
-
-    public String getSystemListItemRevision(int itemOffset) {
-        if (itemOffset == 0) {
-            // self case
-            return "Contains " + consoles.size() + " consoles, " + accessories.size() + " accessories, " + " and " + games.size() + " games.";
-        } else if ((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
-            // consoles case
-            return consoles.get(itemOffset - 1).getRevision();
-        } else if ((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
-            // accessories case
-            return accessories.get(itemOffset - 1 - consoles.size()).getRevision();
-        } else {
-            // games case
-            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).getRevision();
-        }
-    }
-
     public String getSystemListItemUrl(int itemOffset) {
         if (itemOffset == 0) {
             // self case
@@ -122,80 +89,6 @@ public class System extends ObjectWithAdditionalProperty{
         } else {
             // games case
             return games.get(itemOffset - 1 - consoles.size() - accessories.size()).getUrl();
-        }
-    }
-
-    public String getSystemListItemReleaseDate(int itemOffset) {
-        if (itemOffset == 0) {
-            // self case
-            return getReleaseDate();
-        } else if ((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
-            // consoles case
-            return consoles.get(itemOffset - 1).getReleaseDate();
-        } else if ((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
-            // accessories case
-            return accessories.get(itemOffset - 1 - consoles.size()).getReleaseDate();
-        } else {
-            // games case
-            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).getReleaseDate();
-        }
-    }
-
-    public String getSystemListItemCondition(int itemOffset) {
-        if (itemOffset == 0) {
-            // self case
-            return "";
-        } else if ((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
-            // consoles case
-            return consoles.get(itemOffset - 1).getCondition();
-        } else if ((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
-            // accessories case
-            return accessories.get(itemOffset - 1 - consoles.size()).getCondition();
-        } else {
-            // games case
-            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).getCondition();
-        }
-    }
-
-    public String getSystemListItemQuantity(int itemOffset) {
-        if (itemOffset == 0) {
-            // self case
-            return "";
-        } else if ((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
-            if (consoles.get(itemOffset - 1).getQuantity() == null) {
-                return "";
-            }
-
-            // consoles case
-            return "(qty: " + consoles.get(itemOffset - 1).getQuantity() + ")";
-        } else if ((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
-            if (accessories.get(itemOffset - 1 - consoles.size()).getQuantity() == null) {
-                return "";
-            }
-            // accessories case
-            return "(qty: " + accessories.get(itemOffset - 1 - consoles.size()).getQuantity() + ")";
-        } else {
-            if (games.get(itemOffset - 1 - consoles.size() - accessories.size()).getQuantity() == null) {
-                return "";
-            }
-            // games case
-            return "(qty: " + games.get(itemOffset - 1 - consoles.size() - accessories.size()).getQuantity() + ")";
-        }
-    }
-
-    public String getSystemListItemDescription(int itemOffset) {
-        if (itemOffset == 0) {
-            // self case
-            return getSummary();
-        } else if ((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
-            // consoles case
-            return consoles.get(itemOffset - 1).getDescription();
-        } else if ((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
-            // accessories case
-            return accessories.get(itemOffset - 1 - consoles.size()).getDescription();
-        } else {
-            // games case
-            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).getDescription();
         }
     }
 
@@ -232,31 +125,6 @@ public class System extends ObjectWithAdditionalProperty{
         } else {
             // games case
             if (games.get(itemOffset - 1 - consoles.size() - accessories.size()).getAdditionalProperties().containsKey(JsonGameListParser.PROPERTY_DUPLICATE)) {
-                return errorString;
-            }
-        }
-
-        return "";
-    }
-
-
-    public String getSystemListItemCrossDuplicates(int itemOffset, String errorString) {
-        if (itemOffset == 0) {
-            // self case
-            return "";
-        } else if ((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
-            // consoles case
-            if(consoles.get(itemOffset - 1).getAdditionalProperties().containsKey(JsonGameListParser.PROPERTY_DUPLICATE_OTHER_CONSOLE)) {
-                return errorString;
-            }
-        } else if ((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
-            // accessories case
-            if(accessories.get(itemOffset - 1 - consoles.size()).getAdditionalProperties().containsKey(JsonGameListParser.PROPERTY_DUPLICATE_OTHER_CONSOLE)) {
-                return errorString;
-            }
-        } else {
-            // games case
-            if (games.get(itemOffset - 1 - consoles.size() - accessories.size()).getAdditionalProperties().containsKey(JsonGameListParser.PROPERTY_DUPLICATE_OTHER_CONSOLE)) {
                 return errorString;
             }
         }
@@ -313,7 +181,7 @@ public class System extends ObjectWithAdditionalProperty{
         }
     }
 
-    public String getSystemListItehoursPlayed(Context context, int itemOffset) {
+    public String getSystemListItemhoursPlayed(Context context, int itemOffset) {
         if (itemOffset == 0) {
             // self case
             return "";
@@ -365,62 +233,6 @@ public class System extends ObjectWithAdditionalProperty{
      */
     public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
-    }
-
-    /**
-     * @return The summary
-     */
-    public String getSummary() {
-        return summary;
-    }
-
-    /**
-     * @param summary The summary
-     */
-    public void setSummary(String summary) {
-        this.summary = summary;
-    }
-
-    /**
-     * @return The consoles
-     */
-    public List<Console> getConsoles() {
-        return consoles;
-    }
-
-    /**
-     * @param consoles The consoles
-     */
-    public void setConsoles(List<Console> consoles) {
-        this.consoles = consoles;
-    }
-
-    /**
-     * @return The accessories
-     */
-    public List<Accessory> getAccessories() {
-        return accessories;
-    }
-
-    /**
-     * @param accessories The accessories
-     */
-    public void setAccessories(List<Accessory> accessories) {
-        this.accessories = accessories;
-    }
-
-    /**
-     * @return The games
-     */
-    public List<Game> getGames() {
-        return games;
-    }
-
-    /**
-     * @param games The games
-     */
-    public void setGames(List<Game> games) {
-        this.games = games;
     }
 
 }

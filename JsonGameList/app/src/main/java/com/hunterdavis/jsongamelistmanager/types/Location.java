@@ -1,9 +1,6 @@
 package com.hunterdavis.jsongamelistmanager.types;
 
-import java.util.HashMap;
-import java.util.Map;
-
-public class Location extends ObjectWithAdditionalProperty{
+public class Location extends SystemItemWithMetadata {
 
     private String address;
     private String postalCode;

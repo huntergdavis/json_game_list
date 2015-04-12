@@ -12,7 +12,4 @@ public class Icon {
     public String Width = new String();
     public Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
-    public Icon() {
-
-    }
 }

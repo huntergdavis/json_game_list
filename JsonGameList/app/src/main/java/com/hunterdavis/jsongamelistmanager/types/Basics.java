@@ -27,24 +27,10 @@ public class Basics {
     }
 
     /**
-     * @param name The name
-     */
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    /**
      * @return The label
      */
     public String getLabel() {
         return label;
-    }
-
-    /**
-     * @param label The label
-     */
-    public void setLabel(String label) {
-        this.label = label;
     }
 
     /**
@@ -55,24 +41,10 @@ public class Basics {
     }
 
     /**
-     * @param picture The picture
-     */
-    public void setPicture(String picture) {
-        this.picture = picture;
-    }
-
-    /**
      * @return The email
      */
     public String getEmail() {
         return email;
-    }
-
-    /**
-     * @param email The email
-     */
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     /**
@@ -83,24 +55,10 @@ public class Basics {
     }
 
     /**
-     * @param phone The phone
-     */
-    public void setPhone(String phone) {
-        this.phone = phone;
-    }
-
-    /**
      * @return The website
      */
     public String getWebsite() {
         return website;
-    }
-
-    /**
-     * @param website The website
-     */
-    public void setWebsite(String website) {
-        this.website = website;
     }
 
     /**
@@ -111,46 +69,10 @@ public class Basics {
     }
 
     /**
-     * @param summary The summary
-     */
-    public void setSummary(String summary) {
-        this.summary = summary;
-    }
-
-    /**
      * @return The location
      */
     public Location getLocation() {
         return location;
-    }
-
-    /**
-     * @param location The location
-     */
-    public void setLocation(Location location) {
-        this.location = location;
-    }
-
-    /**
-     * @return The systems
-     */
-    public List<System> getSystems() {
-        return systems;
-    }
-
-    /**
-     * @param systems The systems
-     */
-    public void setSystems(List<System> systems) {
-        this.systems = systems;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
     }
 
 }

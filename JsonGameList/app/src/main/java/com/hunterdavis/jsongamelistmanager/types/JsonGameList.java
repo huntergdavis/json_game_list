@@ -41,19 +41,4 @@ public class JsonGameList {
         return basics;
     }
 
-    /**
-     * @param basics The basics
-     */
-    public void setBasics(Basics basics) {
-        this.basics = basics;
-    }
-
-    public Map<String, Object> getAdditionalProperties() {
-        return this.additionalProperties;
-    }
-
-    public void setAdditionalProperty(String name, Object value) {
-        this.additionalProperties.put(name, value);
-    }
-
 }

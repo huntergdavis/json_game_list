@@ -22,6 +22,8 @@ public class JsonGameListParser {
 
     public static final String PROPERTY_DUPLICATE = "duplicate";
     public static final String PROPERTY_DUPLICATE_OTHER_CONSOLE = "duplicate_other_console";
+    public static final String PROPERTY_WISHLIST = "wishlist";
+
 
     /**
      * parse Hunter's current resume from the assets folder
@@ -48,20 +50,20 @@ public class JsonGameListParser {
         Gson gson = new Gson();
         JsonGameList gameList = gson.fromJson(reader, JsonGameList.class);
 
-        return markDuplicatesInGameList(gameList);
+        return markDuplicatesAndWishListInGameList(gameList);
     }
 
 
 
 
-    private static JsonGameList markDuplicatesInGameList(JsonGameList gameList) {
+    private static JsonGameList markDuplicatesAndWishListInGameList(JsonGameList gameList) {
         Set<String> systemNames = new HashSet<String>();
         Set<String> crossGameNames = new HashSet<String>();
         Set<String> crossGameNamesDupes = new HashSet<String>();
         Set<String> systemNamesDupes = new HashSet<String>();
 
 
-        // first loop, mark all dupes
+        // first loop, mark all dupes, mark wish list
         for (System system : gameList.systems) {
             Set<String> consoleNamesDupes = new HashSet<String>();
             Set<String> accessoryNamesDupes = new HashSet<String>();
@@ -72,30 +74,33 @@ public class JsonGameListParser {
             Set<String> consoleNames = new HashSet<String>();
             for (Console console : system.consoles) {
                 setDuplicateAndAddToDupeListIfCollision(console, consoleNames, consoleNamesDupes);
+                setToWishListIfNegativeOrZeroButNotNull(console);
             }
 
             Set<String> accessoryNames = new HashSet<String>();
             for (Accessory acc : system.accessories) {
                 setDuplicateAndAddToDupeListIfCollision(acc, accessoryNames, accessoryNamesDupes);
+                setToWishListIfNegativeOrZeroButNotNull(acc);
             }
 
             Set<String> gameNames = new HashSet<String>();
             for (Game game : system.games) {
                 setDuplicateAndAddToDupeListIfCollision(game, gameNames, gameNamesDupes);
                 setCrossDuplicateAndAddToDupeListIfCollision(game, crossGameNames, crossGameNamesDupes);
+                setToWishListIfNegativeOrZeroButNotNull(game);
             }
 
-            // second loop, mark dupes of dupes
+            // second loop, mark dupes of dupes within same system
             for (Console console : system.consoles) {
-                updateSetRefSecondPass(console, consoleNamesDupes);
+                setDupeIfSetContainsRef(console, consoleNamesDupes);
             }
 
             for (Accessory acc : system.accessories) {
-                updateSetRefSecondPass(acc, accessoryNamesDupes);
+                setDupeIfSetContainsRef(acc, accessoryNamesDupes);
             }
 
             for (Game game : system.games) {
-                updateSetRefSecondPass(game, gameNamesDupes);
+                setDupeIfSetContainsRef(game, gameNamesDupes);
                 setCrossDupeIfCollision(game, crossGameNamesDupes);
             }
         }
@@ -110,29 +115,53 @@ public class JsonGameListParser {
         return gameList;
     }
 
-    public static void setCrossDupeIfCollision(ObjectWithAdditionalProperty oWap, Set<String> setRef) {
-        if(setRef.contains(oWap.getName())) {
-            oWap.setAdditionalProperty(PROPERTY_DUPLICATE_OTHER_CONSOLE,true);
+    /**
+     * if our item has a zero or negative quantity set, it's a wishlist item
+     * the user wants that many
+     * @param item
+     */
+    public static void setToWishListIfNegativeOrZeroButNotNull(SystemItemWithMetadata item) {
+        if(item.getQuantity() == null) {
+            return;
+        }else if (item.getQuantity() < 1) {
+            item.setAdditionalProperty(PROPERTY_WISHLIST,true);
         }
     }
 
-    public static void updateSetRefSecondPass(ObjectWithAdditionalProperty oWap, Set<String> setRef) {
-        if(setRef.contains(oWap.getName())) {
-            oWap.setAdditionalProperty(PROPERTY_DUPLICATE,true);
+
+    /**
+     * if the set contains the name of the item, set cross duplicate
+     * @param oWap
+     * @param setRef
+     */
+    public static void setCrossDupeIfCollision(SystemItemWithMetadata oWap, Set<String> setRef) {
+        setBooleanTruePropertyIfCollision(oWap, setRef, PROPERTY_DUPLICATE_OTHER_CONSOLE);
+    }
+
+    public static void setDupeIfSetContainsRef(SystemItemWithMetadata oWap, Set<String> setRef) {
+        setBooleanTruePropertyIfCollision(oWap, setRef, PROPERTY_DUPLICATE);
+    }
+
+
+    public static void setDuplicateAndAddToDupeListIfCollision(SystemItemWithMetadata oWap, Set<String> setRef, Set<String> dupeRef) {
+        setBooleanTruePropertyIfEntryCollisionAndAddToOtherSet(oWap, setRef, PROPERTY_DUPLICATE, dupeRef);
+    }
+
+    public static void setCrossDuplicateAndAddToDupeListIfCollision(SystemItemWithMetadata oWap, Set<String> setRef, Set<String> dupeRef) {
+        setBooleanTruePropertyIfEntryCollisionAndAddToOtherSet(oWap, setRef, PROPERTY_DUPLICATE_OTHER_CONSOLE, dupeRef);
+    }
+
+
+    public static void setBooleanTruePropertyIfCollision(SystemItemWithMetadata item, Set<String> setOfNames, String property) {
+        if(setOfNames.contains(item.getName())) {
+            item.setAdditionalProperty(property,true);
         }
     }
 
-    public static void setDuplicateAndAddToDupeListIfCollision(ObjectWithAdditionalProperty oWap, Set<String> setRef, Set<String> dupeRef) {
-        if(!setRef.add(oWap.getName())) {
-            oWap.setAdditionalProperty(PROPERTY_DUPLICATE,true);
-            dupeRef.add(oWap.getName());
-        }
-    }
-
-    public static void setCrossDuplicateAndAddToDupeListIfCollision(ObjectWithAdditionalProperty oWap, Set<String> setRef, Set<String> dupeRef) {
-        if(!setRef.add(oWap.getName())) {
-            oWap.setAdditionalProperty(PROPERTY_DUPLICATE_OTHER_CONSOLE,true);
-            dupeRef.add(oWap.getName());
+    public static void setBooleanTruePropertyIfEntryCollisionAndAddToOtherSet(SystemItemWithMetadata item, Set<String> setOfNames, String property, Set<String> dupeSet) {
+        if(!setOfNames.add(item.getName())) {
+            item.setAdditionalProperty(property,true);
+            dupeSet.add(item.getName());
         }
     }
 }

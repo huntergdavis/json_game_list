@@ -15,12 +15,14 @@ import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.hunterdavis.jsongamelistmanager.JsonGameListParser;
 import com.hunterdavis.jsongamelistmanager.tasks.DuckDuckGoTask;
 import com.hunterdavis.jsongamelistmanager.tasks.IconDownloadTask;
 import com.hunterdavis.jsongamelistmanager.JsonGameListActivity;
 import com.hunterdavis.jsongamelistmanager.R;
 import com.hunterdavis.jsongamelistmanager.tasks.YoutubePreviewDownloadTask;
 import com.hunterdavis.jsongamelistmanager.types.System;
+import com.hunterdavis.jsongamelistmanager.types.SystemItemWithMetadata;
 import com.squareup.picasso.Picasso;
 
 import java.net.MalformedURLException;
@@ -66,15 +68,16 @@ public class SystemFragment extends ListFragment {
         systemReference = JsonGameListActivity.gameList.systems.get(systemNumber - 1);
 
         // alphebetize our games list when it's loaded in
-        systemReference.alphebetizeGamesList();
+        systemReference.alphabetizeGameList();
 
-        ArrayList dummyList = new ArrayList<Integer>();
-        for (int i = 0; i < systemReference.getListItemCount(); i++) {
-            dummyList.add(69); // bill and ted
-        }
+        ArrayList systemItemList = new ArrayList<SystemItemWithMetadata>();
+
+        systemItemList.addAll(systemReference.consoles);
+        systemItemList.addAll(systemReference.accessories);
+        systemItemList.addAll(systemReference.games);
 
         SystemAdapter adapter = new SystemAdapter(
-                inflater.getContext(), dummyList);
+                inflater.getContext(), systemItemList);
         setListAdapter(adapter);
 
         return super.onCreateView(inflater, container, savedInstanceState);
@@ -109,9 +112,9 @@ public class SystemFragment extends ListFragment {
 
     }
 
-    private class SystemAdapter extends ArrayAdapter<Integer> {
+    private class SystemAdapter extends ArrayAdapter<SystemItemWithMetadata> {
 
-        public SystemAdapter(Context context, List<Integer> items) {
+        public SystemAdapter(Context context, List<SystemItemWithMetadata> items) {
             super(context, R.layout.system_list_item, items);
         }
 
@@ -149,18 +152,22 @@ public class SystemFragment extends ListFragment {
             // hide the image first
             viewHolder.workImageAndWebsiteLauncher.setVisibility(View.GONE);
 
+            SystemItemWithMetadata currentItem = getItem(position);
+
             // update the item view
-            updateItemViewVisibliltyAndText(viewHolder.name, systemReference.getSystemListItemName(position));
-            updateItemViewVisibliltyAndText(viewHolder.revision, systemReference.getSystemListItemRevision(position));
-            updateItemViewVisibliltyAndText(viewHolder.url, systemReference.getSystemListItemUrl(position));
-            updateItemViewVisibliltyAndText(viewHolder.releaseDate, systemReference.getSystemListItemReleaseDate(position));
-            updateItemViewVisibliltyAndText(viewHolder.condition, systemReference.getSystemListItemCondition(position));
-            updateItemViewVisibliltyAndText(viewHolder.quantity, systemReference.getSystemListItemQuantity(position));
-            updateItemViewVisibliltyAndText(viewHolder.description, systemReference.getSystemListItemDescription(position));
+            updateItemViewVisibliltyAndText(viewHolder.name, currentItem.name);
+            updateItemViewVisibliltyAndText(viewHolder.revision, currentItem.revision);
+            updateItemViewVisibliltyAndText(viewHolder.url, currentItem.url);
+            updateItemViewVisibliltyAndText(viewHolder.releaseDate, currentItem.releaseDate);
+            updateItemViewVisibliltyAndText(viewHolder.condition, currentItem.condition);
+            updateItemViewVisibliltyAndText(viewHolder.quantity, currentItem.getDescriptiveQuantity());
+            updateItemViewVisibliltyAndText(viewHolder.description, currentItem.description);
+
+
             updateItemViewVisibliltyAndText(viewHolder.systemRequirements, systemReference.getSystemListItemSystemRequirements(position));
 
             // new steam items
-            updateItemViewVisibliltyAndText(viewHolder.hoursPlayed, systemReference.getSystemListItehoursPlayed(getContext(),position));
+            updateItemViewVisibliltyAndText(viewHolder.hoursPlayed, systemReference.getSystemListItemhoursPlayed(getContext(), position));
 
             updateItemViewVisibliltyAndTextWithUrlAndDefaultText(viewHolder.statsLink,getString(R.string.stats), systemReference.getSystemListItemStatsLink(position));
             updateItemViewVisibliltyAndTextWithUrlAndDefaultText(viewHolder.globalStatsLink,getString(R.string.global_stats), systemReference.getSystemListItemGlobalStatsLink(position));
@@ -169,9 +176,9 @@ public class SystemFragment extends ListFragment {
 
             // if duplicate is empty, try cross duplicate, otherwise default to duplicate
             if(TextUtils.isEmpty(systemReference.getSystemListItemDuplicates(position, getString(R.string.duplicate)))) {
-                updateItemViewVisibliltyAndText(viewHolder.duplicate, systemReference.getSystemListItemCrossDuplicates(position, getString(R.string.cross_duplicate)));
+                updateItemViewVisibliltyAndText(viewHolder.duplicate, currentItem.getStringIfProperty(JsonGameListParser.PROPERTY_DUPLICATE_OTHER_CONSOLE,getString(R.string.cross_duplicate)));
             }else {
-                updateItemViewVisibliltyAndText(viewHolder.duplicate, systemReference.getSystemListItemDuplicates(position, getString(R.string.duplicate)));
+                updateItemViewVisibliltyAndText(viewHolder.duplicate, currentItem.getStringIfProperty(JsonGameListParser.PROPERTY_DUPLICATE,getString(R.string.duplicate)));
             }
 
 
@@ -182,6 +189,8 @@ public class SystemFragment extends ListFragment {
                 viewHolder.background.setBackgroundColor(Color.MAGENTA);
             }else if (viewHolder.duplicate.getText().toString().equalsIgnoreCase(getString(R.string.duplicate))) {
                 viewHolder.background.setBackgroundColor(Color.RED);
+            }else if (!TextUtils.isEmpty(currentItem.getStringIfProperty(JsonGameListParser.PROPERTY_WISHLIST, "-"))) {
+                viewHolder.background.setBackgroundColor(Color.DKGRAY);
             }
 
             // our favico downloading task if no logoImage
