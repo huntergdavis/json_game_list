@@ -196,11 +196,11 @@ public class System extends SystemItemWithMetadata {
             String hoursPlayed = "";
             if(!TextUtils.isEmpty(games.get(itemOffset - 1 - consoles.size() - accessories.size()).hoursOnRecord))
             {
-                hoursPlayed += games.get(itemOffset - 1 - consoles.size() - accessories.size()).hoursOnRecord;
+                hoursPlayed += games.get(itemOffset - 1 - consoles.size() - accessories.size()).hoursOnRecord + " " + context.getString(R.string.hours_played);
             }
 
-            if(!TextUtils.isEmpty(games.get(itemOffset - 1 - consoles.size() - accessories.size()).hoursLastTwoWeeeks)) {
-                hoursPlayed  += " (" + games.get(itemOffset - 1 - consoles.size() - accessories.size()).hoursLastTwoWeeeks + " " + context.getString(R.string.last_two_weeks)+ ")";
+            if(!TextUtils.isEmpty(games.get(itemOffset - 1 - consoles.size() - accessories.size()).hoursLast2Weeks)) {
+                hoursPlayed  += " (" + games.get(itemOffset - 1 - consoles.size() - accessories.size()).hoursLast2Weeks + " " + context.getString(R.string.last_two_weeks)+ ")";
             }
             return hoursPlayed;
         }

@@ -13,7 +13,7 @@ public class Game extends SystemItemWithMetadata {
 
     // update for data from steam DB
     public String logo;
-    public String hoursLastTwoWeeeks;
+    public String hoursLast2Weeks;
     public String hoursOnRecord;
     public String statsLink;
     public String globalStatsLink;
