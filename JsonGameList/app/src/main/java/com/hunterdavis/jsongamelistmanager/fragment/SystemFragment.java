@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.GridLayout;
 import android.widget.ImageView;
+import android.widget.SectionIndexer;
 import android.widget.TextView;
 
 import com.hunterdavis.jsongamelistmanager.JsonGameListParser;
@@ -28,7 +29,11 @@ import com.squareup.picasso.Picasso;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Locale;
+import java.util.Set;
 
 /**
  * Created by hunter on 3/22/15.
@@ -79,9 +84,19 @@ public class SystemFragment extends ListFragment {
 
         SystemAdapter adapter = new SystemAdapter(
                 inflater.getContext(), systemItemList);
+
         setListAdapter(adapter);
 
         return super.onCreateView(inflater, container, savedInstanceState);
+    }
+
+
+
+    @Override
+    public void onActivityCreated(Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        getListView().setFastScrollEnabled(true);
     }
 
     private void updateItemViewVisibliltyAndText(TextView view, String text) {
@@ -113,10 +128,12 @@ public class SystemFragment extends ListFragment {
 
     }
 
-    private class SystemAdapter extends ArrayAdapter<SystemItemWithMetadata> {
+    private class SystemAdapter extends ArrayAdapter<SystemItemWithMetadata>  {
+
 
         public SystemAdapter(Context context, List<SystemItemWithMetadata> items) {
             super(context, R.layout.system_list_item, items);
+
         }
 
         @Override

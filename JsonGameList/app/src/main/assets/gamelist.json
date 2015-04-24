@@ -298,13 +298,13 @@
             "url": "http://www.xbox.com",
             "consoles": [
                 {
-                    "name": "Xbox 360",
-                    "revision": "Original Phat 60gb Xbox 360",
+                    "name": "Xbox 360 Slim",
+                    "revision": "Slim 320gb Xbox 360",
                     "url": "http://www.xbox.com",
-                    "releaseDate": "2005-12-25",
-                    "condition": "fair",
+                    "releaseDate": "2010-12-25",
+                    "condition": "excellent",
                     "quantity": 1,
-                    "description": "Glue all over the bottom from a previous hack.",
+                    "description": "Jet Black.",
                     "systemInfo": {
                         "cpu": "",
                         "cpuSpeed": "",
@@ -320,6 +320,9 @@
             "games": [
                 {
                     "name": "Amped 3"
+                },
+                {
+                    "name": "LEGO Indiana Jones The Original Adventure / Kung Fu Panda"
                 },
                 {
                     "name": "Kameo: Elements of Power"
@@ -374,7 +377,16 @@
                     "name": "Viva Pinata: Party Animals"
                 },
                 {
-                    "name": "Gears of War"
+                    "name": "Gears of War",
+                    "digitalDistribution": true
+                },
+                {
+                    "name": "Assassins Creed IV: Black Flag",
+                    "digitalDistribution": true
+                },
+                {
+                    "name": "Army of 2: Devils Cartel",
+                    "digitalDistribution": true
                 },
                 {
                     "name": "Burnout Revenge"
@@ -3597,6 +3609,12 @@
           "globalStatsLink": "http://steamcommunity.com/stats/237630/achievements/"
         },
         {
+          "appID": "207370",
+          "name": "eXceed - Gun Bullet Children",
+          "logo": "http://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/207370/a869e332df6762fef8bbb3b958ca5e6eaeeb9292.jpg",
+          "url": "http://steamcommunity.com/app/207370"
+        },
+        {
           "appID": "240160",
           "name": "Duke Nukem",
           "logo": "http://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/240160/26fc43d96de98211588509c8f5c5005ac9a310c9.jpg",
@@ -3923,21 +3941,16 @@
           "statsLink": "http://steamcommunity.com/id/toastc2c/stats/233470",
           "globalStatsLink": "http://steamcommunity.com/stats/233470/achievements/"
         },
-        {
-          "appID": "207370",
-          "name": "eXceed - Gun Bullet Children",
-          "logo": "http://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/207370/a869e332df6762fef8bbb3b958ca5e6eaeeb9292.jpg",
-          "url": "http://steamcommunity.com/app/207370"
-        },
+
         {
           "appID": "207380",
-          "name": "eXceed 2nd - Vampire REX",
+          "name": "eXceed 2nd Vampire REX",
           "logo": "http://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/207380/825465d1b7152be0dc8b2a6becbe65082067acfb.jpg",
           "url": "http://steamcommunity.com/app/207380"
         },
         {
           "appID": "207400",
-          "name": "eXceed 3rd - Jade Penetrate Black Package",
+          "name": "eXceed 3rd Jade Penetrate Black Package",
           "logo": "http://cdn.akamai.steamstatic.com/steamcommunity/public/images/apps/207400/d7653a8f45ffef2e4a666eaceccbfadb8aeda7e6.jpg",
           "url": "http://steamcommunity.com/app/207400"
         },

@@ -9,7 +9,11 @@ import com.hunterdavis.jsongamelistmanager.R;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
+import java.util.Locale;
+import java.util.Set;
 
 public class System extends SystemItemWithMetadata {
 
@@ -28,7 +32,7 @@ public class System extends SystemItemWithMetadata {
         Collections.sort(games, new Comparator<Game>() {
             @Override
             public int compare(Game g1, Game g2) {
-                return g1.getName().compareTo(g2.getName());
+                return g1.getName().toLowerCase().compareTo(g2.getName().toLowerCase());
             }
 
         });
