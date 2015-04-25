@@ -161,6 +161,7 @@ public class SystemFragment extends ListFragment {
                 viewHolder.statsLink = (TextView) convertView.findViewById(R.id.statsLink);
                 viewHolder.globalStatsLink = (TextView) convertView.findViewById(R.id.globalStatsLink);
                 viewHolder.logo = (ImageView) convertView.findViewById(R.id.logo);
+                viewHolder.language = (TextView) convertView.findViewById(R.id.language);
                 convertView.setTag(viewHolder);
             } else {
                 // recycle the already inflated view
@@ -180,6 +181,8 @@ public class SystemFragment extends ListFragment {
             updateItemViewVisibliltyAndText(viewHolder.condition, currentItem.condition);
             updateItemViewVisibliltyAndText(viewHolder.quantity, currentItem.getDescriptiveQuantity(getContext()));
             updateItemViewVisibliltyAndText(viewHolder.description, currentItem.description);
+            updateItemViewVisibliltyAndText(viewHolder.language, currentItem.language);
+
 
 
             updateItemViewVisibliltyAndText(viewHolder.systemRequirements, systemReference.getSystemListItemSystemRequirements(position));
@@ -318,6 +321,7 @@ public class SystemFragment extends ListFragment {
         TextView hoursPlayed;
         TextView statsLink;
         TextView globalStatsLink;
+        TextView language;
 
         boolean duckDuckWent;
 

@@ -16,6 +16,8 @@ public abstract class SystemItemWithMetadata {
     public String condition;
     public Integer quantity;
     public String description;
+    public String gameRegion;
+    public String language;
     public Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
     public Map<String, Object> getAdditionalProperties() {

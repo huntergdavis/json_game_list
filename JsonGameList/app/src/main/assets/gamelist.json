@@ -343,6 +343,9 @@
                     "name": "Crackdown 2"
                 },
                 {
+                    "name": "Rock of The Dead"
+                },
+                {
                     "name": "BattleFantasia"
                 },
                 {
@@ -449,6 +452,15 @@
                     "name": "Evil Dead: A Fist Full of Boomstick"
                 },
                 {
+                    "name": "Evil Dead: Regeneration"
+                },
+                {
+                    "name": "Dark Watch"
+                },
+                {
+                    "name": "The Suffering"
+                },
+                {
                     "name": "Tony Hawk's Underground"
                 },
                 {
@@ -458,7 +470,12 @@
                     "name": "Dead or Alive 3"
                 },
                 {
-                    "name": "Burnout 3: Takedown"
+                    "name": "Burnout 3: Takedown",
+                    "language" : "en"
+                },
+                {
+                    "name": "Burnout 3: Takedown",
+                    "language" : "jp"
                 },
                 {
                     "name": "The Incredible Hulk: Ultimate Destruction"
