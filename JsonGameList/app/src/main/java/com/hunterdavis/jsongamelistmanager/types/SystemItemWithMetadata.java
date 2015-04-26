@@ -17,6 +17,7 @@ public abstract class SystemItemWithMetadata {
     public Integer quantity;
     public String description;
     public String gameRegion;
+    public String isbn;
     public String language;
     public Map<String, Object> additionalProperties = new HashMap<String, Object>();
 
@@ -35,7 +36,7 @@ public abstract class SystemItemWithMetadata {
         return name;
     }
 
-    /**
+    /**s
      * @param name The name
      */
     public void setName(String name) {

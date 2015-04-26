@@ -21,6 +21,8 @@ public class System extends SystemItemWithMetadata {
     public List<Console> consoles = new ArrayList<Console>();
     public List<Accessory> accessories = new ArrayList<Accessory>();
     public List<Game> games = new ArrayList<Game>();
+    public List<SystemItemWithMetadata> movies = new ArrayList<>();
+    public List<SystemItemWithMetadata> music = new ArrayList<>();
     public ArrayList<String> videos = new ArrayList<String>();
 
     // update for compatibility with steam gamelist data
@@ -96,21 +98,7 @@ public class System extends SystemItemWithMetadata {
         }
     }
 
-    public String getSystemListItemSystemRequirements(int itemOffset) {
-        if (itemOffset == 0) {
-            // self case
-            return "";
-        } else if ((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
-            // consoles case
-            return consoles.get(itemOffset - 1).getSystemInfo().toString();
-        } else if ((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
-            // accessories case
-            return accessories.get(itemOffset - 1 - consoles.size()).systemRequirements.toString();
-        } else {
-            // games case
-            return games.get(itemOffset - 1 - consoles.size() - accessories.size()).getSystemRequirements().toString();
-        }
-    }
+
 
     public String getSystemListItemDuplicates(int itemOffset, String errorString) {
         if (itemOffset == 0) {
@@ -185,30 +173,6 @@ public class System extends SystemItemWithMetadata {
         }
     }
 
-    public String getSystemListItemhoursPlayed(Context context, int itemOffset) {
-        if (itemOffset == 0) {
-            // self case
-            return "";
-        } else if ((itemOffset < consoles.size() + 1) && (consoles.size() > 0)) {
-            // consoles case
-            return "";
-        } else if ((itemOffset < (consoles.size() + accessories.size() + 1)) && (accessories.size() > 0)) {
-            // accessories case
-            return "";
-        } else {
-            // games case
-            String hoursPlayed = "";
-            if(!TextUtils.isEmpty(games.get(itemOffset - 1 - consoles.size() - accessories.size()).hoursOnRecord))
-            {
-                hoursPlayed += games.get(itemOffset - 1 - consoles.size() - accessories.size()).hoursOnRecord + " " + context.getString(R.string.hours_played);
-            }
-
-            if(!TextUtils.isEmpty(games.get(itemOffset - 1 - consoles.size() - accessories.size()).hoursLast2Weeks)) {
-                hoursPlayed  += " (" + games.get(itemOffset - 1 - consoles.size() - accessories.size()).hoursLast2Weeks + " " + context.getString(R.string.last_two_weeks)+ ")";
-            }
-            return hoursPlayed;
-        }
-    }
 
 
     /**

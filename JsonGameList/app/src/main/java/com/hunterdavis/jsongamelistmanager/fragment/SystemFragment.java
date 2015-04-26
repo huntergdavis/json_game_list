@@ -3,6 +3,7 @@ package com.hunterdavis.jsongamelistmanager.fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Movie;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -22,6 +23,9 @@ import com.hunterdavis.jsongamelistmanager.tasks.IconDownloadTask;
 import com.hunterdavis.jsongamelistmanager.JsonGameListActivity;
 import com.hunterdavis.jsongamelistmanager.R;
 import com.hunterdavis.jsongamelistmanager.tasks.YoutubePreviewDownloadTask;
+import com.hunterdavis.jsongamelistmanager.types.Accessory;
+import com.hunterdavis.jsongamelistmanager.types.Console;
+import com.hunterdavis.jsongamelistmanager.types.Game;
 import com.hunterdavis.jsongamelistmanager.types.System;
 import com.hunterdavis.jsongamelistmanager.types.SystemItemWithMetadata;
 import com.squareup.picasso.Picasso;
@@ -185,10 +189,10 @@ public class SystemFragment extends ListFragment {
 
 
 
-            updateItemViewVisibliltyAndText(viewHolder.systemRequirements, systemReference.getSystemListItemSystemRequirements(position));
+            updateItemViewVisibliltyAndText(viewHolder.systemRequirements, getSystemListItemSystemRequirements(currentItem));
 
             // new steam items
-            updateItemViewVisibliltyAndText(viewHolder.hoursPlayed, systemReference.getSystemListItemhoursPlayed(getContext(), position));
+            updateItemViewVisibliltyAndText(viewHolder.hoursPlayed, getSystemListItemhoursPlayed(getContext(), currentItem));
 
             updateItemViewVisibliltyAndTextWithUrlAndDefaultText(viewHolder.statsLink,getString(R.string.stats), systemReference.getSystemListItemStatsLink(position));
             updateItemViewVisibliltyAndTextWithUrlAndDefaultText(viewHolder.globalStatsLink,getString(R.string.global_stats), systemReference.getSystemListItemGlobalStatsLink(position));
@@ -326,4 +330,62 @@ public class SystemFragment extends ListFragment {
         boolean duckDuckWent;
 
     }
+
+    public String getSomethingFromSomething(SystemItemWithMetadata item) {
+        String retString = "";
+
+        if(item instanceof Console) {
+
+        }else if(item instanceof Accessory) {
+
+        }else if(item instanceof Game) {
+
+        }else if(item instanceof SystemItemWithMetadata) { //movie or music case
+
+        }
+
+        return retString;
+    }
+
+
+    public String getSystemListItemSystemRequirements(SystemItemWithMetadata item) {
+        String retString = "";
+
+        if(item instanceof Console) {
+            retString = ((Console) item).getSystemInfo().toString();
+        }else if(item instanceof Accessory) {
+            retString = ((Accessory) item).systemRequirements.toString();
+        }else if(item instanceof Game) {
+            retString = ((Game) item).getSystemRequirements().toString();
+        }else if(item instanceof SystemItemWithMetadata) { //movie or music case
+            // no system requirements for music and movies on a system right?
+        }
+
+        return retString;
+    }
+
+
+    public String getSystemListItemhoursPlayed(Context context, SystemItemWithMetadata item) {
+        String retString = "";
+
+        if(item instanceof Console) {
+
+        }else if(item instanceof Accessory) {
+
+        }else if(item instanceof Game) {
+
+        }else if(item instanceof Game) { //movie or music case
+            if(!TextUtils.isEmpty(((Game) item).hoursOnRecord))
+            {
+                retString += ((Game)item).hoursOnRecord + " " + context.getString(R.string.hours_played);
+            }
+
+            if(!TextUtils.isEmpty(((Game)item).hoursLast2Weeks)) {
+                retString  += " (" + ((Game)item).hoursLast2Weeks + " " + context.getString(R.string.last_two_weeks)+ ")";
+            }
+        }
+
+        return retString;
+    }
+
 }
