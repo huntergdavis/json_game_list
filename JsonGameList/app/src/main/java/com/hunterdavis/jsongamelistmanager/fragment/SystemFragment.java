@@ -194,13 +194,13 @@ public class SystemFragment extends ListFragment {
             // new steam items
             updateItemViewVisibliltyAndText(viewHolder.hoursPlayed, getSystemListItemhoursPlayed(getContext(), currentItem));
 
-            updateItemViewVisibliltyAndTextWithUrlAndDefaultText(viewHolder.statsLink,getString(R.string.stats), systemReference.getSystemListItemStatsLink(position));
-            updateItemViewVisibliltyAndTextWithUrlAndDefaultText(viewHolder.globalStatsLink,getString(R.string.global_stats), systemReference.getSystemListItemGlobalStatsLink(position));
+            updateItemViewVisibliltyAndTextWithUrlAndDefaultText(viewHolder.statsLink,getString(R.string.stats), getSystemListItemStatsLink(currentItem));
+            updateItemViewVisibliltyAndTextWithUrlAndDefaultText(viewHolder.globalStatsLink,getString(R.string.global_stats), getSystemListItemGlobalStatsLink(currentItem));
 
 
 
             // if duplicate is empty, try cross duplicate, otherwise default to duplicate
-            if(TextUtils.isEmpty(systemReference.getSystemListItemDuplicates(position, getString(R.string.duplicate)))) {
+            if(TextUtils.isEmpty(getSystemListItemDuplicates(currentItem, getString(R.string.duplicate)))) {
                 updateItemViewVisibliltyAndText(viewHolder.duplicate, currentItem.getStringIfProperty(JsonGameListParser.PROPERTY_DUPLICATE_OTHER_CONSOLE,getString(R.string.cross_duplicate)));
             }else {
                 updateItemViewVisibliltyAndText(viewHolder.duplicate, currentItem.getStringIfProperty(JsonGameListParser.PROPERTY_DUPLICATE,getString(R.string.duplicate)));
@@ -221,10 +221,10 @@ public class SystemFragment extends ListFragment {
             }
 
             // our favico downloading task if no logoImage
-            String logoImage = systemReference.getSystemListItemLogoImage(position);
+            String logoImage = getSystemListItemLogoImage(currentItem);
             String baseURL = "";
             try {
-                URL url = new URL(systemReference.getSystemListItemUrl(position));
+                URL url = new URL(getSystemListItemUrl(currentItem));
                 baseURL = url.getProtocol() + "://" + url.getHost();
             } catch (MalformedURLException e) {
                 // do something.. or not
@@ -233,8 +233,8 @@ public class SystemFragment extends ListFragment {
             viewHolder.workImageAndWebsiteLauncher.setVisibility(View.GONE);
             if(!TextUtils.isEmpty(baseURL) && TextUtils.isEmpty(logoImage)) {
                 final String favIconString = baseURL + "/favicon.ico";
-                viewHolder.workImageAndWebsiteLauncher.setTag(systemReference.getSystemListItemName(position));
-                new IconDownloadTask(viewHolder.workImageAndWebsiteLauncher, systemReference.getSystemListItemName(position)).execute(favIconString);
+                viewHolder.workImageAndWebsiteLauncher.setTag(currentItem.name);
+                new IconDownloadTask(viewHolder.workImageAndWebsiteLauncher, currentItem.name).execute(favIconString);
             }
 
             if(TextUtils.isEmpty(logoImage)) {
@@ -247,14 +247,14 @@ public class SystemFragment extends ListFragment {
 
             // the imagePreview or google image search preview image
             viewHolder.imagePreview.setVisibility(View.GONE);
-            viewHolder.imagePreview.setTag(systemReference.getSystemListItemName(position));
-            String firstYoutubeUrl = systemReference.getSystemListYoutube(position);
+            viewHolder.imagePreview.setTag(currentItem.name);
+            String firstYoutubeUrl = getSystemListYoutube(currentItem);
             if(!TextUtils.isEmpty(firstYoutubeUrl)) {
-                new YoutubePreviewDownloadTask(getActivity(),viewHolder.imagePreview, systemReference.getSystemListItemName(position)).execute(firstYoutubeUrl);
+                new YoutubePreviewDownloadTask(getActivity(),viewHolder.imagePreview, currentItem.name).execute(firstYoutubeUrl);
                 viewHolder.imagePreview.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(systemReference.getSystemListYoutube(position)));
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getSystemListYoutube(currentItem)));
                         startActivity(browserIntent);
                     }
                 });
@@ -282,11 +282,11 @@ public class SystemFragment extends ListFragment {
 
 
             // go to website if exists when you click on it
-            if (!TextUtils.isEmpty(systemReference.getSystemListItemUrl(position))) {
+            if (!TextUtils.isEmpty(getSystemListItemUrl(currentItem))) {
                 viewHolder.url.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(systemReference.getSystemListItemUrl(position)));
+                        Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(getSystemListItemUrl(currentItem)));
                         startActivity(browserIntent);
                     }
                 });
@@ -357,7 +357,7 @@ public class SystemFragment extends ListFragment {
             retString = ((Accessory) item).systemRequirements.toString();
         }else if(item instanceof Game) {
             retString = ((Game) item).getSystemRequirements().toString();
-        }else if(item instanceof SystemItemWithMetadata) { //movie or music case
+        }else  { //movie or music case
             // no system requirements for music and movies on a system right?
         }
 
@@ -371,8 +371,6 @@ public class SystemFragment extends ListFragment {
         if(item instanceof Console) {
 
         }else if(item instanceof Accessory) {
-
-        }else if(item instanceof Game) {
 
         }else if(item instanceof Game) { //movie or music case
             if(!TextUtils.isEmpty(((Game) item).hoursOnRecord))
@@ -388,4 +386,51 @@ public class SystemFragment extends ListFragment {
         return retString;
     }
 
+    public String getSystemListItemStatsLink(SystemItemWithMetadata item) {
+        if(item instanceof Game) { //movie or music case
+            return ((Game) item).statsLink;
+        }
+
+        return "";
+    }
+
+
+    public String getSystemListItemGlobalStatsLink(SystemItemWithMetadata item) {
+        if(item instanceof Game) { //movie or music case
+            return ((Game) item).globalStatsLink;
+        }
+
+        return "";
+    }
+
+
+    public String getSystemListItemDuplicates(SystemItemWithMetadata item, String errorString) {
+        String retString = "";
+
+        if(item.getAdditionalProperties().containsKey(JsonGameListParser.PROPERTY_DUPLICATE)) {
+            return errorString;
+        }
+
+        return "";
+    }
+
+
+
+    public String getSystemListItemLogoImage(SystemItemWithMetadata item) {
+        return item.logo;
+    }
+
+
+
+    public String getSystemListItemUrl(SystemItemWithMetadata item) {
+        return item.url;
+    }
+
+
+    public String getSystemListYoutube(SystemItemWithMetadata item) {
+        if(item.videos.size() > 0) {
+            return item.videos.get(0);
+        }
+       return "";
+    }
 }

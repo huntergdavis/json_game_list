@@ -5,6 +5,7 @@ import android.content.Context;
 import com.hunterdavis.jsongamelistmanager.JsonGameListParser;
 import com.hunterdavis.jsongamelistmanager.R;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -19,7 +20,10 @@ public abstract class SystemItemWithMetadata {
     public String gameRegion;
     public String isbn;
     public String language;
+    public String logo;
+    public ArrayList<String> videos = new ArrayList<String>();
     public Map<String, Object> additionalProperties = new HashMap<String, Object>();
+
 
     public Map<String, Object> getAdditionalProperties() {
         return this.additionalProperties;
