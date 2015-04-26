@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public abstract class SystemItemWithMetadata {
+public class SystemItemWithMetadata {
     public String name;
     public String revision;
     public String url;
