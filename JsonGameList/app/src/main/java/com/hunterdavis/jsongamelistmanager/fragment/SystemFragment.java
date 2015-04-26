@@ -85,6 +85,8 @@ public class SystemFragment extends ListFragment {
         systemItemList.addAll(systemReference.consoles);
         systemItemList.addAll(systemReference.accessories);
         systemItemList.addAll(systemReference.games);
+        systemItemList.addAll(systemReference.movies);
+        systemItemList.addAll(systemReference.music);
 
         SystemAdapter adapter = new SystemAdapter(
                 inflater.getContext(), systemItemList);
