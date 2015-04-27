@@ -190,6 +190,11 @@ public class SystemFragment extends ListFragment {
             updateItemViewVisibliltyAndText(viewHolder.language, currentItem.language);
 
 
+            // swap revision if system
+            if(currentItem instanceof System) {
+                updateItemViewVisibliltyAndText(viewHolder.revision,currentItem.getRevision() );
+            }
+
 
             updateItemViewVisibliltyAndText(viewHolder.systemRequirements, getSystemListItemSystemRequirements(currentItem));
 
@@ -276,7 +281,7 @@ public class SystemFragment extends ListFragment {
                 @Override
                 public void onClick(View v) {
                     if(!viewHolder.duckDuckWent) {
-                        new DuckDuckGoTask(getActivity(), viewHolder.imagePreview, viewHolder.description, currentItem.getName()).execute();
+                        new DuckDuckGoTask(getActivity(), viewHolder.imagePreview, viewHolder.description, currentItem.name).execute();
                         viewHolder.duckDuckWent = true;
                     }
                 }

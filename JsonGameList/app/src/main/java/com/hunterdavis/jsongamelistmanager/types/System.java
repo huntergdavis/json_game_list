@@ -38,6 +38,30 @@ public class System extends SystemItemWithMetadata {
         });
     }
 
+    public String getRevision() {
+        ArrayList<String> listOfItems = new ArrayList<>();
+        
+        if(consoles.size() > 0) {
+            listOfItems.add(consoles.size() + " consoles");
+        }
+        if(accessories.size() > 0) {
+            listOfItems.add(accessories.size() + " accessories");
+        }
+        if(games.size() > 0) {
+            listOfItems.add(games.size() + " games");
+        }
+        if(movies.size() > 0) {
+            listOfItems.add(movies.size() + " movies");
+        }
+        if(music.size() > 0) {
+            listOfItems.add(music.size() + " music");
+        }
+
+        return TextUtils.join(",",listOfItems);
+
+    }
+
+
     /**
      * @return The url
      */
