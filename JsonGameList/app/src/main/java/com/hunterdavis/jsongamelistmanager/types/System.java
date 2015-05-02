@@ -40,7 +40,7 @@ public class System extends SystemItemWithMetadata {
 
     public String getRevision() {
         ArrayList<String> listOfItems = new ArrayList<>();
-        
+
         if(consoles.size() > 0) {
             listOfItems.add(consoles.size() + " consoles");
         }
