@@ -28,14 +28,22 @@ public class System extends SystemItemWithMetadata {
     public String steamID64;
     public String steamID;
 
-    public void alphabetizeGameList() {
-        Collections.sort(games, new Comparator<Game>() {
+    public void alphabetizeSystemItemLists() {
+        Collections.sort(consoles, getSystemItemComparator());
+        Collections.sort(accessories, getSystemItemComparator());
+        Collections.sort(games, getSystemItemComparator());
+        Collections.sort(movies, getSystemItemComparator());
+        Collections.sort(music, getSystemItemComparator());
+    }
+
+    public Comparator<SystemItemWithMetadata> getSystemItemComparator() {
+        return new Comparator<SystemItemWithMetadata>() {
             @Override
-            public int compare(Game g1, Game g2) {
+            public int compare(SystemItemWithMetadata g1, SystemItemWithMetadata g2) {
                 return g1.getName().toLowerCase().compareTo(g2.getName().toLowerCase());
             }
 
-        });
+        };
     }
 
     public String getRevision() {

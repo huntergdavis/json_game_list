@@ -3,7 +3,6 @@ package com.hunterdavis.jsongamelistmanager.fragment;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Movie;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
@@ -14,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.GridLayout;
 import android.widget.ImageView;
-import android.widget.SectionIndexer;
 import android.widget.TextView;
 
 import com.hunterdavis.jsongamelistmanager.JsonGameListParser;
@@ -33,11 +31,7 @@ import com.squareup.picasso.Picasso;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Locale;
-import java.util.Set;
 
 /**
  * Created by hunter on 3/22/15.
@@ -77,7 +71,7 @@ public class SystemFragment extends ListFragment {
         systemReference = JsonGameListActivity.gameList.systems.get(systemNumber - 1);
 
         // alphebetize our games list when it's loaded in
-        systemReference.alphabetizeGameList();
+        systemReference.alphabetizeSystemItemLists();
 
         ArrayList systemItemList = new ArrayList<SystemItemWithMetadata>();
 
