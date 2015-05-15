@@ -346,6 +346,24 @@
                     "name": "Crackdown 2"
                 },
                 {
+                    "name": "Max Payne 3"
+                },
+                {
+                    "name": "Batman Arkham City"
+                },
+                {
+                    "name": "Dishonored"
+                },
+                {
+                    "name": "Fallout New Vegas"
+                },
+                {
+                    "name": "Duke Nukem Forever"
+                },
+                {
+                    "name": "Resident Evil 5"
+                },
+                {
                     "name": "Rock of The Dead"
                 },
                 {
@@ -763,6 +781,38 @@
                             "operatingSystemVersion": ""
                         }
                     }
+                },
+                {
+                    "name": "L.A. Noire"
+                },
+                {
+                    "name": "Uncharted"
+                },
+
+                {
+                    "name": "Uncharted 2"
+                },
+
+                {
+                    "name": "Uncharted 3"
+                },
+                {
+                    "name": "BulletStorm"
+                },
+
+                {
+                    "name": "Anarchy Reigns
+                },
+
+                {
+                    "name": "Killzone 3"
+                },
+                {
+                    "name": "Infamous"
+                },
+
+                {
+                    "name": "Infamous 2"
                 }
             ]
         },
