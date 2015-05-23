@@ -436,7 +436,28 @@
                     "name": "The Simpsons Game"
                 },
                 {
-                    "name": "Marvel Vs Capcom 3"
+                    "name": "Mortal Kombat Vs. DC Universe"
+                },
+                {
+                    "name": "Dead Rising"
+                },
+                {
+                    "name": "Bionic Commando"
+                },
+                {
+                    "name": "Forza Motorsport 3"
+                },
+                {
+                    "name": "BioShock Infinite"
+                },
+                {
+                    "name": "Monster Madness: Battle for Suburbia"
+                },
+                {
+                    "name": "The Darkness"
+                },
+                {
+                    "name": "Ultimate Marvel Vs Capcom 3"
                 },
                 {
                     "name" : "Turning Point: Fall of Liberty"
@@ -464,6 +485,12 @@
                 },
                 {
                     "name": "Sneak King"
+                },
+                {
+                    "name": "Dead or Alive Ultimate (1 and 2)"
+                },
+                {
+                    "name": "Aggressive Inline"
                 },
                 {
                     "name": "Big Bumpin"
@@ -744,9 +771,36 @@
                     "name": "Soul Calibur 3"
                 },
                 {
-                    "name": "Ace Combat 5"
+                    "name": "Corvette"
                 },
                 {
+                    "name": "ATV Offroad Fury 2"
+                },
+                {
+                    "name": "007 Agent Under Fire"
+                },
+                {
+                    "name": "Sonic Riders"
+                },
+                {
+                    "name": "Pirates of the Carribbean: At World's End"
+                },
+                {
+                    "name": "Medal of Honor Frontline"
+                },
+                {
+                    "name": "Ace Combat 04 Shattered Skies"
+                },
+                {
+                    "name": "Indiana Jones and the Staff of Kings"
+                },
+                {
+                    "name": "Ford Mustang The Legend Lives"
+                },
+                {
+                    "name": "Ace Combat 5"
+                },
+                  {
                     "name": "Grand Theft Auto: San Andreas"
                 }
             ]
@@ -759,6 +813,24 @@
             "games": [
                 {
                     "name": "Pac Man World"
+                },
+                {
+                    "name": "Triple Play 99"
+                },
+                {
+                    "name": "Cool Boarders 4"
+                },
+                {
+                    "name": "Sno Cross Championship Racing"
+                },
+                {
+                    "name": "Rally Cross 2"
+                },
+                {
+                    "name": "Ten Pin Alley"
+                },
+                {
+                    "name": "Lego Racers"
                 }
             ]
         },
