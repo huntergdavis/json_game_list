@@ -520,6 +520,12 @@
                     "name": "Black"
                 },
                 {
+                    "name": "Test Drive"
+                },
+                {
+                    "name": "Monopoly Party"
+                },
+                {
                     "name": "Metal Gear Solid 2"
                 },
                 {
@@ -12879,6 +12885,10 @@
                 },
                 {
                     "name": "The Wizard",
+                    "revision": "DVD"
+                },
+                {
+                    "name": "WALL-E",
                     "revision": "DVD"
                 },
                 {
