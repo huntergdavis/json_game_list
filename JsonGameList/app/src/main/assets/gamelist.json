@@ -752,6 +752,17 @@
             ]
         },
         {
+            "name": "Playstation 1",
+            "url": "http://www.playstation.com",
+            "releaseDate": "1995-10-10",
+            "summary": "A rock solid console released in 1995 by Sony",
+            "games": [
+                {
+                    "name": "Pac Man World"
+                }
+            ]
+        },
+        {
             "name": "Playstation 3",
             "url": "http://www.playstation.com",
             "releaseDate": "2006-12-25",
