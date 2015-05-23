@@ -763,6 +763,17 @@
             ]
         },
         {
+            "name": "Playstation Vita",
+            "url": "http://www.playstation.com",
+            "releaseDate": "2011-10-10",
+            "summary": "A fun but faltering console released in 2011 by Sony",
+            "games": [
+                {
+                    "name": "Wipeout 2048"
+                }
+            ]
+        },
+        {
             "name": "Playstation 3",
             "url": "http://www.playstation.com",
             "releaseDate": "2006-12-25",
