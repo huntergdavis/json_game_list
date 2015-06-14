@@ -1208,13 +1208,6 @@
             "games": [
 
                 {
-                    "name": "Wrestlemania 18"
-                },
-
-                {
-                    "name": "Tales of Symphonia"
-                },
-                {
                     "name": "Super Monkey Ball 2"
                 },
 
@@ -1224,12 +1217,10 @@
 
                 {
                     "name": "Star Wars Rogue Leader",
-                    "quantity" : 2
+                    "quantity" : 1
                 },
 
-                {
-                    "name": "Army Men Sarge's War"
-                },
+
 
                 {
                     "name": "The Legend of Zelda: The Wind Waker"
@@ -1251,21 +1242,13 @@
                     "name": "Kareoke Revolution Party"
                 },
 
-                {
-                    "name": "Star Wars: The Clone Wars"
-                },
+
 
                 {
                     "name": "Ultimate Spider Man"
                 },
 
-                {
-                    "name": "Star Wars Bounty Hunter"
-                },
 
-                {
-                    "name": "Need For Speed Underground 2"
-                },
 
                 {
                     "name": "NCAA Football 2003"
