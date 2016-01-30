@@ -334,6 +334,10 @@
                     "digitalDistribution": true
                 },
                 {
+                    "name": "CSI Hard Evidence",
+                    "digitalDistribution": false
+                },                
+                {
                     "name": "Pure",
                     "digitalDistribution": true
                 },
