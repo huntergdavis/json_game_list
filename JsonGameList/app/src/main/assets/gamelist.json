@@ -340,6 +340,10 @@
 		    "name" : "Bioshock"
 		},
                 {
+                    "name": "CSI Hard Evidence",
+                    "digitalDistribution": false
+                },                
+                {
                     "name": "Pure",
                     "digitalDistribution": true
                 },
@@ -583,12 +587,16 @@
                     "name": "Geometry Wars Evolved",
                     "digitalDistribution": true
                 },
-		{
+		        {
                     "name": "Robotron: 2084",
                     "digitalDistribution": true
                 },
                 {
                     "name": "UNO",
+                    "digitalDistribution": true
+                },
+                {
+                    "name": "The Witcher 2: Assassins of Kings Enhanced Edition",
                     "digitalDistribution": true
                 },
                 {
