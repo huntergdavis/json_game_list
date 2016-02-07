@@ -322,6 +322,14 @@
                     "name": "Amped 3"
                 },
                 {
+                    "name": "Battlefield Bad Company 2",
+                    "digitalDistribution": false
+                },
+                {
+                    "name": "Battlefield 1943",
+                    "digitalDistribution": true
+                },
+                {
                     "name": "Deus Ex: Human Revolution",
                     "digitalDistribution": true
                 },
