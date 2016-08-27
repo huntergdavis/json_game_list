@@ -319,6 +319,15 @@
             ],
             "games": [
                 {
+                    "name": "Majin and the Forsaken Kingdom"
+                },
+                {
+                    "name": "The Godfather: The Game"
+                },
+                {
+                    "name": "Spider Man: Web of Shadows"
+                },
+                {
                     "name": "Amped 3"
                 },
                 {
@@ -1434,26 +1443,6 @@
             "url": "http://www.playstation.com",
             "releaseDate": "2006-12-25",
             "summary": "A rock solid console released in 2006 by Sony",
-            "consoles": [
-                {
-                    "name": "Playstation 3",
-                    "revision": "Original Phat 60gb",
-                    "url": "http://www.playstation.com",
-                    "releaseDate": "2006-12-25",
-                    "condition": "fair",
-                    "quantity": 1,
-                    "description": "Has been dropped, missing usb front bezel",
-                    "systemInfo": {
-                        "cpu": "",
-                        "cpuSpeed": "",
-                        "cpuRam": "",
-                        "gpu": "",
-                        "gpuRam": "",
-                        "operatingSystem": "",
-                        "operatingSystemVersion": ""
-                    }
-                }
-            ],
             "accessories": [
                 {
                     "name": "Dualshock 3 Wireless Remote",
