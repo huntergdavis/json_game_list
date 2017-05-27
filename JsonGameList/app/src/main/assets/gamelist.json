@@ -359,7 +359,7 @@
                 {
                     "name": "CSI Hard Evidence",
                     "digitalDistribution": false
-                },                
+                },
                 {
                     "name": "Pure",
                     "digitalDistribution": true
@@ -913,251 +913,142 @@
             "name": "Xbox (Original)",
             "url": "http://www.xbox.com",
             "games": [
-                {
-                    "name": "Teenage Mutant Ninja Turtles"
-                },
-                {
-                    "name": "Enter The Matrix"
-                },
-                {
-                    "name": "Indiana Jones and The Emperor's Tomb"
-                },
-                {
-                    "name": "Fable - The Lost Chapters"
-                },
-                {
-                    "name": "Delta Force: Black Hawk Down"
-                },
-                {
-                    "name": "American Chopper"
-                },
-                {
-                    "name": "Sneak King"
-                },
+              {
+                  "name": "Super Monkey Ball Deluxe"
+              },
 
-                {
-                    "name": "Mission: Impossible Operation Surma"
-                },
+              {
+                  "name": "Need for Speed Underground 2"
+              },
 
-                {
-                    "name": "Fuzion Frenzy"
-                },
+              {
+                  "name": "MTV Celebrity Deathmatch"
+              },
 
-                {
-                    "name": "Charlie and the Chocolate Factory"
-                },
-                {
-                    "name": "Pitfall: The Lost Expidition"
-                },
+              {
+                  "name": "Hunter The Reckoning: Redeemer"
+              },
 
-                {
-                    "name": "Castlevania: Curse of Darkness"
-                },
+              {
+                  "name": "The Simpsons Hit and Run"
+              },
 
-                {
-                    "name": "Capcom Classics Collection"
-                },
+              {
+                  "name": "Soul Calibur 2"
+              },
 
-                {
-                    "name": "Pirates of the Caribbean"
-                },
+              {
+                  "name": "The Incredible Hulk Ultimate Destruction"
+              },
 
-                {
-                    "name": "Need for Speed: Most Wanted"
-                },
+              {
+                  "name": "Jaws Unleashed"
+              },
 
-                {
-                    "name": "Shrek 2"
-                },
+              {
+                  "name": "Teenage Mutant Ninja Turtles"
+              },
 
-                {
-                    "name": "Brute Force"
-                },
+              {
+                  "name": "The Simpsons Road Rage"
+              },
 
-                {
-                    "name": "Peter Jackson's King Kong"
-                },
+              {
+                  "name": "Indiana Jones and the Emperor's Tomb"
+              },
 
-                {
-                    "name": "Dead or Alive Ultimate (1 and 2)"
-                },
-                {
-                    "name": "Aggressive Inline"
-                },
-                {
-                    "name": "Fantastic 4"
-                },
+              {
+                  "name": "Capcom CLassics Collection Volume 1"
+              },
 
-                {
-                    "name": "Iron Phoenix"
-                },
+              {
+                  "name": "Evil Dead Regeneration"
+              },
 
-                {
-                    "name": "GunMetal"
-                },
+              {
+                  "name": "Crimson Skies"
+              },
 
-                {
-                    "name": "Robotech Invasion"
-                },
+              {
+                  "name": "Kakuto Chojin"
+              },
 
-                {
-                    "name": "Lara Croft Tomb Raider: Legend"
-                },
+              {
+                  "name": "Mortal Kombat Deadly Alliance"
+              },
 
-                {
-                    "name": "ShellShock Nam '67"
-                },
+              {
+                  "name": "Evil Dead A Fistful of Boomstick"
+              },
 
-                {
-                    "name": "Dead to Rights"
-                },
+              {
+                  "name": "Phantom Dust"
+              },
 
-                {
-                    "name": "Finding Nemo"
-                },
+              {
+                  "name": "Pitfall The Lost Expidition"
+              },
 
-                {
-                    "name": "Tom Clancy's Classic Trilogy"
-                },
+              {
+                  "name": "Need for Speed Underground"
+              },
 
-                {
-                    "name": "Rugby 06"
-                },
+              {
+                  "name": "Dead or Alive Ultimate"
+              },
 
-                {
-                    "name": "Aeon Flux"
-                },
+              {
+                  "name": "Dead or Alive 2 Ultimate"
+              },
 
-                {
-                    "name": "XIII"
-                },
+              {
+                  "name": "Apex"
+              },
 
-                {
-                    "name": "True Crime Streets of LA"
-                },
+              {
+                  "name": "Blinx the Time Sweeper"
+              },
 
-                {
-                    "name": "TimeSplitters 2"
-                },
+              {
+                  "name": "True Crime Streets of LA"
+              },
 
-                {
-                    "name": "Legacy of Kain Defiance"
-                },
+              {
+                  "name": "Starsky and Hutch"
+              },
 
-                {
-                    "name": "Worms Forts: Under Siege"
-                },
+              {
+                  "name": "ShellShock Nam '67"
+              },
 
-                {
-                    "name": "Minority Report"
-                },
+              {
+                  "name": "RalliSport Challenge"
+              },
 
-                {
-                    "name": "Kill Switch"
-                },
+              {
+                  "name": "Top Spin / NCAA Football 2005"
+              },
 
-                {
-                    "name": "Big Bumpin"
-                },
-                {
-                    "name": "Amped Freestyle Snowboarding"
-                },
-                {
-                    "name": "Madden NFL 06"
-                },
-                {
-                    "name": "NCAA Football 2005"
-                },
-                {
-                    "name": "FIFA Soccer 2004"
-                },
-                {
-                    "name": "NFL 2K5"
-                },
-                {
-                    "name": "NHL 2K7"
-                },
-                {
-                    "name": "Links 2004"
-                },
-                {
-                    "name": "Need For Speed Underground 2"
-                },
-                {
-                    "name": "ATV 2 Quad Power Racing"
-                },
-                {
-                    "name": "fairly OddParents! Breakin' Da Rules"
-                },
-                {
-                    "name": "Ford Bold Moves StreetRacing"
-                },
-                {
-                    "name": "007 From Russia With Love"
-                },
-                {
-                    "name": "Jaws Unleashed"
-                },
-                {
-                    "name": "Sudeki"
-                },
-                {
-                    "name": "Oddworld: Munch's Oddysee"
-                },
-                {
-                    "name": "IHRA Motorsports Drag Racing 2004"
-                },
-                {
-                    "name": "Black"
-                },
-                {
-                    "name": "Test Drive"
-                },
-                {
-                    "name": "Monopoly Party"
-                },
-                {
-                    "name": "Metal Gear Solid 2"
-                },
-                {
-                    "name": "Mortal Kombat Deadly Alliance"
-                },
-                {
-                    "name": "Starsky and Hutch"
-                },
-                {
-                    "name": "Crazy Taxi 3: High Rollers"
-                },
-                {
-                    "name": "Kakuto Chojin"
-                },
-                {
-                    "name": "Eggstreme Madness"
-                },
-                {
-                    "name": "Azurik: Rise of Perathia"
-                },
-                {
-                    "name": "Half Life 2"
-                },
-                {
-                    "name": "Evil Dead: A Fist Full of Boomstick"
-                },
-                {
-                    "name": "Evil Dead: Regeneration"
-                },
-                {
-                    "name": "Dark Watch"
-                },
-                {
-                    "name": "The Suffering"
-                },
-                {
-                    "name": "Tony Hawk's Underground"
-                },
-                {
-                    "name": "Red Faction II"
-                },
+              {
+                  "name": "Lord of the Rings: The Two Towers"
+              },
+
+              {
+                  "name": "Jet Set Radio Future / Sega GT 2002"
+              },
+
+              {
+                  "name": "Project Gotham Racing 2"
+              },
+
+              {
+                  "name": "Serious Sam 2"
+              },
+
+              {
+                  "name": "Sneak King"
+              },
+
                 {
                     "name": "Dead or Alive 3"
                 },
@@ -1168,143 +1059,8 @@
                 {
                     "name": "Burnout 3: Takedown",
                     "language" : "jp"
-                },
-                {
-                    "name": "The Incredible Hulk: Ultimate Destruction"
-                },
-                {
-                    "name": "Unreal 2: The Awakening"
-                },
-                {
-                    "name": "Unreal Championship"
-                },
-                {
-                    "name": "RalliSpirt Challenge 2"
-                },
-                {
-                    "name": "Midway Arcade Treasures 2"
-                },
-                {
-                    "name": "The Simpsons: Road Rage"
-                },
-                {
-                    "name": "Star Wars Jedi Starfighter"
-                },
-                {
-                    "name": "Soul Calibur II"
-                },
-                {
-                    "name": "Crimson Skies: High Road to Revenge"
-                },
-                {
-                    "name": "Strike Force Bowling"
-                },
-                {
-                    "name": "Blinx: The Time Sweeper"
-                },
-                {
-                    "name": "Defender"
-                },
-                {
-                    "name": "The Simpsons: Hit and Run"
-                },
-                {
-                    "name": "Ford VS Chevy"
-                },
-                {
-                    "name": "WrestleMania 21"
-                },
-                {
-                    "name": "Phantom Dust"
-                },
-                {
-                    "name": "Grabbed By The Ghoulies"
-                },
-                {
-                    "name": "Deus Ex: Invisible War"
-                },
-                {
-                    "name": "Doom 3"
-                },
-                {
-                    "name": "Sega GT 2002 / Jet Set Radio Future"
-                },
-                {
-                    "name": "Outlaw Volleyball: Red Hot"
-                },
-                {
-                    "name" : "Jade Empire"
-                },
-                {
-                    "name" : "CounterStrike"
-                },
-                {
-                    "name" : "Mercenaries: Playground of Destruction"
-                },
-                {
-                    "name" : "Project Gotham Racing"
-                },
-                {
-                    "name" : "Battlefield 2: Modern Combat"
-                },
-                {
-                    "name" : "Brothers In Arms: Road To Hill 30"
-                },
-                {
-                    "name" : "Spider Man"
-                },
-
-                {
-                    "name" : "Outlaw Golf: 9 More Holes of Xmas"
-                },
-
-                {
-                    "name" : "Outlaw Golf"
-                },
-
-                {
-                    "name" : "Tak 2: The Staff of Dreams"
-                },
-
-                {
-                    "name" : "MTX Mototrax"
-                },
-
-                {
-                    "name" : "BMX XXX"
-                },
-
-                {
-                    "name" : "Project Gotham Racing"
-                },
-
-                {
-                    "name" : "Splinter Cell"
-                },
-
-                {
-                    "name" : "Outlaw Golf: 9 Holes of X-mas"
-                },
-
-                {
-                    "name" : "Nascar Thunder 2003"
-                },
-
-                {
-                    "name" : "Chessmaster"
-                },
-
-                {
-                    "name" : "Scooby-Doo! Night of 100 Frights"
-                },
-
-                {
-                    "name" : "NBA Street V3"
-                },
-
-                {
-                    "name" : "Marvel Ultimate Alliance"
                 }
+
             ]
         },
         {
