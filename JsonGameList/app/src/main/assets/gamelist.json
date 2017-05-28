@@ -1220,6 +1220,18 @@
             ]
         },
         {
+            "name": "Nintendo Entertainment System",
+            "url": "http://www.nintendo.com",
+            "games": [
+                {
+                    "name": "Duck Hunt"
+                },
+                {
+                    "name": "Hogan's Alley"
+                }
+            ]
+        },
+        {
             "name": "Gamecube",
             "url": "http://www.nintendo.com",
             "games": [
