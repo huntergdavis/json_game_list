@@ -1070,87 +1070,7 @@
             "summary": "A rock solid console released in 2000 by Sony",
             "games": [
                 {
-                    "name": "Loony Toons Space Race"
-                },
-                {
                     "name": "Escape from Monkey Island"
-                },
-                {
-                    "name": "Final Fantasy X"
-                },
-                {
-                    "name": "Final Fantasy X-2"
-                },
-                {
-                    "name": "Hulk Ultimate Destruction"
-                },
-                {
-                    "name": "The Matrix: Path of Neo"
-                },
-                {
-                    "name": "Soul Calibur 3"
-                },
-                {
-                    "name": "Corvette"
-                },
-                {
-                    "name": "ATV Offroad Fury 2"
-                },
-                {
-                    "name": "007 Agent Under Fire"
-                },
-                {
-                    "name": "The Davinci Code"
-                },
-                {
-                    "name": "Dai Senryaku"
-                },
-                {
-                    "name": "Star Trek Conquest"
-                },
-                {
-                    "name": "Family Guy the Video Game"
-                },
-
-                {
-                    "name": "The Sopranos Road to Respect"
-                },
-
-                {
-                    "name": "Avatar"
-                },
-
-                {
-                    "name": "Spy Hunter"
-                },
-
-                {
-                    "name": "The Godfather The Game"
-                },
-
-                {
-                    "name": "Sonic Riders"
-                },
-                {
-                    "name": "Pirates of the Carribbean: At World's End"
-                },
-                {
-                    "name": "Medal of Honor Frontline"
-                },
-                {
-                    "name": "Ace Combat 04 Shattered Skies"
-                },
-                {
-                    "name": "Indiana Jones and the Staff of Kings"
-                },
-                {
-                    "name": "Ford Mustang The Legend Lives"
-                },
-                {
-                    "name": "Ace Combat 5"
-                },
-                  {
-                    "name": "Grand Theft Auto: San Andreas"
                 }
             ]
         },
@@ -1160,27 +1080,7 @@
             "releaseDate": "1995-10-10",
             "summary": "A rock solid console released in 1995 by Sony",
             "games": [
-                {
-                    "name": "Pac Man World"
-                },
-                {
-                    "name": "Triple Play 99"
-                },
-                {
-                    "name": "Cool Boarders 4"
-                },
-                {
-                    "name": "Sno Cross Championship Racing"
-                },
-                {
-                    "name": "Rally Cross 2"
-                },
-                {
-                    "name": "Ten Pin Alley"
-                },
-                {
-                    "name": "Lego Racers"
-                }
+
             ]
         },
         {
@@ -1266,6 +1166,21 @@
                             "operatingSystemVersion": ""
                         }
                     }
+                },
+                {
+                  "name" : "Ni no Kuni: Wrath of the White Witch"
+                },
+                {
+                  "name" : "Blazing Angels"
+                },
+                {
+                  "name" : "Prototype"
+                },
+                {
+                  "name" : "Infamous"
+                },
+                {
+                  "name" : "Star Trek"
                 }
             ]
         },
@@ -1344,6 +1259,9 @@
                     "name": "Kareoke Revolution Party"
                 },
 
+                {
+                    "name": "Need for Speed Underground 2"
+                },
 
 
                 {
@@ -1367,6 +1285,20 @@
                     "name": "Spy Hunter"
                 }
 
+            ]
+        },
+        {
+            "name": "Nintendo Switch",
+            "url": "http://www.nintendo.com",
+            "games": [
+
+                {
+                    "name": "The Legend of Zelda: Breath of the Wild"
+                },
+
+                {
+                    "name": "Super Bomber Man R"
+                }
             ]
         },
         {
@@ -1401,21 +1333,11 @@
                     "name": "Donkey Kong Country: Tropical Freeze",
                     "digitalDistribution": true
                 },
-                {
-                    "name": "Hyrule Warriors"
-                },
-
-                {
-                    "name": "Mario Kart 8"
-                },
 
                 {
                     "name": "Lego Batman 2: DC Super Heroes"
                 },
 
-                {
-                    "name": "Captain Toad: Treasure Tracker"
-                },
 
                 {
                     "name": "Mario and Sonic at the Sochii Winter Olympics"
@@ -1425,13 +1347,6 @@
                     "name": "Injustice: Gods Among Us"
                 },
 
-                {
-                    "name": "Bayonetta 2"
-                },
-
-                {
-                    "name": "Tekken Tag Tournament 2"
-                },
 
                 {
                     "name": "Zombi U"
@@ -1445,36 +1360,22 @@
                     "name": "The Legend Of Zelda: The Wind Waker HD"
                 },
 
-                {
-                    "name": "New Super Luigi U"
-                },
 
                 {
                     "name": "Mass Effect 3"
                 },
 
                 {
-                    "name": "New Super Mario U"
-                },
-
-                {
                     "name": "007 Legends"
                 },
 
-                {
-                    "name": "Nintendo Land"
-                },
-
-                {
-                    "name": "The Avengers"
-                },
 
                 {
                     "name": "Super Mario 3d World"
                 },
 
                 {
-                    "name": "Call of Duty Black Ops 2"
+                    "name": "Rodea the Sky Soldier"
                 },
 
                 {
@@ -1486,23 +1387,7 @@
                 },
 
                 {
-                    "name": "The Wonderful 101"
-                },
-
-                {
-                    "name": "Lego City Undercover"
-                },
-
-                {
-                    "name": "Rayman Legends"
-                },
-
-                {
                     "name": "Assassins Creed III"
-                },
-
-                {
-                    "name": "Need For Speed Most Wanted U"
                 },
 
                 {
@@ -1510,17 +1395,24 @@
                 },
 
                 {
-                    "name": "Sonic Lost World"
-                },
-
-                {
-                    "name": "Darksiders II"
-                },
-
-                {
                     "name": "Batman: Arkham City Armored Edition"
                 },
 
+                {
+                    "name": "Ducktales Remastered"
+                },
+                {
+                    "name": "Star Fox Zero"
+                },
+                {
+                    "name": "Star Fox Guard"
+                },
+                {
+                    "name": "The Legend of Zelda Twilight Princess HD"
+                },
+                {
+                    "name": "Super Mario Maker"
+                },
                 {
                     "name": "Ducktales Remastered"
                 },
@@ -12307,11 +12199,24 @@
                 {
                     "name": "The Legend of Zelda: Twilight Princess"
                 },
+                {
+                    "name": "Super Paper Mario"
+                },
+                {
+                    "name": "Broken Sword Shadow of the Templars"
+                  },
+                {
+                    "name": "Battalion Wars"
+                },
+                {
+                    "name": "Donkey Kong Country Returns"
+                },
 
 
                 {
                     "name": "Super Monkey Ball Banana Blitz"
-                }            ]
+                }
+            ]
         },
         {
             "name": "Movie Disks",
