@@ -12,6 +12,8 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -50,17 +52,27 @@ public class JsonGameListParser {
         Gson gson = new Gson();
         JsonGameList gameList = gson.fromJson(reader, JsonGameList.class);
 
-        return markDuplicatesAndWishListInGameList(gameList);
+        return sanitizeMarkDuplicatesAndWishListInGameList(gameList);
     }
 
 
+    public static Comparator<System> getSystemListComparator() {
+        return new Comparator<System>() {
+            @Override
+            public int compare(System g1, System g2) {
+                return g1.getName().toLowerCase().compareTo(g2.getName().toLowerCase());
+            }
+        };
+    }
 
-
-    private static JsonGameList markDuplicatesAndWishListInGameList(JsonGameList gameList) {
+    private static JsonGameList sanitizeMarkDuplicatesAndWishListInGameList(JsonGameList gameList) {
         Set<String> systemNames = new HashSet<String>();
         Set<String> crossGameNames = new HashSet<String>();
         Set<String> crossGameNamesDupes = new HashSet<String>();
         Set<String> systemNamesDupes = new HashSet<String>();
+
+        //sanitize - alphebatize the list of systems
+        Collections.sort(gameList.systems, getSystemListComparator());
 
 
         // first loop, mark all dupes, mark wish list
