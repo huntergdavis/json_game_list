@@ -66,26 +66,27 @@ public class SystemFragment extends ListFragment {
         Bundle args = getArguments();
         if (args != null) {
             this.systemNumber = args.getInt(EXTRA_SYSTEM_NUMER);
+
+            systemReference = JsonGameListActivity.gameList.systems.get(systemNumber - 1);
+
+            // alphebetize our games list when it's loaded in
+            systemReference.alphabetizeSystemItemLists();
+
+            ArrayList systemItemList = new ArrayList<SystemItemWithMetadata>();
+
+            systemItemList.add(systemReference);
+            systemItemList.addAll(systemReference.consoles);
+            systemItemList.addAll(systemReference.accessories);
+            systemItemList.addAll(systemReference.games);
+            systemItemList.addAll(systemReference.movies);
+            systemItemList.addAll(systemReference.music);
+
+            SystemAdapter adapter = new SystemAdapter(
+                    inflater.getContext(), systemItemList);
+
+            setListAdapter(adapter);
         }
 
-        systemReference = JsonGameListActivity.gameList.systems.get(systemNumber - 1);
-
-        // alphebetize our games list when it's loaded in
-        systemReference.alphabetizeSystemItemLists();
-
-        ArrayList systemItemList = new ArrayList<SystemItemWithMetadata>();
-
-        systemItemList.add(systemReference);
-        systemItemList.addAll(systemReference.consoles);
-        systemItemList.addAll(systemReference.accessories);
-        systemItemList.addAll(systemReference.games);
-        systemItemList.addAll(systemReference.movies);
-        systemItemList.addAll(systemReference.music);
-
-        SystemAdapter adapter = new SystemAdapter(
-                inflater.getContext(), systemItemList);
-
-        setListAdapter(adapter);
 
         return super.onCreateView(inflater, container, savedInstanceState);
     }
@@ -128,7 +129,7 @@ public class SystemFragment extends ListFragment {
 
     }
 
-    private class SystemAdapter extends ArrayAdapter<SystemItemWithMetadata>  {
+    class SystemAdapter extends ArrayAdapter<SystemItemWithMetadata>  {
 
 
         public SystemAdapter(Context context, List<SystemItemWithMetadata> items) {
