@@ -6,10 +6,12 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.hunterdavis.jsongamelistmanager.JsonGameListActivity;
+import com.hunterdavis.jsongamelistmanager.types.Game;
 import com.hunterdavis.jsongamelistmanager.types.System;
 import com.hunterdavis.jsongamelistmanager.types.SystemItemWithMetadata;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by hunter on 5/30/17.
@@ -37,14 +39,16 @@ public class AllFragment extends SystemFragment {
 
             for(System system : JsonGameListActivity.gameList.systems) {
                 superSystem.consoles.addAll(system.consoles);
-                superSystem.accessories.addAll(system.accessories);
+
+
+                for(Game game : system.games) {
+                    game.systemName = system.name;
+                }
+
                 superSystem.games.addAll(system.games);
                 superSystem.movies.addAll(system.movies);
                 superSystem.music.addAll(system.music);
             }
-
-
-            //systemReference = JsonGameListActivity.gameList.systems.get(systemNumber - 1);
 
             // alphebetize our games list when it's loaded in
             systemReference.alphabetizeSystemItemLists();
@@ -59,7 +63,7 @@ public class AllFragment extends SystemFragment {
             systemItemList.addAll(systemReference.music);
 
             SystemAdapter adapter = new SystemAdapter(
-                    inflater.getContext(), systemItemList);
+                    inflater.getContext(), systemItemList, true);
 
             setListAdapter(adapter);
 

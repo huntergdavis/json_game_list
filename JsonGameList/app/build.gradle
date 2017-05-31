@@ -8,8 +8,8 @@ android {
         applicationId "com.hunterdavis.jsongamelistmanager"
         minSdkVersion 15
         targetSdkVersion 25
-        versionCode 11
-        versionName "1.91"
+        versionCode 13
+        versionName "1.93"
     }
     buildTypes {
         release {
