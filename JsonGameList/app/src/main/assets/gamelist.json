@@ -328,6 +328,30 @@
                     "name": "Spider Man: Web of Shadows"
                 },
                 {
+                    "name": "Turok"
+                },
+                {
+                    "name": "UFC 2009 Undisputed"
+                },
+                {
+                    "name": "Rockstar Table Tennis"
+                },
+                {
+                    "name": "Sonic's Ultimate Genesis Collection"
+                },
+                {
+                    "name": "Velvet Assassin"
+                },
+                {
+                    "name": "Street Fighter IV"
+                },
+                {
+                    "name": "Samurai Warriors 2 Empires"
+                },
+                {
+                    "name": "Warhammer 40000 Space Marine"
+                },
+                {
                     "name": "Amped 3"
                 },
                 {
@@ -946,7 +970,31 @@
               {
                   "name": "Super Monkey Ball Deluxe"
               },
+              {
+                  "name": "Blood Wake"
+              },
+              {
+                  "name": "Amped"
+              },
+              {
+                  "name": "Azurik"
+              },
+              {
+                  "name": "Metal Gear Solid 2"
+              },
+              {
+                  "name": "Monopoly Party"
+              },
+              {
+                  "name": "Namco Museum Volume 1"
+              },
+              {
+                  "name": "The Bible Game"
+              },
 
+              {
+                  "name": "Batman Begins"
+              },
               {
                   "name": "Need for Speed Underground 2"
               },
@@ -1101,6 +1149,24 @@
             "games": [
                 {
                     "name": "Escape from Monkey Island"
+                },
+                {
+                    "name": "Let's Ride! Silver Buckle Stables"
+                },
+                {
+                    "name": "Family Guy Video Game!"
+                },
+                {
+                    "name": "Ultimate Board Game Collection"
+                },
+                {
+                    "name": "Gran Turismo 3 A-spec"
+                },
+                {
+                    "name": "Spider-Man 2"
+                },
+                {
+                    "name": "Disney's The Incredibles"
                 }
             ]
         },
@@ -1280,6 +1346,18 @@
                   "name" : "Infamous"
                 },
                 {
+                  "name" : "Jak and Daxter Collection"
+                },
+                {
+                  "name" : "Kung Fu Panda"
+                },
+                {
+                  "name" : "Medal of Honor Limited Edition"
+                },
+                {
+                  "name" : "Need for Speed Hot Pursuit"
+                },
+                {
                   "name" : "Star Trek"
                 }
             ]
@@ -1343,7 +1421,9 @@
                 {
                     "name": "Super Monkey Ball"
                 },
-
+                {
+                    "name": "Pikmin"
+                },
                 {
                     "name": "Star Wars Rogue Leader",
                     "quantity" : 1
@@ -17604,8 +17684,12 @@
                 {
                     "name": "Donkey Kong Country Returns"
                 },
-
-
+                {
+                    "name": "Tatsunoko VS. Capcom"
+                },
+                {
+                    "name": "Red Steel 2"
+                },
                 {
                     "name": "Super Monkey Ball Banana Blitz"
                 }
