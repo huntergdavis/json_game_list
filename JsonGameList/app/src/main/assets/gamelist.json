@@ -322,6 +322,12 @@
                     "name": "Majin and the Forsaken Kingdom"
                 },
                 {
+                    "name": "Qubed - E4, Lumines Live, Rez"
+                },
+                {
+                    "name": "Tropico 4"
+                },
+                {
                     "name": "The Godfather: The Game"
                 },
                 {
@@ -983,6 +989,15 @@
                   "name": "Blood Wake"
               },
               {
+                  "name": "Quantum Redshift"
+              },
+              {
+                  "name": "Brute Force"
+              },
+              {
+                  "name": "007 Nightfire"
+              },
+              {
                   "name": "Nascar Heat 2002"
               },
               {
@@ -1194,6 +1209,22 @@
             "games": [
                 {
                     "name": "Escape from Monkey Island"
+                },
+                {
+                    "name": "Iron Man"
+                },
+                {
+                    "name": "Harry Potter and the Prizoner of Azkaban"
+                },
+                {
+                    "name": "Kessen"
+                },
+                {
+                    "name": "Final Fantasy XII"
+                },
+                {
+                    "name": "Naruto",
+                    "language" : "jp"
                 },
                 {
                     "name": "Let's Ride! Silver Buckle Stables"
@@ -1428,6 +1459,9 @@
                 },
                 {
                   "name" : "Infamous"
+                },
+                {
+                  "name" : "Aragorn's Quest"
                 },
                 {
                   "name" : "Jak and Daxter Collection"
@@ -17729,6 +17763,10 @@
                     "digitalDistribution": true
                 },
                 {
+                    "name": "Super Mario Galaxy",
+                    "digitalDistribution": true
+                },
+                {
                     "name": "Punch-Out",
                     "digitalDistribution": true
                 },
@@ -17740,7 +17778,9 @@
                 {
                     "name": "Indiana Jones and the Staff of Kings"
                 },
-
+                {
+                    "name": "Cabela's Survival Shadows of Katmai"
+                },
                 {
                     "name": "Nights: Journey of Dreams"
                 },
