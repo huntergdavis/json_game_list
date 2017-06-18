@@ -986,8 +986,18 @@
                   "name": "Super Monkey Ball Deluxe"
               },
               {
+                  "name": "The Urbz Sims in the City"
+              },
+              {
+                  "name": "Dinotopia The Sunstone Odyssey"
+              },
+              {
+                  "name": "Toxic Grind"
+              },
+              {
                   "name": "Blood Wake"
               },
+
               {
                   "name": "Quantum Redshift"
               },
@@ -1521,6 +1531,9 @@
             "games": [
                 {
                     "name": "Duck Hunt"
+                },
+                {
+                    "name": "Operation Wolf"
                 },
                 {
                     "name": "Hogan's Alley"
