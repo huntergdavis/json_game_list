@@ -328,6 +328,9 @@
                     "name": "Tropico 4"
                 },
                 {
+                    "name": "Over G Fighters"
+                },
+                {
                     "name": "The Godfather: The Game"
                 },
                 {
@@ -989,6 +992,12 @@
                   "name": "The Urbz Sims in the City"
               },
               {
+                  "name": "Spongebob Squarepants Battle for Bikini Bottom"
+              },
+              {
+                  "name": "Spongebob Squarepants Lights, Camera, Pants"
+              },
+              {
                   "name": "Dinotopia The Sunstone Odyssey"
               },
               {
@@ -1499,11 +1508,37 @@
             ]
         },
         {
+            "name": "Game Gear",
+            "games": [
+                {
+                    "name": "Ecco the Dolphin"
+                },
+                {
+                    "name": "World Series Baseball"
+                },
+                {
+                    "name": "Tazmania"
+                },
+                {
+                    "name": "Desert SpeedTrap starring Road Runner and Wile E. Coyote"
+                }
+            ]
+        },
+        {
             "name": "Neo Geo Pocket Color",
             "url": "http://www.neo-geo.com",
             "games": [
                 {
                     "name": "Samurai Showdown! 2"
+                }
+            ]
+        },
+        {
+            "name": "Game Boy",
+            "url": "http://www.nintendo.com",
+            "games": [
+                {
+                    "name": "Balloon Kid"
                 }
             ]
         },
@@ -1521,7 +1556,40 @@
                     "name": "King Of Fighters EX: Neo Blood"
                 },
                 {
+                    "name": "Yu Yu Yakusho Tournament Tactics"
+                },
+                {
+                    "name": "Monster Trucks"
+                },
+                {
+                    "name": "Castlevania Double Pack"
+                },
+                {
+                    "name": "Mario Pinball Land"
+                },
+                {
+                    "name": "Herbie Fully Loaded"
+                },
+                {
+                    "name": "Super Mario Advance"
+                },
+                {
+                    "name": "Super Mario World Super Mario Advance 2"
+                },
+                {
+                    "name": "Operation and MouseTrap and Simon"
+                },
+                {
                     "name": "Rayman Hoodlum's Revenge"
+                }
+            ]
+        },
+        {
+            "name": "Game Boy Color",
+            "url": "http://www.nintendo.com",
+            "games": [
+                {
+                    "name": "Sabrina the animated series Zapped"
                 }
             ]
         },
