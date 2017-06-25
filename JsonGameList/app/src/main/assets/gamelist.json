@@ -328,7 +328,28 @@
                     "name": "Tropico 4"
                 },
                 {
+                    "name": "WET"
+                },
+                {
+                    "name": "Midway Arcade Origins"
+                },
+                {
+                    "name": "El Shaddai Ascention of the Metatron"
+                },
+                {
+                    "name": "Earth Defense Force 2025"
+                },
+                {
+                    "name": "Namco Museum Virtual Arcade"
+                },
+                {
                     "name": "Over G Fighters"
+                },
+                {
+                    "name": "Harry Potter and the Deathly Hallows Part 1"
+                },
+                {
+                    "name": "Killer is Dead"
                 },
                 {
                     "name": "The Godfather: The Game"
@@ -995,6 +1016,24 @@
                   "name": "Spider-Man 2"
               },
               {
+                  "name": "UFC Tapout 2"
+              },
+              {
+                  "name": "Teenage Mutant Ninja Turtles 3: Mutant Nightmare"
+              },
+              {
+                  "name": "Reservoir Dogs"
+              },
+              {
+                  "name": "Sega Soccer Slam"
+              },
+              {
+                  "name": "James Cameron's Dark Angel"
+              },
+              {
+                  "name": "Alias"
+              },
+              {
                   "name": "Mechassault 2 Lone Wolf"
               },
               {
@@ -1239,6 +1278,36 @@
                     "name": "Iron Man"
                 },
                 {
+                    "name": "Hulk"
+                },
+                {
+                    "name": "Black"
+                },
+                {
+                    "name": "Out of the Chute Professional Bull Riding"
+                },
+                {
+                    "name": "Mojo!"
+                },
+                {
+                    "name": "Jimmy Neutron Boy Genius Attack of the Twinkies"
+                },
+                {
+                    "name": "Avatar the last Airbender"
+                },
+                {
+                    "name": "The Matrix Path of Neo"
+                },
+                {
+                    "name": "Harry Potter and the Goblet of Fire"
+                },
+                {
+                    "name": "NBA Jam"
+                },
+                {
+                    "name": "Super Trucks Racing"
+                },
+                {
                     "name": "Harry Potter and the Prizoner of Azkaban"
                 },
                 {
@@ -1316,7 +1385,18 @@
             "releaseDate": "1995-10-10",
             "summary": "A rock solid console released in 1995 by Sony",
             "games": [
-
+              {
+                  "name": "Streak Hoverboard Racing"
+              },
+              {
+                  "name": "Excalibur 2555 A.D."
+              },
+              {
+                  "name": "Air Combat"
+              },
+              {
+                  "name": "Harry Potter and the Sorcerer's Stone"
+              }
             ]
         },
         {
@@ -1495,6 +1575,27 @@
                   "name" : "Kung Fu Panda"
                 },
                 {
+                  "name" : "Jurassic: The Hunted"
+                },
+                {
+                  "name" : "Air Conflicts: Secret Wars"
+                },
+                {
+                  "name" : "Condemned 2: Bloodshot"
+                },
+                {
+                  "name" : "Alpha Protocol"
+                },
+                {
+                  "name" : "The Bigs 2"
+                },
+                {
+                  "name" : "Assassin's Creed 2"
+                },
+                {
+                  "name" : "Tom Clancy's Endwar"
+                },
+                {
                   "name" : "Medal of Honor Limited Edition"
                 },
                 {
@@ -1545,6 +1646,9 @@
             "games": [
                 {
                     "name": "Balloon Kid"
+                },
+                {
+                    "name": "Wave Race"
                 }
             ]
         },
@@ -1596,6 +1700,9 @@
             "games": [
                 {
                     "name": "Sabrina the animated series Zapped"
+                },
+                {
+                    "name": "DragonBall Z Legendary Super Warriors"
                 }
             ]
         },
@@ -1622,7 +1729,15 @@
                 {
                     "name": "Super Monkey Ball 2"
                 },
-
+                {
+                    "name": "Donkey Konga"
+                },
+                {
+                    "name": "Enter the Matrix"
+                },
+                {
+                    "name": "Dragonball Z Sagas"
+                },
                 {
                     "name": "Super Monkey Ball"
                 },
@@ -1743,12 +1858,12 @@
                 {
                     "name": "Injustice: Gods Among Us"
                 },
-
-
+                {
+                    "name": "The Voice I want You"
+                },
                 {
                     "name": "Zombi U"
                 },
-
                 {
                     "name": "Game and Wario"
                 },
@@ -17861,7 +17976,10 @@
                     "name": "Metroid Prime Trilogy",
                     "digitalDistribution": true
                 },
-
+                {
+                    "name": "The Legend of Zelda: Skyward Sword",
+                    "digitalDistribution": true
+                },
                 {
                     "name": "Indiana Jones and the Staff of Kings"
                 },
@@ -17871,7 +17989,9 @@
                 {
                     "name": "Nights: Journey of Dreams"
                 },
-
+                {
+                    "name": "Sin and Punishment Star Successor"
+                },
                 {
                     "name": "New Super Mario Bros"
                 },
@@ -18155,6 +18275,10 @@
                 },
                 {
                     "name": "Dragon's Lair",
+                    "revision": "DVD"
+                },
+                {
+                    "name": "Dragon's Lair II Time Warp",
                     "revision": "DVD"
                 },
                 {
