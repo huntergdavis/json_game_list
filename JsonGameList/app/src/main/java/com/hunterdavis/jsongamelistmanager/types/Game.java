@@ -16,6 +16,7 @@ public class Game extends SystemItemWithMetadata {
     public String statsLink;
     public String globalStatsLink;
     public String appID;
+    public String systemName;
 
 
     /**

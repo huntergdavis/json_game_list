@@ -82,7 +82,7 @@ public class SystemFragment extends ListFragment {
             systemItemList.addAll(systemReference.music);
 
             SystemAdapter adapter = new SystemAdapter(
-                    inflater.getContext(), systemItemList);
+                    inflater.getContext(), systemItemList, false);
 
             setListAdapter(adapter);
         }
@@ -131,10 +131,11 @@ public class SystemFragment extends ListFragment {
 
     class SystemAdapter extends ArrayAdapter<SystemItemWithMetadata>  {
 
+        private boolean qualifyGamesWithSystemName = false;
 
-        public SystemAdapter(Context context, List<SystemItemWithMetadata> items) {
+        public SystemAdapter(Context context, List<SystemItemWithMetadata> items, boolean qualifyGamesWithSystem) {
             super(context, R.layout.system_list_item, items);
-
+            this.qualifyGamesWithSystemName = qualifyGamesWithSystem;
         }
 
         @Override
@@ -174,8 +175,15 @@ public class SystemFragment extends ListFragment {
 
             final SystemItemWithMetadata currentItem = getItem(position);
 
-            // update the item view
-            updateItemViewVisibliltyAndText(viewHolder.name, currentItem.name);
+            // qualify name with system if exists
+            String qualifiedName = currentItem.name;
+            if(currentItem instanceof Game) {
+                if(qualifyGamesWithSystemName) {
+                    qualifiedName += " (" + ((Game) currentItem).systemName + ")";
+                }
+            }
+
+            updateItemViewVisibliltyAndText(viewHolder.name, qualifiedName);
             updateItemViewVisibliltyAndText(viewHolder.revision, currentItem.revision);
             updateItemViewVisibliltyAndText(viewHolder.url, currentItem.url);
             updateItemViewVisibliltyAndText(viewHolder.releaseDate, currentItem.releaseDate);
