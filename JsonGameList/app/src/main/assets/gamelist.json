@@ -331,6 +331,15 @@
                     "name": "WET"
                 },
                 {
+                    "name": "NBA Street HomeCourt"
+                },
+                {
+                    "name": "Forza Motorsport 2"
+                },
+                {
+                    "name": "Puss in Boots"
+                },
+                {
                     "name": "Fracture"
                 },
                 {
@@ -1028,6 +1037,60 @@
                   "name": "I-Ninja"
               },
               {
+                  "name": "Madagascar"
+              },
+              {
+                  "name": "Shark Tale"
+              },
+              {
+                  "name": "Panzer Dragoon Orta"
+              },
+              {
+                  "name": "Men of Valor"
+              },
+              {
+                  "name": "Crash Twinsanity"
+              },
+              {
+                  "name": "Madden 2005"
+              },
+              {
+                  "name": "Forza Motorsport"
+              },
+              {
+                  "name": "Inside Pitch 2003"
+              },
+              {
+                  "name": "Rapala Pro Fishing"
+              },
+              {
+                  "name": "007 Agent under Fire"
+              },
+              {
+                  "name": "NHL Rivals 2004"
+              },
+              {
+                  "name": "NFL Fever 2004"
+              },
+              {
+                  "name": "Ghost Recon"
+              },
+              {
+                  "name": "Ghost Recon Island Thunder"
+              },
+              {
+                  "name": "Blinx 2 Masters of Time and Space"
+              },
+              {
+                  "name": "Splinter Cell Pandora Tomorrow"
+              },
+              {
+                  "name": "Buffy the Vampire Slayer"
+              },
+              {
+                  "name": "Xbox Music Maker"
+              },
+              {
                   "name": "Burnout Revenge"
               },
 
@@ -1382,6 +1445,66 @@
                     "name": "Rygar"
                 },
                 {
+                    "name": "Robin Hood Defender of the Crown"
+                },
+                {
+                    "name": "X2 Wolverine's Revenge"
+                },
+                {
+                    "name": "Grand Prix Challenge"
+                },
+                {
+                    "name": "Call of Duty Finest Hour"
+                },
+                {
+                    "name": "True Crime Streets of LA"
+                },
+                {
+                    "name": "Horsez"
+                },
+                {
+                    "name": "Top Gun Combat Zones"
+                },
+                {
+                    "name": "Mad Maestro"
+                },
+                {
+                    "name": "The Mark of Kri"
+                },
+                {
+                    "name": "The Sims 2 Castaway"
+                },
+                {
+                    "name": "Frogger The Great Quest"
+                },
+                {
+                    "name": "The Lord of the Rings The Fellowship of the Ring"
+                },
+                {
+                    "name": "Midnight Club"
+                },
+                {
+                    "name": "Knockout Kings 2002"
+                },
+                {
+                    "name": "WinBack Covert Operations"
+                },
+                {
+                    "name": "Battlestar Galactica"
+                },
+                {
+                    "name": "Soul Calibur 2"
+                },
+                {
+                    "name": "Half-Life"
+                },
+                {
+                    "name": "WWF Smackdown Just Bring It"
+                },
+                {
+                    "name": "Shepard's Crossing"
+                },
+                {
                     "name": "Disney's Treasure Planet"
                 },
                 {
@@ -1712,6 +1835,15 @@
                   "name" : "The Bigs 2"
                 },
                 {
+                  "name" : "Killzone 2"
+                },
+                {
+                  "name" : "Fight Night Round 3"
+                },
+                {
+                  "name" : "God of War Origins Collection"
+                },
+                {
                   "name" : "Assassin's Creed 2"
                 },
                 {
@@ -1770,6 +1902,18 @@
                     "name": "Balloon Kid"
                 },
                 {
+                    "name": "The Legend of Zelda: Link's Awakening"
+                },
+                {
+                    "name": "Tetris"
+                },
+                {
+                    "name": "Boggle Plus"
+                },
+                {
+                    "name": "A Bug's Life"
+                },
+                {
                     "name": "Wave Race"
                 }
             ]
@@ -1824,6 +1968,9 @@
                     "name": "Sabrina the animated series Zapped"
                 },
                 {
+                    "name": "Marble Madness"
+                },
+                {
                     "name": "DragonBall Z Legendary Super Warriors"
                 }
             ]
@@ -1864,15 +2011,21 @@
                     "name": "Super Monkey Ball"
                 },
                 {
+                    "name": "Harry Potter and the Goblet of Fire"
+                },
+                {
+                    "name": "Sonic Heroes"
+                },
+                {
                     "name": "Pikmin"
+                },
+                {
+                    "name": "NCAA Football 2004"
                 },
                 {
                     "name": "Star Wars Rogue Leader",
                     "quantity" : 1
                 },
-
-
-
                 {
                     "name": "The Legend of Zelda: The Wind Waker"
                 },
@@ -1901,8 +2054,6 @@
                 {
                     "name": "Ultimate Spider Man"
                 },
-
-
 
                 {
                     "name": "NCAA Football 2003"
@@ -18117,11 +18268,15 @@
                 {
                     "name": "New Super Mario Bros"
                 },
-
                 {
                     "name": "Wii Sports"
                 },
-
+                {
+                    "name": "Transformers Ultimate Battle Edition Combo Pack"
+                },
+                {
+                    "name": "Build a Bear Workshop - A friend Fur All Seasons"
+                },
                 {
                     "name": "The Legend of Zelda: Twilight Princess"
                 },
