@@ -331,6 +331,9 @@
                     "name": "WET"
                 },
                 {
+                    "name": "Fuzion Frenzy 2"
+                },
+                {
                     "name": "NBA Street HomeCourt"
                 },
                 {
@@ -1043,6 +1046,12 @@
                   "name": "Grand Theft Auto III"
               },
               {
+                  "name": "Shadow Ops Red Mercury"
+              },
+              {
+                  "name": "Call of Duty 2 Big Red one"
+              },
+              {
                   "name": "Deus Ex: Invisible War"
               },
               {
@@ -1463,6 +1472,15 @@
                     "name": "Rygar"
                 },
                 {
+                    "name": "Fisherman's Bass Club"
+                },
+                {
+                    "name": "Red Dead Revolver"
+                },
+                {
+                    "name": "Suzuki Superbike Real Road Racing"
+                },
+                {
                     "name": "Robin Hood Defender of the Crown"
                 },
                 {
@@ -1663,6 +1681,15 @@
             ]
         },
         {
+            "name": "Atari XE",
+            "url": "http://www.atari.com",
+            "games": [
+              {
+                  "name": "David's Midnight Magic"
+              }
+            ]
+        },
+        {
             "name": "Playstation Vita",
             "url": "http://www.playstation.com",
             "releaseDate": "2011-10-10",
@@ -1670,6 +1697,24 @@
             "games": [
                 {
                     "name": "Wipeout 2048"
+                },
+                {
+                    "name": "Ultimate Marvel vs Capcom 3"
+                },
+                {
+                    "name": "Little Deviants"
+                },
+                {
+                    "name": "Uncharted Golden Abyss"
+                },
+                {
+                    "name": "Muramasa Rebirth"
+                },
+                {
+                    "name": "Ragnarok Odyssey"
+                },
+                {
+                    "name": "Dead or Alive Xtreme 3 Venus"
                 }
             ]
         },
@@ -2036,6 +2081,12 @@
                 },
                 {
                     "name": "Pikmin"
+                },
+                {
+                    "name": "Harry Potter Quidditch World Cup"
+                },
+                {
+                    "name": "NFL Blitz 20-02"
                 },
                 {
                     "name": "NCAA Football 2004"
@@ -18288,6 +18339,9 @@
                 },
                 {
                     "name": "Wii Sports"
+                },
+                {
+                    "name": "Drawsome! Artist & Drawsome! Sketch Quest"
                 },
                 {
                     "name": "X-Men Origins Wolverine"
