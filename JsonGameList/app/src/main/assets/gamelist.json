@@ -331,6 +331,12 @@
                     "name": "WET"
                 },
                 {
+                    "name": "Rocksmith"
+                },
+                {
+                    "name": "Darksiders"
+                },
+                {
                     "name": "Fuzion Frenzy 2"
                 },
                 {
@@ -1201,6 +1207,21 @@
                   "name": "Alias"
               },
               {
+                  "name": "Cabela's Dangerous Hunts"
+              },
+              {
+                  "name": "Peter Jackson's King Kong"
+              },
+              {
+                  "name": "Dave Mirra Freestyle BMX 2"
+              },
+              {
+                  "name": "Finding Nemo"
+              },
+              {
+                  "name": "Fable"
+              },
+              {
                   "name": "WrestleMania 21"
               },
               {
@@ -1461,6 +1482,9 @@
                 },
                 {
                     "name": "Hulk"
+                },
+                {
+                    "name": "American Idol"
                 },
                 {
                     "name": "Thrillville"
@@ -18348,6 +18372,15 @@
                 },
                 {
                     "name": "Wii Sports"
+                },
+                {
+                    "name": "Puzzler Collection"
+                },
+                {
+                    "name": "Ultimate Board Game Collection"
+                },
+                {
+                    "name": "Monster 4x4 World Circuit"
                 },
                 {
                     "name": "Project Runway"
