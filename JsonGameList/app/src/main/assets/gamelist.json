@@ -1049,6 +1049,9 @@
                   "name": "I-Ninja"
               },
               {
+                  "name": "Full Spectrum Warrior"
+              },
+              {
                   "name": "Dance Dance Revolution Ultramix"
               },
               {
@@ -2023,6 +2026,15 @@
             "games": [
                 {
                     "name": "Samurai Showdown! 2"
+                }
+            ]
+        },
+        {
+            "name": "Genesis",
+            "url": "http://www.sega.com",
+            "games": [
+                {
+                    "name": "Sonic Spinball"
                 }
             ]
         },
