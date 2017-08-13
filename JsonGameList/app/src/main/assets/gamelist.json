@@ -1073,6 +1073,48 @@
                   "name": "The Sims"
               },
               {
+                  "name": "Fight Night Round 3"
+              },
+              {
+                  "name": "Transworld Surf"
+              },
+              {
+                  "name": "Doom 3"
+              },
+              {
+                  "name": "Spy Hunter 2"
+              },
+              {
+                  "name": "PocketBike Racer"
+              },
+              {
+                  "name": "Barbie Horse Adventures Wild Horse Rescue"
+              },
+              {
+                  "name": "The DaVinci Code"
+              },
+              {
+                  "name": "Lego Star Wars"
+              },
+              {
+                  "name": "Silent Scope Complete"
+              },
+              {
+                  "name": "The House of the Dead 3"
+              },
+              {
+                  "name": "ThrillVille"
+              },
+              {
+                  "name": "Midway Arcade Treasures 2"
+              },
+              {
+                  "name": "Full Spectrum Warrior Ten Hammers"
+              },
+              {
+                  "name": "Enter the Matrix"
+              },
+              {
                   "name": "RalliSport Challenge 2"
               },
               {
@@ -1509,6 +1551,15 @@
                 },
                 {
                     "name": "Iron Man"
+                },
+                {
+                    "name": "NBA 07 The Life"
+                },
+                {
+                    "name": "Eragon"
+                },
+                {
+                    "name": "Tomb Raider The Angel of Darkness"
                 },
                 {
                     "name": "High Heat Major League Baseball 2002"
@@ -2078,11 +2129,35 @@
             ]
         },
         {
+            "name": "Playstation Portable",
+            "url": "http://www.playstation.com",
+            "games": [
+                {
+                    "name": "Mortal Kombat Unchained"
+                }
+            ]
+        },
+        {
             "name": "Genesis",
             "url": "http://www.sega.com",
             "games": [
                 {
                     "name": "Sonic Spinball"
+                },
+                {
+                    "name": "Sports Talk Foodball 93 Starring Joe Montana"
+                },
+                {
+                    "name": "Madden 98"
+                }
+            ]
+        },
+        {
+            "name": "Super Nintendo",
+            "url": "http://www.nintendo.com",
+            "games": [
+                {
+                    "name": "Yoshi's Island Super Mario World 2"
                 }
             ]
         },
@@ -2192,6 +2267,9 @@
                 },
                 {
                     "name": "Donkey Konga"
+                },
+                {
+                    "name": "Madden 2005"
                 },
                 {
                     "name": "Backyard Foodball"
