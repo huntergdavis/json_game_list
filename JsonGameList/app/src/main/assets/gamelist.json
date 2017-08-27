@@ -2313,6 +2313,78 @@
                     "name": "Ragnarok Odyssey"
                 },
                 {
+                  "name" : "XCOM:Enemy Unknown"
+                },
+                {
+                    "name": "Touch My Katamari"
+                },
+                {
+                  "name" : "Sid Meier's Civilization Revolution 2 Plus"
+                },
+                {
+                  "name" : "Playstation All Stars Battle Royale"
+                },
+                {
+                  "name" : "Asuka's Wrath"
+                },
+                {
+                    "name": "Ratchet and Clank Collection"
+                },
+                {
+                    "name": "J-STARS Victory VS+"
+                },
+                {
+                    "name": "Once Piece: Pirate Warriors 3"
+                },
+                {
+                    "name": "Tearaway"
+                },
+                {
+                    "name": "Street Fighter X Tekken"
+                },
+                {
+                    "name": "Street Fighter Alpha 3 Max"
+                },
+                {
+                    "name": "Patchwork Heroes"
+                },
+                {
+                    "name": "Piyotama"
+                },
+                {
+                    "name": "Patapon"
+                },
+                {
+                    "name": "Dungeon Maker: Hunting Ground"
+                },
+                {
+                    "name": "Magic Carpet"
+                },
+                {
+                    "name": "Dead Head Fred"
+                },
+                {
+                    "name": "Castlevania: Symphony of the Night"
+                },
+                {
+                    "name": "Wild Arms"
+                },
+                {
+                    "name": "Oddworld: Stranger's Wrath"
+                },
+                {
+                    "name": "Zen Pinball 2"
+                },
+                {
+                    "name": "Need for Speed Most Wanted"
+                },
+                {
+                    "name": "Injustice: Gods Among Us"
+                },
+                {
+                    "name": "Akiba's Trip: Undead and Undressed"
+                },
+                {
                     "name": "Dead or Alive Xtreme 3 Venus"
                 }
             ]
@@ -2597,7 +2669,70 @@
                     "name": "Until Dawn"
                 },
                 {
+                    "name": "Full Throttle Remastered"
+                },
+                {
+                    "name": "Deformers"
+                },
+                {
+                    "name": "Legend of Kay Anniversary"
+                },
+                {
+                    "name": "Deponia"
+                },
+                {
+                    "name": "Super Dungeon Bros"
+                },
+                {
+                    "name": "Arcania: The Complete Tale"
+                },
+                {
+                    "name": "MX vs ATV Supercross Europe"
+                },
+                {
+                    "name": "The Book of Unwritten Tales 2"
+                },
+                {
+                    "name": "Darksiders II Deathinitive Edition"
+                },
+                {
+                    "name": "BattleWorldsKronos"
+                },
+                {
+                    "name": "Destroy All Humans!"
+                },
+                {
+                    "name": "Destroy All Humans! 2"
+                },
+                {
+                    "name": "Darksiders Warmastered Edition"
+                },
+                {
+                    "name": "Red Faction"
+                },
+                {
+                    "name": "3on3 Freestyle"
+                },
+                {
+                    "name": "inFamous First Light"
+                },
+                {
+                    "name": "The Warriors"
+                },
+                {
+                  "name" : "Evolve"
+                },
+                {
+                  "name" : "Battleborn"
+                },
+                {
+                  "name" : "Red Dead Revolver"
+                },
+                {
                     "name": "God of War 3 Remastered"
+                },
+                {
+                    "name": "Plants Vs Zombies Garden Warfare"
                 },
                 {
                     "name": "Uncharted 1-3 Nathan Drake Collection"
@@ -2687,10 +2822,91 @@
                   "name" : "Prototype"
                 },
                 {
+                  "name" : "Marvel vs Capcom 2"
+                },
+                {
+                  "name" : "Guilty Gear Judgement"
+                },
+                {
+                  "name" : "1942: Joint Strike"
+                },
+                {
                   "name" : "Infamous"
                 },
                 {
                   "name" : "Infamous 2"
+                },
+                {
+                  "name" : "Mirror's Edge"
+                },
+                {
+                    "name": "MX vs ATV Supercross"
+                },
+                {
+                    "name": "Legend of Kay Anniversary"
+                },
+                {
+                    "name": "Fat Princess"
+                },
+                {
+                    "name": "God of War: Ascension"
+                },
+                {
+                    "name": "Twisted Metal"
+                },
+                {
+                    "name": "God of War HD"
+                },
+                {
+                    "name": "God of War II HD"
+                },
+                {
+                    "name": "Modnation Racers"
+                },
+                {
+                    "name": "MotorStorm Apocalypse"
+                },
+                {
+                    "name": "Pocket Fighters"
+                },
+                {
+                    "name": "God of War Chains of Olympus"
+                },
+                {
+                    "name": "God of War Ghost of Sparta"
+                },
+                {
+                  "name" : "Bioshock"
+                },
+                {
+                  "name" : "Borderlands"
+                },
+                {
+                  "name" : "Borderlands 2"
+                },
+                {
+                  "name" : "Spec Ops: The Line"
+                },
+                {
+                  "name" : "XCOM:Enemy Within"
+                },
+                {
+                  "name" : "The Bureau: XCOM Declassified"
+                },
+                {
+                  "name" : "Mafia II"
+                },
+                {
+                  "name" : "Sid Meier's Cifization Revolution 2 Plus"
+                },
+                {
+                  "name" : "Okami HD"
+                },
+                {
+                  "name" : "Darksiders"
+                },
+                {
+                  "name" : "Darksiders II"
                 },
                 {
                   "name" : "Virtua Fighter 5"
@@ -2751,6 +2967,15 @@
                 },
                 {
                   "name" : "Ratchet and Clank: All 4 One"
+                },
+                {
+                  "name" : "Asuka's Wrath"
+                },
+                {
+                  "name" : "Borderlands 2"
+                },
+                {
+                  "name" : "The Bureau: XCOM Declassified CodeBreakers"
                 },
                 {
                   "name" : "Asuka's Wrath"
