@@ -331,6 +331,18 @@
                     "name": "WET"
                 },
                 {
+                    "name": "How to Train Your Dragon"
+                },
+                {
+                    "name": "Call of Juarez Bound By Blood"
+                },
+                {
+                    "name": "Looney Toons Acme Arsenal"
+                },
+                {
+                    "name": "Project Sylpheed Arc of Deception"
+                },
+                {
                     "name": "America's Army True Soliders"
                 },
                 {
@@ -1064,6 +1076,12 @@
                   "name": "I-Ninja"
               },
               {
+                  "name": "True Crime New York City"
+              },
+              {
+                  "name": "Dakar 2"
+              },
+              {
                   "name": "Real World Golf"
               },
               {
@@ -1583,6 +1601,21 @@
                     "name": "Iron Man"
                 },
                 {
+                    "name": "The Sims 2"
+                },
+                {
+                    "name": "Harry Potter and the Goblet of Fire"
+                },
+                {
+                    "name": "Bass Strike"
+                },
+                {
+                    "name": "DragonBall Z Budokai"
+                },
+                {
+                    "name": "Sea Monsters: A Prehistoric Adventure"
+                },
+                {
                     "name": "War Jetz"
                 },
                 {
@@ -1964,6 +1997,9 @@
                   "name": "Power Play Sports Trivia"
               },
               {
+                  "name": "Tomb Raider 2"
+              },
+              {
                   "name": "Caesar's Palace"
               },
               {
@@ -2201,6 +2237,21 @@
                   "name" : "Infamous"
                 },
                 {
+                  "name" : "Infamous 2"
+                },
+                {
+                  "name" : "Virtua Fighter 5"
+                },
+                {
+                  "name" : "X-Men Origins Wolverine"
+                },
+                {
+                  "name" : "Virtua Tennis 3"
+                },
+                {
+                  "name" : "Vancouver 2010"
+                },
+                {
                   "name" : "Shawn White Skateboarding"
                 },
                 {
@@ -2296,6 +2347,15 @@
             "games": [
                 {
                     "name": "Samurai Showdown! 2"
+                }
+            ]
+        },
+        {
+            "name": "Sega Genesis",
+            "url": "http://www.sega.com",
+            "games": [
+                {
+                    "name": "NBA 2k"
                 }
             ]
         },
@@ -2438,6 +2498,12 @@
                 },
                 {
                     "name": "Donkey Konga"
+                },
+                {
+                    "name": "Call of Duty Finest Hour"
+                },
+                {
+                    "name": "The Sims 2"
                 },
                 {
                     "name": "The Incredibles"
@@ -18729,6 +18795,12 @@
                 },
                 {
                     "name": "Wii Sports"
+                },
+                {
+                    "name": "Fortune Street"
+                },
+                {
+                    "name": "Mad World"
                 },
                 {
                     "name": "Luxor 3"
