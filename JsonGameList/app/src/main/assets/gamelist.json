@@ -1330,6 +1330,27 @@
                   "name": "Arena Football"
               },
               {
+                  "name": "Shrek"
+              },
+              {
+                  "name": "Transworld Snow Boarding"
+              },
+              {
+                  "name": "College Hoops 2K6"
+              },
+              {
+                  "name": "James Bond 007 in Agent Under Fire"
+              },
+              {
+                  "name": "Star Wars Battlefront"
+              },
+              {
+                  "name": "CSI: Crime Scene Investigation"
+              },
+              {
+                  "name": "Circus Maximus Chariot Wars"
+              },
+              {
                   "name": "Backyard Wrestling: Don't Try this at Home"
               },
               {
@@ -1840,10 +1861,25 @@
                     "name": "Iron Man"
                 },
                 {
+                    "name": "Top Gun Combat Zones"
+                },
+                {
+                    "name": "Lethal Skies Elite Pilot: Team SW"
+                },
+                {
                     "name": "Burnout Dominator"
                 },
                 {
                     "name": "The Sims 2"
+                },
+                {
+                    "name": "Ford vs Chevy"
+                },
+                {
+                    "name": "Arctic Thunder"
+                },
+                {
+                    "name": "The Chronicles of Narnia The Lion The Witch and the Wardrobe"
                 },
                 {
                     "name": "Harry Potter and the Goblet of Fire"
@@ -2228,6 +2264,12 @@
               },
               {
                   "name": "Air Combat"
+              },
+              {
+                  "name": "Syphon Filter"
+              },
+              {
+                  "name": "NCAA Gamebreaker 98"
               },
               {
                   "name": "Burstrick Wake Boarding!"
@@ -3035,7 +3077,16 @@
             ]
         },
         {
-            "name": "Sega Genesis",
+            "name": "CD-i",
+            "url": "http://www.phillips.com",
+            "games": [
+                {
+                    "name": "Video Speedway"
+                }
+            ]
+        },
+        {
+            "name": "Dreamcast",
             "url": "http://www.sega.com",
             "games": [
                 {
@@ -19479,6 +19530,12 @@
                 },
                 {
                     "name": "Wii Sports"
+                },
+                {
+                    "name": "Sega Superstars Tennis"
+                },
+                {
+                    "name": "dancing with the stars"
                 },
                 {
                     "name": "Fortune Street"
