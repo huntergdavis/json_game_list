@@ -352,6 +352,27 @@
                     "name": "Toy Story 3"
                 },
                 {
+                    "name": "Ea Sports MMA"
+                },
+                {
+                    "name": "Rockstar Games Presents Table Tennis"
+                },
+                {
+                    "name": "Sonic the Hedgehog"
+                },
+                {
+                    "name": "The Sabateur"
+                },
+                {
+                    "name": "Afro Samurai"
+                },
+                {
+                    "name": "Dynasty Warriors Gundam 2"
+                },
+                {
+                    "name": "Tony Hawk's Project 8"
+                },
+                {
                     "name": "Lego Batman 2 DC Super Heroes"
                 },
                 {
@@ -1204,6 +1225,9 @@
                     "name" : "Dynasty Warriors 6"
                 },
                 {
+                    "name" : "Dynasty Warriors 7"
+                },
+                {
                     "name" : "Ninja Gaiden 2"
                 },
                 {
@@ -1310,6 +1334,54 @@
               },
               {
                   "name": "I-Ninja"
+              },
+              {
+                  "name": "Kingdom Under Fire The Crusaders"
+              },
+              {
+                  "name": "Smashing Drive"
+              },
+              {
+                  "name": "Spider-Man"
+              },
+              {
+                  "name": "Outlaw Volleyball"
+              },
+              {
+                  "name": "Pure Pinball"
+              },
+              {
+                  "name": "Phantasy Star Online Episode 1 and 2"
+              },
+              {
+                  "name": "Spyro A Hero's Tale"
+              },
+              {
+                  "name": "Shadow the Hedgehog"
+              },
+              {
+                  "name": "Crash Nitro Kart"
+              },
+              {
+                  "name": "Close Combat First to Fight"
+              },
+              {
+                  "name": "IndyCar Series 2005"
+              },
+              {
+                  "name": "The Great Escape"
+              },
+              {
+                  "name": "Burnout"
+              },
+              {
+                  "name": "Amped 2"
+              },
+              {
+                  "name": "Lord of the Rings: The Fellowship of the Ring"
+              },
+              {
+                  "name": "Star Wars Jedi Starfighter"
               },
               {
                   "name": "Star Wars Episode III Revenge of the Sith"
@@ -1934,6 +2006,54 @@
                 },
                 {
                     "name": "Ridge Racer V"
+                },
+                {
+                    "name": "Scooby Doo Unmasked"
+                },
+                {
+                    "name": "Barbarian"
+                },
+                {
+                    "name": "Pirates - The Legend of Black Kat"
+                },
+                {
+                    "name": "Wallace and Gromit in Project Zoo"
+                },
+                {
+                    "name": "Monster 4x4 Masters of Metal"
+                },
+                {
+                    "name": "Shamu's Deep Sea Adventures"
+                },
+                {
+                    "name": "Virtua Fighter 4"
+                },
+                {
+                    "name": "Bolt"
+                },
+                {
+                    "name": "James Bond Everything or Nothing"
+                },
+                {
+                    "name": "Test Drive Off Road Wide Open"
+                },
+                {
+                    "name": "The Chronicles of Narnia Prince Caspian"
+                },
+                {
+                    "name": "Top Gear Dare Devil"
+                },
+                {
+                    "name": "Future Tactics The Uprising"
+                },
+                {
+                    "name": "GI Joe The Rise of Cobra"
+                },
+                {
+                    "name": "The Thing"
+                },
+                {
+                    "name": "Rugrats Royal Ransom"
                 },
                 {
                     "name": "Puzzle Challenge Crosswords and More!"
@@ -2888,6 +3008,12 @@
                   "name" : "Infamous 2"
                 },
                 {
+                  "name" : "The Chronicles of Narnia: Prince Caspian"
+                },
+                {
+                  "name" : "Sonic the Hedgehog"
+                },
+                {
                   "name" : "Mirror's Edge"
                 },
                 {
@@ -3278,6 +3404,9 @@
                 },
                 {
                     "name": "Pikmin"
+                },
+                {
+                    "name": "Shrek 2"
                 },
                 {
                     "name": "Harry Potter Quidditch World Cup"
@@ -19539,6 +19668,15 @@
                 },
                 {
                     "name": "Wii Sports"
+                },
+                {
+                    "name": "M&Ms Kart Racing"
+                },
+                {
+                    "name": "Metroid: Other M"
+                },
+                {
+                    "name": "Ratatouille"
                 },
                 {
                     "name": "Sega Superstars Tennis"
