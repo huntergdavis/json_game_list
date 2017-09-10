@@ -1951,6 +1951,9 @@
                     "name": "Harry Potter and the Chamber of Secrets"
                 },
                 {
+                    "name": "Harry Potter and the Half Blood Prince"
+                },
+                {
                     "name": "Splashdown"
                 },
                 {
@@ -3277,6 +3280,21 @@
             "games": [
                 {
                     "name": "Yoshi's Island Super Mario World 2"
+                },
+                {
+                    "name": "Super Mario World"
+                },
+                {
+                    "name": "Speedy Gonzales Los Gatos Bandidos"
+                },
+                {
+                    "name": "Super Mario Kart"
+                },
+                {
+                    "name": "Mario Paint"
+                },
+                {
+                    "name": "Donkey Kong Country 2 Diddy Kong's Quest"
                 }
             ]
         },
