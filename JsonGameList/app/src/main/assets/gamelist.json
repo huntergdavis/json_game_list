@@ -160,6 +160,12 @@
                     "name": "Exit"
                 },
                 {
+                    "name": "Konami Classics Series Arcade Hits"
+                },
+                {
+                    "name": "Puss in Boots"
+                },
+                {
                     "name": "N+"
                 },
                 {
@@ -332,6 +338,36 @@
                 },
                 {
                     "name": "Rayman 3"
+                },
+                {
+                    "name": "Adrenalin Misfits"
+                },
+                {
+                    "name": "Dead Space 2"
+                },
+                {
+                    "name": "SoulCalibur IV"
+                },
+                {
+                    "name": "TimeShift"
+                },
+                {
+                    "name": "Disney Universe"
+                },
+                {
+                    "name": "Harry Potter and the Half-Blood Prince"
+                },
+                {
+                    "name": "The Bourne Conspiracy"
+                },
+                {
+                    "name": "Borderlands: The Pre-Sequel!"
+                },
+                {
+                    "name": "Legendary"
+                },
+                {
+                    "name": "Tornado Outbreak"
                 },
                 {
                     "name": "My Sims Sky Heroes"
@@ -1396,6 +1432,21 @@
                   "name": "I-Ninja"
               },
               {
+                  "name": "Doom 3"
+              },
+              {
+                  "name": "Grand Theft Auto San Andreas"
+              },
+              {
+                  "name": "The Chronicles of Riddick: Escape from Butcher Bay"
+              },
+              {
+                  "name": "Jade Empire"
+              },
+              {
+                  "name": "Aquaman"
+              },
+              {
                   "name": "The Incredibles"
               },
               {
@@ -2035,6 +2086,33 @@
                     "name": "Iron Man"
                 },
                 {
+                    "name": "Whirl Tour"
+                },
+                {
+                    "name": "Spider-Man"
+                },
+                {
+                    "name": "Bratz Rock Angelz"
+                },
+                {
+                    "name": "Madagascar"
+                },
+                {
+                    "name": "Leisure Suit Larry Magna Cum Laude"
+                },
+                {
+                    "name": "Blowout"
+                },
+                {
+                    "name": "Pinball Hall of Fame"
+                },
+                {
+                    "name": "Scooby-Doo! First Frights"
+                },
+                {
+                    "name": "Army Men: Sarge's Heroes 2"
+                },
+                {
                     "name": "The Godfather"
                 },
                 {
@@ -2587,6 +2665,9 @@
                   "name": "Air Combat"
               },
               {
+                  "name": "Crash Team Racing"
+              },
+              {
                   "name": "Syphon Filter"
               },
               {
@@ -2778,6 +2859,12 @@
                 },
                 {
                     "name": "Evolve"
+                },
+                {
+                    "name": "Atari Flashback CLassics Vol 2"
+                },
+                {
+                    "name": "Atari Flashback CLassics Vol 1"
                 },
                 {
                     "name": "Dark Souls 3"
@@ -3038,6 +3125,9 @@
                     "name": "Uncharted 4"
                 },
                 {
+                    "name": "Disney Infinity 3.0"
+                },
+                {
                     "name": "Kingdom Hearts HD 1.5 + 2.5 Remix"
                 },
                 {
@@ -3201,6 +3291,27 @@
                 },
                 {
                   "name" : "Tony Hawk Shred"
+                },
+                {
+                  "name" : "JASF Jane's Advance Strike Fighters"
+                },
+                {
+                  "name" : "Metal Gear Solid 4 Guns of the Patriots"
+                },
+                {
+                  "name" : "The Elder Scrolls V Skyrim"
+                },
+                {
+                  "name" : "Heavenly Sword"
+                },
+                {
+                  "name" : "Battlefield Bad Company 2"
+                },
+                {
+                  "name" : "Sleeping Dogs"
+                },
+                {
+                  "name" : "Harry Potter and the Order of the Phoenix"
                 },
                 {
                   "name" : "Prototype"
@@ -3460,6 +3571,23 @@
             "games": [
                 {
                     "name": "Mortal Kombat Unchained"
+                },
+                {
+                    "name": "Star Wars BattleFront 2"
+                },
+                {
+                    "name": "Wipeout Pure"
+                },
+                {
+                    "name": "Untold Legends Brotherhood of the Blade"
+                }
+            ]
+        },
+        {
+            "name": "Intellivision",
+            "games": [
+                {
+                    "name": "Tennis"
                 }
             ]
         },
@@ -3469,6 +3597,9 @@
             "games": [
                 {
                     "name": "Sonic Spinball"
+                },
+                {
+                    "name": "Toy Story"
                 },
                 {
                     "name": "Sports Talk Foodball 93 Starring Joe Montana"
@@ -3487,6 +3618,9 @@
                 },
                 {
                     "name": "Super Mario World"
+                },
+                {
+                    "name": "Super WrestleMania"
                 },
                 {
                     "name": "Speedy Gonzales Los Gatos Bandidos"
@@ -3535,6 +3669,9 @@
                 },
                 {
                     "name": "Rayman Advance"
+                },
+                {
+                    "name": "Shrek Smash n Crash Raching"
                 },
                 {
                     "name": "King Of Fighters EX: Neo Blood"
@@ -3620,6 +3757,12 @@
                 },
                 {
                     "name": "Madden 2005"
+                },
+                {
+                    "name": "MC Groovz dance CRAZE"
+                },
+                {
+                    "name": "Universal Sudios Theme Park Adventure"
                 },
                 {
                     "name": "Tiger Woods PGA Tour 2004"
@@ -3778,8 +3921,6 @@
                 {
                     "name": "Lego Batman 2: DC Super Heroes"
                 },
-
-
                 {
                     "name": "Mario and Sonic at the Sochii Winter Olympics"
                 },
@@ -3841,6 +3982,12 @@
 
                 {
                     "name": "Ducktales Remastered"
+                },
+                {
+                    "name": "Just Dance 2014"
+                },
+                {
+                    "name": "Disney Infinity 2.0"
                 },
                 {
                     "name": "Star Fox Zero"
@@ -19971,6 +20118,9 @@
                 },
                 {
                     "name": "Wii Sports"
+                },
+                {
+                    "name": "Dance Dance Revolution"
                 },
                 {
                     "name": "Mario and Sonic at the Olympic Winter Games"
